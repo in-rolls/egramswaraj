@@ -64,7 +64,10 @@ def scrub(x):
 
 def get(out, path, rel, delay, attempts=4):
     """Return the saved JSON for path, fetching it if not yet saved; None on failure."""
-    target = out / rel
+    # rel is built from server-supplied codes; never write outside --out
+    target = (out / rel).resolve()
+    if not target.is_relative_to(out.resolve()):
+        raise ValueError(f"refusing to write outside {out}: {rel!r}")
     if target.exists():
         return json.loads(target.read_text(encoding="utf-8"))
     for attempt in range(1, attempts + 1):
@@ -97,7 +100,9 @@ def gp_lists(out, sc, delay):
     for z in zps or []:
         if not z.get("gperCount"):
             continue
-        zp = z["zpCode"]
+        zp = str(z["zpCode"])
+        if not zp.isdigit():
+            continue
         if sc in TWO_TIER:
             bps = [zp]
         else:
@@ -107,6 +112,7 @@ def gp_lists(out, sc, delay):
                 q = f"findElectedStateBpByZpCode.do?stateCode={sc}&year={YEAR}&zpCode={zp}"
                 rows = get(out, q, f"{sc}/bp_alt_{zp}.json", delay)
             bps = [b["bpCode"] for b in rows or [] if b.get("gperCount", 1)]
+            bps = [b for b in bps if str(b).isdigit()]
         for bp in bps:
             q = f"findGpNameAndERCountByBpCode.do?stateCode={sc}&year={YEAR}&bpCode={bp}"
             yield bp, get(out, q, f"{sc}/gp_{bp}.json", delay) or []
@@ -129,6 +135,7 @@ def main():
 
     states = get(out, f"ElectedStateReportGp.do?year={YEAR}", "states.json", args.delay) or []
     codes = [str(s["stateCode"]) for s in states if s.get("gperCount")]
+    codes = [c for c in codes if c.isdigit()]
     if args.states:
         codes = [c for c in codes if c in args.states.split(",")]
     log(out, event="start", states=codes, workers=args.workers)
@@ -137,6 +144,7 @@ def main():
         gps = []
         for _bp, rows in gp_lists(out, sc, args.delay):
             gps += [str(g["gpCode"]) for g in rows if g.get("gperCount")]
+        gps = [g for g in gps if g.isdigit()]
         with cf.ThreadPoolExecutor(args.workers) as pool:
             ok = sum(pool.map(lambda g: members(out, sc, g, args.delay), gps))
         log(out, event="state_done", state=sc, gps=len(gps), saved=ok, failed=len(gps) - ok)
