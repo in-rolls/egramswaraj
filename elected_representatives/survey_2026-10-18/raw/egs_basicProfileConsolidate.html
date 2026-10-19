@@ -1,0 +1,1443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<!-- Bootstrap -->
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="referer" content="strict-origin-when-cross-origin" />
+<title>Basic Profile Consolidate Report</title>
+<link rel="stylesheet" type="text/css" href="/resources/home/js/font-awesome.min.css" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+<!-- Theme style -->
+
+<!--  Theme Skins -->
+	
+	<!-- Data Table -->
+
+
+
+<script defer src="https://egramswaraj.gov.in/pes_analytics/script.js" data-website-id="10df7fae-9459-4a49-af58-19370610e6f1"></script>
+
+</head>
+
+<body>
+	<html>
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!-- Site Metas -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+		<title>eGramSwaraj</title>
+		
+		<!-- slider stylesheet -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+		
+		<!-- bootstrap core css -->
+		<link rel="stylesheet" type="text/css" href="/resources/home/css/bootstrap.css" />
+		
+		<!-- fonts style -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/resources/home/css/style.css" rel="stylesheet" />
+		<!-- responsive style -->
+		<link href="/resources/home/css/responsive.css" rel="stylesheet" />
+	<script src="https://translation-plugin.bhashini.co.in/v2/website_translation_utility.js" data-pos-x="5" data-pos-y="10" referer="www.egramswaraj.gov.in" referrerpolicy="strict-origin-when-cross-origin"></script>
+<style>
+
+
+/* =======================
+   HEADER
+======================= */
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 42px;
+  background: #04285b;
+  color: white;
+  height: auto;              /* fixed height à¤¹à¤à¤¾à¤à¤ */
+  min-height: 42px;          /* minimum height à¤°à¤à¥à¤ */
+}
+
+.logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.logo:hover {
+  color: #007bff;
+}
+
+.top-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;           /* à¤à¥à¤à¥ screen à¤ªà¤° wrap */
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.action:hover {
+  opacity: 0.85;
+}
+
+.nav-link {
+  color: #FFFFFF;
+}
+.nav-link:hover {
+  color: #007bff;
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* =======================
+   TABLET
+======================= */
+@media (max-width: 992px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .top-links {
+    gap: 16px;
+  }
+}
+
+/* =======================
+   MOBILE
+======================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    gap: 8px;
+  }
+
+  .logo {
+    white-space: normal; /* allow wrap */
+    font-size: 12px;
+  }
+
+  .top-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .action {
+    font-size: 11.5px;
+  }
+}
+
+/* =======================
+   SMALL MOBILE
+======================= */
+@media (max-width: 480px) {
+  .top-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .action {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    font-size: 11px;
+  }
+}
+
+
+/* ================================
+   REPORT HEADER NAVBAR
+================================ */
+.rh-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px 40px;
+ 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  min-height: 72px;
+  box-sizing: border-box;
+}
+
+/* ---- LEFT LOGO ---- */
+.rh-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rh-emblem {
+  width: 52px;
+  height: auto;
+  object-fit: contain;
+}
+
+.rh-brand {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---- RIGHT ICONS ---- */
+.rh-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rh-icon {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .rh-navbar {
+    padding: 8px 16px;
+    min-height: 60px;
+  }
+
+  .rh-emblem {
+    width: 38px;
+  }
+
+  .rh-brand {
+    height: 36px;
+  }
+
+  .rh-icon {
+    height: 32px;
+  }
+
+  .rh-icons {
+    gap: 10px;
+  }
+}
+
+
+</style>
+
+</head>
+	<body>
+		
+		
+			<header class="header">
+			  <div class="logo"><a href="welcome.do" class="logo">Government of India | Ministry of Panchayati Raj</a></div>
+			  <div class="top-links">								  
+			     <span class="action">
+			      <img src="resources/home/images/new/Maskgroup.svg" class="action-icon" alt="" />
+			      <a class="nav-link" href="screenReader.jsp" target="_parent">   Screen Reader Access </a>
+			       <!-- <a class="nav-link action" href="screenReader.jsp" target="_parent">  Screen Reader Access </a> -->
+			    </span>
+			    <span class="action">
+			      <img src="resources/home/images/new/Simplification.svg" class="action-icon" alt="" />
+			      <a class="nav-link action" href="welcome.do"> Home </a>
+			    </span>
+			   <!--  <span class="action">
+			      <img src="resources/home/images/new/Login.svg" class="action-icon" alt="" />
+			      <a href="javascript:login()" class="nav-link action">Login</a>
+			    </span> -->
+			  </div>
+			</header>
+				
+		
+			<!-- header section strats -->
+			
+			<!-- end header section -->
+			<!-- slider section -->
+			
+			<div class="rh-navbar">
+			  <div class="rh-logo">
+			    <img src="resources/home/images/new/icon-emblem.svg" class="rh-emblem" alt="Emblem" />
+			    <img src="resources/home/images/new/eGramsSwaraj.svg" class="rh-brand" alt="eGramSwaraj" />
+			  </div>
+			
+			  <div class="rh-icons">
+			    <img src="resources/home/images/new/Panchayati Raj _Logo Government1.svg" class="rh-icon" alt="Panchayati Raj" />
+			    <img src="resources/home/images/new/Group3525.svg" class="rh-icon" alt="Sabka Vikas" />
+			  </div>
+			
+			</div>
+			<!-- end slider section -->
+		
+	</body>
+	
+  <script type="text/javascript" src="/resources/home/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/resources/js/popper.min.js"></script>
+  <script type="text/javascript" src="/resources/home/js/bootstrap.js"></script>
+</html>	
+	
+	
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+<!-- Bootstrap -->
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title> 
+<script type='text/javascript' language="javascript" src='/dwr/engine.js'></script>
+<script type='text/javascript' language="javascript" src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/interface/captchaValidator.js'></script>
+<script type="text/javascript" src="/resources/js/captcha.js"></script>
+<script  type="text/javascript" src="/resources/plugins/angular/excelexportjs.js"></script>
+<script  type="text/javascript" src="/resources/plugins/angular/jQuery.print.js"></script>
+<link rel="stylesheet" type="text/css" href="resources/plugins/datatables/css/jquery.dataTables.css">  
+<script type="text/javascript" charset="utf8" src="resources/plugins/datatables/js/jquery.dataTables.js"></script>
+
+
+<style>
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+</style>
+
+<script>
+
+/* $(document).ready( function (){
+    $('#TableId').DataTable({
+    	lengthMenu: [ [ 10, 25, 50, 100], [ 10, 25, 50, 100] ],  //, [ 10, 25, 50, 100, -1], [ 10, 25, 50, 100, "All"]
+    });
+    
+});
+ */
+ 
+ 
+$(document).ready(function() {
+    $("input[type='checkbox']").click(function() {
+      var columnIndex = $(this).attr("data-column");
+      $("#TableId td:nth-child(" + columnIndex + "), th:nth-child(" + columnIndex + ")").toggle();
+    });
+  });
+
+function getTireSetup(stateCd){
+	
+	dwr.util.removeAllOptions('panchayatLevel');
+	$(".errored").hide();
+		
+	if(stateCd == 13 || stateCd == 15){
+		  $("#panchayatLevel").append("<option value=''>Select</option>");
+		  $("#panchayatLevel").append("<option value='V'>Gram Panchayat & Equivalent</option>");
+		  
+	} else if(stateCd == 12 || stateCd == 11 || stateCd == 14 || stateCd == 30 || stateCd == 31 || stateCd == 38){
+		  $("#panchayatLevel").append("<option value=''>Select</option>");
+		  $("#panchayatLevel").append("<option value='D'>District Panchayat & Equivalent</option>");
+		  $("#panchayatLevel").append("<option value='V'>Gram Panchayat & Equivalent</option>");
+		  
+	} else if(stateCd == 17 || stateCd == 34){
+		  $("#panchayatLevel").append("<option value=''>Select</option>");
+		  $("#panchayatLevel").append("<option value='I'>Block Panchayat and Equivalent</option>");
+		  $("#panchayatLevel").append("<option value='V'>Gram Panchayat & Equivalent</option>");
+		  
+	} else{
+		  $("#panchayatLevel").append("<option value=''>Select</option>");
+		  $("#panchayatLevel").append("<option value='D'>District Panchayat & Equivalent</option>");
+		  $("#panchayatLevel").append("<option value='I'>Block Panchayat and Equivalent</option>");
+		  $("#panchayatLevel").append("<option value='V'>Gram Panchayat & Equivalent</option>");
+	}
+}
+
+function isValidInputs() {
+	
+	$(".errored").hide();
+	
+	var flag = true;
+	
+	var state = document.getElementById("stateId").value;
+	var pLevel = document.getElementById("panchayatLevel").value;
+	 
+	$('#stateCode').val(state);
+	$('#levelDes').val(pLevel);
+	
+	var stateName = $('#stateId :selected').text().split("(")[0];
+	$("#stateNameId").val(stateName);
+	
+
+	if (state == null || state=="") {
+		document.getElementById("stateError").style.display = "block";
+		flag = false;
+	
+	}
+	if (pLevel == null || pLevel=="") {
+		document.getElementById("pLevelError").style.display = "block";
+		flag = false;
+	
+	}
+	
+	var captchaAnswer = document.getElementById("captchaAnswer").value;
+	
+	if(captchaAnswer == "" || captchaAnswer == null){
+		document.getElementById("captchaAnswer_error").style.display = "block";
+		flag = false;
+	}
+	else{
+		if(captchaAnswer.length!=6){
+		 	alert("Error.InvalidCaptchaLength");
+		 	flag = false;
+	 	}
+	
+	// Use the captchaValidator.js function to validate the captcha
+	    else{
+			var status = validateCaptcha(captchaAnswer);
+
+			if (!status) {
+				refreshCaptcha();
+				document.getElementById("wrongCaptcha").style.display = "block";
+				flag = false;
+			
+			}
+	    }
+	}
+				
+return flag;
+}
+
+function getData(pageNo, pageSize) {
+	
+	if('true' == 'true'){
+		
+		if (isValidInputs()) { 
+	    	
+			refreshCaptcha ();
+	    	
+	    	$('#page').val(pageNo);
+	        $('#pageSize').val(pageSize);
+	           	
+	        // Submit the form
+	        var form = document.getElementById("basicProfileConsolidateReportId");
+	        form.method = "POST";
+	        form.action = "basicProfileConsolidateReport.do";
+	        showLoader();
+	        form.submit();
+	        
+	    }
+	}else{
+		$('#page').val(pageNo);
+        $('#pageSize').val(pageSize);  
+          	
+        // Submit the form
+        var form = document.getElementById("basicProfileConsolidateReportId");
+        form.method = "POST";
+        form.action = "basicProfileConsolidateReport.do";
+        showLoader();
+        form.submit();
+	}
+    
+   
+}
+
+
+
+function exportFile(tableID){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    
+    //var table=$("#TableId").DataTable();	
+    //table.rows().nodes().page.len(-1).draw();
+    
+ 	// Clone the table and filter out hidden columns
+    var clonedTable = tableSelect.cloneNode(true);
+    
+ 	$(clonedTable).find("#TableId thead th").each(function(index) {
+        if ($(this).css("display") === "none") {
+            $(clonedTable).find("#TableId tr").each(function() {
+            	$(this).find("th, td").eq(index).addClass("remove-column");   //$(this).find("th, td").eq(index).remove();
+            });
+        }
+    });
+ 	
+ 	// Remove all elements with the assigned class in one go
+ 	$(clonedTable).find(".remove-column").remove(); 
+ 	
+ 	$(clonedTable).find("#checkboxes,#TableId_length,#TableId_filter,#TableId_info,#TableId_paginate,.pagination").remove();
+    
+    var tableHTML = clonedTable.outerHTML;   //tableSelect.outerHTML; 
+    var filename = "Consolidated Report on Panchayat Profile Details";
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'excel_data.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', formatAsExcel(tableHTML)], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+ 	   	var blob = new Blob([formatAsExcel(tableHTML)], { type: 'application/vnd.ms-excel' });
+	    	var link = document.createElement('a');
+	   	 	link.href = window.URL.createObjectURL(blob);
+	    	link.download = 'Consolidated_Report_on_Panchayat_Profile_Details.xls';
+	    	link.click();
+	    	//table.rows().nodes().page.len(10).draw();	
+   }
+}
+ 
+
+function formatAsExcel(tableHTML) {
+	    return '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">'
+	        + '<head>'
+	        + '<style>'
+	        + '@page { size: A4; mso-page-orientation: landscape; margin: 1cm; mso-header-margin: .5in; mso-footer-margin: .5in; }'
+	        + 'table, th, td { border: 1px solid black; border-collapse: collapse; width: 50%; table-layout: fixed; font-family: Times New Roman; }'
+	        + 'th, td { word-wrap: break-word; max-width: 100px; }'
+	        + '</style>'
+	        + '<!--[if gte mso 9]>'
+	        + '<xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>'
+	        + '<x:Name>Sheet 1</x:Name>'
+	        + '<x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions>'
+	        + '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml>'
+	        + '<![endif]--></head><body>' + tableHTML + '</body></html>';
+		
+}
+
+
+function exportAllData(stateCd, panchayatLevel){
+	
+	$("#exportAllDataBtnId").prop("disabled", true);
+	
+	var baseUrl = window.location.origin; // This will be "http://localhost:8080" or "https://egramswaraj.gov.in"
+	
+	//Comment this for live
+	var contextPath = window.location.pathname.split("/")[1]; 
+	if(contextPath) baseUrl = baseUrl + "/" + contextPath;
+	
+
+    $.ajax({
+    	//For local & demo & staging & live
+    	url: baseUrl + '/basicExcel.do?levelDes=' + panchayatLevel + '&stateCode=' + stateCd, 
+        method: 'GET',
+        xhrFields: {
+            responseType: 'blob'
+        },
+        success: function(data, status, xhr) {
+        	$("#exportAllDataBtnId").prop("disabled", false);
+            console.log('AJAX success'); // Debug log
+            var filename = "Consolidated_Report_on_Panchayat_Profile_Details.xlsx";
+            var disposition = xhr.getResponseHeader('Content-Disposition');
+            if (disposition && disposition.indexOf('attachment') !== -1) {
+                var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                var matches = filenameRegex.exec(disposition);
+                if (matches != null && matches[1]) filename = matches[1].replace(/['"]/g, '');
+            }
+            var a = document.createElement('a');
+            var url = window.URL.createObjectURL(data);
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error downloading the file:', textStatus, errorThrown);
+        }
+    });
+
+}
+	
+	
+function cancel() {
+		
+	window.location.href = 'profilerReport.do';
+}
+
+function goBack(){
+		
+	window.location.href = 'basicProfileConsolidateReport.do';
+}
+	
+function hideError(){
+		
+	$(".errored").hide();
+}
+
+
+//Toggle the dropdown visibility
+function toggleDropdown(dropdownId) {
+  // Close any open dropdowns
+  document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
+    const options = dropdown.querySelector('.dropdown-options');
+    if (options && options.id !== dropdownId) {
+      dropdown.classList.remove('active');
+    }
+  });
+
+  // Toggle the clicked dropdown
+  const dropdownOptions = document.getElementById(dropdownId);
+  if (dropdownOptions) {
+    dropdownOptions.parentElement.classList.toggle('active');
+  }
+}
+
+// Close dropdown when clicking outside
+window.onclick = function (event) {
+  if (!event.target.closest('.custom-dropdown')) {
+    document.querySelectorAll('.custom-dropdown').forEach(dropdown => dropdown.classList.remove('active'));
+  }
+};
+
+
+//Show loader
+function showLoader() {
+    document.getElementById('loader').style.display = 'flex';
+}
+
+// Hide loader after page load
+$(window).on('load', function() {
+    $('#loader').fadeOut();
+});
+
+$(document).ajaxStart(function () {
+    $("#loader").fadeIn();
+}).ajaxStop(function () {
+    $("#loader").fadeOut();
+});
+
+
+		
+</script>
+
+<style>
+
+
+thead{
+
+     position: sticky; 
+     top: 0;
+     background-color: #fff;
+     optional: for better visibility*/
+     
+}
+
+
+/* General container styling */
+    .dropdown-container {
+      margin-bottom: 20px;
+    }
+
+    /* Dropdown container styling */
+    .custom-dropdown {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+    }
+
+    /* Label styling */
+    .custom-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Select-style input */
+    .custom-select {
+      width: 100%;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Dropdown content styling */
+    .dropdown-options {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      width: 100%;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    /* Individual option styling */
+    .dropdown-options label {
+      display: block;
+      align-items: center;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .dropdown-options label:hover {
+      background-color: #f9f9f9;
+    }
+
+    /* Show dropdown when active */
+    .custom-dropdown.active .dropdown-options {
+      display: block;
+    }
+
+</style>
+
+
+<style>
+	#loader {
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0,0,0,0.4);
+	    z-index: 9999;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	
+	.spinner {
+	    width: 50px;
+	    height: 50px;
+	    border: 6px solid #f3f3f3;
+	    border-top: 6px solid #3498db;
+	    border-radius: 50%;
+	    animation: spin 1s linear infinite;
+	}
+	
+	@keyframes spin {
+	    100% { transform: rotate(360deg); }
+	}
+</style>
+
+
+</head>
+<body>
+
+	<section  class="main-reports py-3"> 
+		<div class="container-fluid">
+			<form id="basicProfileConsolidateReportId" action="basicProfileConsolidateReport" method="POST">
+				
+			    <input type="hidden" id="page" name="page" /> 
+			    <input type="hidden" id="pageSize" name="pageSize" />  
+			    <input type="hidden" id="isBulkExport" name="isBulkExport" />
+			  
+			    <input id="stateNameId" name="stateName" type="hidden" value=""/> 
+			
+			
+			<div class="row">
+				<div class="col-12 text-center">
+					<h5 class="mainHeading heading_black cursor-pointer mx-auto">Consolidated Report on Panchayat Profile Details</h5>
+				</div>
+			</div>
+			
+			<!-- loader -->
+			<div id="loader" style="display:none;">
+			    <div class="spinner-container">
+			        <div class="spinner"></div>
+			        <span class="spinner-text text-white">Please wait...</span>
+			    </div>
+			</div>
+			
+			
+			
+				
+				<div class="row">
+					<div class="col-12 col-lg-4">&nbsp;</div>
+					<div class="col-12 col-lg-4" style="background: #fdfdfd;border: 1px solid #ddd; padding: 10px 10px;">
+						<div class="card">
+							<div class="card-body">
+
+								 <div class="row form-group" id="localBodyTypeTr">
+										<div class="col-md-4 text-left">
+											<label class="control-label mandatory"><strong>Select State</strong></label>
+										</div>
+										<div class="col-md-8 text-left">
+											 <select id="stateId" name="stateCode" class="form-control" onchange="getTireSetup(this.value);hideError()">
+												 <option value="">Select</option>
+												
+        											<option value="35">Andaman And Nicobar Islands(35)</option>
+    											
+        											<option value="28">Andhra Pradesh(28)</option>
+    											
+        											<option value="12">Arunachal Pradesh(12)</option>
+    											
+        											<option value="18">Assam(18)</option>
+    											
+        											<option value="10">Bihar(10)</option>
+    											
+        											<option value="22">Chhattisgarh(22)</option>
+    											
+        											<option value="30">Goa(30)</option>
+    											
+        											<option value="24">Gujarat(24)</option>
+    											
+        											<option value="6">Haryana(6)</option>
+    											
+        											<option value="2">Himachal Pradesh(2)</option>
+    											
+        											<option value="1">Jammu And Kashmir(1)</option>
+    											
+        											<option value="20">Jharkhand(20)</option>
+    											
+        											<option value="29">Karnataka(29)</option>
+    											
+        											<option value="32">Kerala(32)</option>
+    											
+        											<option value="37">Ladakh(37)</option>
+    											
+        											<option value="31">Lakshadweep(31)</option>
+    											
+        											<option value="23">Madhya Pradesh(23)</option>
+    											
+        											<option value="27">Maharashtra(27)</option>
+    											
+        											<option value="14">Manipur(14)</option>
+    											
+        											<option value="17">Meghalaya(17)</option>
+    											
+        											<option value="15">Mizoram(15)</option>
+    											
+        											<option value="13">Nagaland(13)</option>
+    											
+        											<option value="21">Odisha(21)</option>
+    											
+        											<option value="34">Puducherry(34)</option>
+    											
+        											<option value="3">Punjab(3)</option>
+    											
+        											<option value="8">Rajasthan(8)</option>
+    											
+        											<option value="11">Sikkim(11)</option>
+    											
+        											<option value="33">Tamil Nadu(33)</option>
+    											
+        											<option value="36">Telangana(36)</option>
+    											
+        											<option value="38">The Dadra And Nagar Haveli And Daman And Diu(38)</option>
+    											
+        											<option value="16">Tripura(16)</option>
+    											
+        											<option value="5">Uttarakhand(5)</option>
+    											
+        											<option value="9">Uttar Pradesh(9)</option>
+    											
+        											<option value="19">West Bengal(19)</option>
+    											
+											</select> 
+											<span class="text text-danger errored" style="display: none;" id="stateError"> This Field Is Required</span>
+										</div>
+								</div>
+								
+								
+								<div class="row form-group" id="localBodyTypeTr">
+									<div class="col-md-4 text-left">
+										<label class="control-label mandatory"><strong>Panchayat Level</strong></label>
+									</div>
+									<div class="col-md-8 text-left">
+										 <select id="panchayatLevel" name="panchayatLevel" class="form-control" onchange="hideError()">
+											 <option value="">Select</option>
+										</select> 
+										<span class="text text-danger errored" style="display: none;" id="pLevelError"> This Field Is Required</span>
+									</div>
+								</div>
+								
+								<!-- Captcha -->
+								
+								<div class="form-group row">
+									<div class="col-lg-2 col-sm-offset-1"></div>
+									<div class="col-12 col-lg-4 text-right">
+										<img src="captchaImage" class="captcha" id="img_Capatcha" width="130px" /> <i class="fa fa-refresh link" onclick="refreshCaptcha()"></i>
+									</div>
+									<div class="col-12 col-lg-4 text-left">
+										<input id="captchaAnswer" onclick="hideError()" placeholder="Captcha Answer" class="form-control" required="required" type="text" value="" maxlength="6" autocomplete="off"/> 
+										<span class="text-danger errored" style="display: none;" id="captchaAnswer_error">This Field Is Required</span> 
+										<span class=" text-danger errored" style="display: none;" id="wrongCaptcha">You have entered Wrong Captcha</span>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="card-footer">
+								<div class="float-right">
+								
+									<!-- Get Report Button -->
+									 <button type="button" id="getReportBtn" onclick="getData(1, 25)"  class="btn btn-primary" tabindex="0"><i class="fa fa-arrow-right"></i>&nbsp;
+										Get Report
+									</button>
+
+									<!-- Close Button -->
+									<button type="button" class="btn btn-danger"  onclick="cancel()" tabindex="0"><i class="fa fa-times"></i>&nbsp;
+										Close
+									</button>
+								</div>
+							</div>
+						</div> <!-- card ends  -->
+						
+					</div>
+					<div class="col-12 col-lg-4">&nbsp;</div>
+				</div>
+				
+			
+			
+			
+			
+	</form> 
+</div>
+</section>
+
+</body>
+</html>
+
+	
+
+
+
+
+
+<!-- Bootstrap -->
+
+
+
+
+
+   	<!-- <div class="container-fluid text-center">
+		<ul class="list-inline footer-link w-100">
+			<li><a href="#" role="link" style="border-left:none;">Sitemap</a></li>
+			<li><a href="#" role="link">Feedback</a></li>
+			<li><a href="#" role="link">Privacy Policy</a></li>
+			<li><a href="#" role="link">Terms &amp; Conditions</a></li>
+			<li><a href="#" role="link">Copyright</a></li>
+			<li><a href="#" role="link">Contact Us</a></li>
+	    </ul>
+	<hr>
+	</div> -->
+    
+    
+    <!-- BOTTOM BLUE BAR -->
+		<div class="sub-footer__bottom">
+		    <p class="sub-footer__text">
+		      Contents on this website are owned, updated and managed by the Panchayats
+		      and State Panchayati Raj Department as a part of e-Panchayat MMP of
+		      <strong>Ministry of Panchayati Raj (MoPR)</strong>. Site is technically
+		      designed, hosted and maintained by
+		      <strong>National Informatics Centre (NIC)</strong>.
+		    </p>
+		
+		    <div class="sub-footer__links">
+		    	<div class="footer-tnc">
+		    	 <div>
+				      <a  href="#" data-toggle="modal" data-target="#quickModal" id="One" onClick="allPolicies(this.id)">Privacy Policy</a>
+				      <a href="#" data-toggle="modal" data-target="#quickModal" id="Two" onClick="allPolicies(this.id)">Terms & Conditions</a>
+				      <a  href="#" data-toggle="modal" data-target="#quickModal" id="Three" onClick="allPolicies(this.id)">Cookie Policy</a>
+				      <a  href="#" data-toggle="modal" data-target="#quickModal" id="Four" onClick="allPolicies(this.id)">Contact</a>
+				     </div>
+				    <div class="sub-footer__right">
+				      <img src="resources/home/images/new/NIC_logo_new.svg" alt="NIC" />
+				    </div>
+		    	</div>
+		    </div>
+		  </div>
+    
+
+<div class="modal fade" id="quickModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row footer-row-padding footer-modal">
+                    <div class="col-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header p-0" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseOne"><i class="fa fa-plus float-right"></i>
+                                        Terms & Conditions</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    	<p class="text-jutify">Contents on this website are owned, updated and managed by the Panchayats and State Panchayati Raj Department as a part of e-Panchayat MMP of Ministry of Panchayati Raj (MoPR),. 
+                                    	Site is technically designed, hosted and maintained by National Informatics Centre (NIC)</p>
+                                        <p class="text-jutify">The following terms and conditions will apply if you wish to use the Internet for availing a service. Please go through the conditions carefully and if you accept them, you may register yourself and transact on the site. On using this site for service delivery, you are deemed to have agreed to the terms and conditions set forth below. If You do not agree with all these terms and conditions, you must not transact on this Website.</p>
+                                        <p class="text-jutify">If a user violates the terms and conditions Government (service owner) reserves the right to deactivate all such user registration and cancel any or all services requested without any notice. Garbage / Junk values in profile may lead to Deactivation.</p>
+                                        <p class="text-jutify">Operationalization of this agreement is subject to existing laws and legal processes of the respective Government, and nothing contained in this agreement is in derogation of Government's right to comply with law enforcement requests or requirements relating to your use of this Web Site or information provided to or gathered by this site with respect to such use. You agree that Government may provide details of your use of the Web Site to regulators or police or to any other third party, or in order to resolve disputes or complaints which relate to the Web Site, at Government’s complete discretion.</p>
+                                        <p class="text-jutify">This agreement is made between: respective service owner department of the respective government who has configured the serviceGovernment ('Us') and The User ('You'), the individual, whose details  are set out in the Portal User Creation page.</p>
+                                        <p class="text-jutify"><strong>User Creation</strong></p>
+                                        <p class="text-jutify">You are responsible for maintaining the confidentiality of the password and account, and are fully responsible for all activities that occur under your password or account.</p>
+                                        <p class="text-jutify"><strong>Complaints Procedure</strong></p>
+                                        <p class="text-jutify">You can reach us on the contact details given in the 'Contacts' option given in the login page.</p>
+                                        <p class="text-jutify"><strong>General Obligations</strong></p>
+                                        <p class="text-jutify">You shall access web site only for lawful purposes and you shall be responsible for complying with all applicable laws, statutes and regulations in connection with the use of Government web site. This Website is for your personal or commercial use by approved kiosks. You shall not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer or sell any information, or services obtained from this Website. You shall not create a hypertext link to the Website or "frame" the Website, except with the express advance written permission of the Government.</p>
+                                        <p class="text-jutify"><strong>Information Provided</strong></p>
+                                        <p class="text-jutify">The information you provide in the Registration page must be complete and accurate. Government 00. reserves the right at all times to disclose any information as deems necessary to satisfy any applicable law, regulation, legal process.</p>
+                                        <p class="text-jutify"><strong>Termination</strong></p>
+                                        <p class="text-jutify">We may at any time at our sole discretion and without giving any reason or any prior notice terminate or temporarily suspend your access to all or any part of the web site.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseTwo"><i class="fa fa-plus float-right"></i>
+                                        Privacy Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">The Government will have complete discretion to share the details of your use of the Web Site and/ or data entered by you with regulators or with any other third party, or in order to resolve disputes or complaints which relate to the Web Site.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseThree"><i class="fa fa-plus float-right"></i>
+                                        Web Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    	<p class="text-jutify">The following terms and conditions will apply if you wish to use the Internet for availing a service. Please go through the conditions carefully and if you accept them, you may register yourself and transact on the site. On using this site for service delivery, you are deemed to have agreed to the terms and conditions set forth below. If You do not agree with all these terms and conditions, you must not transact on this Website.</p>
+                                        <p class="text-jutify">If a user violates the terms and conditions Government (service owner) reserves the right to deactivate all such user registration and cancel any or all services requested without any notice. Garbage / Junk values in profile may lead to Deactivation.</p>
+                                        <p class="text-jutify">Operationalization of this agreement is subject to existing laws and legal processes of the respective Government, and nothing contained in this agreement is in derogation of Government's right to comply with law enforcement requests or requirements relating to your use of this Web Site or information provided to or gathered by this site with respect to such use. You agree that Government may provide details of your use of the Web Site to regulators or police or to any other third party, or in order to resolve disputes or complaints which relate to the Web Site, at Government’s complete discretion.</p>
+                                        <p class="text-jutify">This agreement is made between: respective service owner department of the respective government who has configured the serviceGovernment ('Us') and The User ('You'), the individual, whose details  are set out in the Portal User Creation page.</p>
+                                        <p class="text-jutify"><strong>Payment Option</strong></p>
+                                        <p class="text-jutify">The list of payment options available are internet banking /debit card payment / credit card payment from banks that are listed when selecting each of the above options. Apart from the fee chargeable to Government against each service, bank / payment gateway transaction charges will be applicable extra. In case of a failed transaction the user shall have no right to claim the amount. The loss on this account shall not be borne either by Government or by the Banks /Payment Gateways.</p>
+                                        <p class="text-jutify"><strong>User Creation</strong></p>
+                                        <p class="text-jutify">You are responsible for maintaining the confidentiality of the password and account, and are fully responsible for all activities that occur under your password or account.</p>
+                                        <p class="text-jutify"><strong>Complaints Procedure</strong></p>
+                                        <p class="text-jutify">You can reach us on the contact details given in the 'Contacts' option given in the login page.</p>
+                                        <p class="text-jutify"><strong>General Obligations</strong></p>
+                                        <p class="text-jutify">You shall access web site only for lawful purposes and you shall be responsible for complying with all applicable laws, statutes and regulations in connection with the use of Government web site. This Website is for your personal or commercial use by approved kiosks. You shall not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer or sell any information, or services obtained from this Website. You shall not create a hypertext link to the Website or "frame" the Website, except with the express advance written permission of the Government.</p>
+                                        <p class="text-jutify"><strong>Information Provided</strong></p>
+                                        <p class="text-jutify">The information you provide in the Registration page must be complete and accurate. Government 00. reserves the right at all times to disclose any information as deems necessary to satisfy any applicable law, regulation, legal process.</p>
+                                        <p class="text-jutify"><strong>Termination</strong></p>
+                                        <p class="text-jutify">We may at any time at our sole discretion and without giving any reason or any prior notice terminate or temporarily suspend your access to all or any part of the web site.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header p-0" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseSeven"><i class="fa fa-plus float-right"></i>
+                                        Copyright Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">Material featured on this website may be reproduced free of charge after taking proper permission by sending a mail to us. However, the material has to be reproduced accurately and not to be used in a derogatory manner or in a misleading context. Wherever the material is being published or issued to others, the source must be prominently acknowledged. However, the permission to reproduce this material shall not extend to any material which is identified as being copyright of a third party. Authorisation to reproduce such material must be obtained from the departments/copyright holders concerned.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseSix"><i class="fa fa-plus float-right"></i>
+                                        Hyperlinking Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify"><strong>Links to external websites/portals</strong></p>
+                                        <p class="text-jutify">At many places in this website, you shall find links to other websites/portals. These links have been placed for your convenience. This website is not responsible for the contents and reliability of the linked websites and does not necessarily endorse the views expressed in them. Mere presence of the link or its listing on this website should not be assumed as endorsement of any kind. We cannot guarantee that these links will work all the time and we have no control over the availability of linked pages.</p>
+                                        <p class="text-jutify"><strong>Links to this Website by other websites/portals</strong></p>
+                                        <p class="text-jutify">We do not object to linking directly to the information that is hosted on this site but it is necessary that prior permission is taken before hyperlinks are directed from any website to this site. Permission for the same, stating the nature of the content on the pages from where the link has to be given and the exact language of the hyperlink should be obtained by sending a request to 'egramswaraj[at]gov[dot]in'. Also, it is not permitted that our pages be loaded into frames on the requested site. Our Department's pages must load into a newly opened browser window of the user.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header p-0" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseFour"><i class="fa fa-plus float-right"></i>
+                                        Contact Us</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">Email at <i class="fa fa-envelope"></i> 
+                                        <em>egramswaraj[at]gov[dot]in</em></p>
+                                        <p class="text-jutify">
+                                            Ministry of Panchayati Raj<br />
+                                            Government of India<br />
+                                            Eleventh Floor, J.P. Building,<br />
+                                            Kasturba Gandhi Marg, Connaught Place,<br />
+                                            New Delhi-110001
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseFive"><i class="fa fa-plus float-right"></i>
+                                        Web Information Manager</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">
+                                            Ms. Mukta Shekhar<br />
+                                            Joint Secretary<br />
+                                            <i class="fa fa-envelope"></i> <em>js2[-]mopr[at]gov[dot]in</em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    #quickModal .accordion .card-header .btn-link:not(.collapsed) {
+        background-color: #f9e3a1;
+    }
+    #quickModal .card-body {
+        min-height: 150px;
+        overflow-y: scroll;
+        height: 175px;
+    }
+    #myModal-popup .modal-content {
+        /*margin: auto;*/
+        display: block;
+        width: 1200px;
+        /*width: 100%;*/
+        /*max-width: 2000px;*/
+    }
+    #myModal-popup .modal-header {
+        border-bottom: 1px solid transparent;
+    }
+
+    @media screen and (max-width: 1190px) {
+        #myModal-popup .modal-content {
+            margin: auto;
+            display: block;
+            /*width: 1200px;*/
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+    
+    
+
+
+
+
+
+
+
+/* footer */
+
+.sub-footer {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* LOGO SECTION */
+.sub-footer__logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 20px;
+    background: lightblue;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sub-footer__logos img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* BLUE SECTION */
+.sub-footer__bottom {
+    background: rgb(12, 59, 110);
+    color: #fff;
+    padding: 12px;
+    font-size: 15px;
+    height: auto;              /* fixed height à¤¹à¤à¤¾à¤à¤ */
+    display: flex;
+    flex-direction: column;    /* mobile default column */
+    align-items: center;
+    text-align: center;
+}
+
+.sub-footer__text {
+  margin-bottom: 0px;
+  line-height: 1.6;
+   max-width: 1040px;
+}
+
+.footer-tnc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.footer-tnc a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-tnc a:hover {
+  color: #007bff;
+}
+
+/* Logo section */
+.sub-footer__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sub-footer__right img {
+    max-height: 50px;
+    height: auto;
+}
+
+
+.footer-tnc > div:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* links center me */
+    align-items: center;
+    gap: 20px;                 /* links ke beech spacing */
+}
+
+
+
+
+/* LINKS */
+.sub-footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sub-footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.sub-footer__links a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SECTION */
+.sub-footer__right {
+  display: flex;
+  justify-content: space-between;
+   justify-content: flex-end;   
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sub-footer__right img {
+  height: 55px;
+}
+
+.sub-footer__right span {
+  font-size: 14px;
+}
+
+
+/* Logo section */
+.sub-footer__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sub-footer__right img {
+    max-height: 50px;
+    height: auto;
+}
+
+
+    
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("td").attr("tabindex","0");
+		$("th").attr("tabindex","0");
+		$(".btn").attr("tabindex","0");
+		$("a .btn").attr("tabindex","0");
+	});
+	function allPolicies(id) {
+		
+		var a = "heading";
+		var newid = a + id; 
+		$(".card-header .btn").addClass("collapsed");
+		$(".card-header .btn .fa").addClass("fa-plus").removeClass("fa-minus");
+		$(".collapse").removeClass("show");
+		$("#" + newid +"  .btn").removeClass("collapsed");
+		$("#" + newid +"  .btn .fa").removeClass("fa-plus").addClass("fa-minus");
+		$("#collapse"+id).addClass("show");
+	}
+	function changeTextSize(size) {
+      	if (size=='xx-large'){
+      		document.getElementById("maintext").style.fontSize = "xx-large";
+      	}
+      	if (size=='small'){
+      		document.getElementById("maintext").style.fontSize = "small";
+      	}
+      	if (size=='medium'){
+      		document.getElementById("maintext").style.fontSize = "medium";
+      	}
+    	
+    }
+</script>
+
+	</div>
+	</div>
+	
+	
+ <!-- #####################################Alert ############################### -->
+
+ <!-- added by shiv  -->
+ 
+ 
+ <!-- end here -->
+
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#formErrorDiv").append("<div class='alert alert-primary'><i class='fa fa-exclamation-circle' aria-hidden='true'></i> KPI statistics are updated through a scheduler that runs on hourly basis hence there might be a difference in the counts of both reports at a point of time.</div>");
+	$("#formErrorDiv").fadeTo(6000, 500).slideUp(500, function(){
+	    $("#formErrorDiv").slideUp(500);
+	});
+});
+</script>
+
+</body>
+</html>

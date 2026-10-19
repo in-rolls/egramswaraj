@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+
+<html lang="en-US" class="dyn detail-main-page dir-ltr contents fp-enabled" dir="ltr" style="overflow: visible; height: initial;">
+
+
+
+
+
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LGD - Local Government Directory, Government of India</title>
+     <link rel="icon" href="resource/homebody-resource/images/favicon/lgdTitle1.ico" type="image/x-icon" />
+     <link rel="manifest" href="resource/homebody-resource/images/favicon/manifest.json"> 
+      
+     <!--Favicon-->
+
+    
+
+     
+    <meta content="Local Government Directory, Government of India" name="description">
+    
+    <meta content="" name="keywords">
+	
+	<!DOCTYPE html >
+<html >
+<!-- content="text/html; -->
+<meta  charset=utf-8" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/resource/common-resource/bootstrap-v5.3.7/bootstrap.min.css">
+<script type="text/javascript" src="/resource/common-resource/jquery.min.js"></script>  
+<script type="text/javascript" src="/resource/common-resource/jquery.cookie.js"></script> 
+
+<link rel="stylesheet" href="/resource/dashboard-resource/dist/css/skins/_all-skins.min.css">
+
+<link rel="stylesheet" href="/resource/common-resource/upgrade/css/jquery-ui.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"rel="stylesheet">
+<script type="text/javascript" src='/dwr/engine.js'> </script>
+<script type='text/javascript' src='/dwr/util.js'> </script>
+
+
+
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/bootstrap.bundle.min.js"></script>
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/bootstrap.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/resource/common-resource/jquery.validate.min.js"></script>   
+
+
+<script src="/resource/common-resource/jquery.blockUI.js"></script> 
+
+ 
+
+
+
+
+ <script src="/resource/common-resource/upgrade/js/jquery-ui.min.js"></script>
+ <script src="/resource/common-resource/jquery.format.js"></script> 
+
+ <script src="resource/dashboard-resource/plugins/fastclick/fastclick.min.js"></script>
+ <script src="resource/dashboard-resource/plugins/select2/select2.full.min.js"></script>
+
+<script src="/resource/common-resource/upgrade/js/jquery-migrate.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script defer src="https://egramswaraj.gov.in/pes_analytics/script.js" data-website-id="b6131538-6618-481e-bb6a-e6d4eccd1c80" data-performance="true"></script> <script defer src="https://egramswaraj.gov.in/pes_analytics/recorder.js" data-website-id="b6131538-6618-481e-bb6a-e6d4eccd1c80" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
+
+<script>
+
+	dwr.engine.setErrorHandler(function(message,exception){
+		var form = document.getElementById("ajaxErrorFrom");			
+		form.submit();
+	});
+	window.onerror = noError;
+	
+	function noError() {
+		return true;
+	}
+
+	displayLoadingImage = function() {
+		  $.blockUI({ 
+				theme:true,
+				/* title: 'Loading...', */
+				message: "<div style='text-align: center'><img  src='/resource/dashboard-resource/dist/img/loader-lgd.gif'/></div>"
+		    });  
+		
+	};
+	
+	showLoadingImage = function() {
+		
+		//alert("mk");
+		// $("#dwrloaderModal").show();
+		
+		 $.blockUI({ 
+			theme:true,
+			/* title: 'Loading...', */
+			message: "<div style='text-align: center'><img  src='/resource/dashboard-resource/dist/img/loader-lgd.gif'/></div>"
+	    });  
+	};
+	
+	hideLoadingImage = function(){
+		  $.unblockUI();  
+		
+		// $("#dwrloaderModal").hide();
+		//$("#dwrloaderModal").hide();
+		
+	};
+	
+	 dwr.engine.setPreHook(showLoadingImage);
+	 dwr.engine.setPostHook(hideLoadingImage); 
+	
+	
+	 customAlert = function(message){
+			//alert(message);
+			$("#bsalertbody").text(message);
+			$('#cAlert').modal('show');	
+		};
+	
+	/* $(document).ready(function() {
+		$('#printable').dataTable({
+		});
+	}); */
+	
+	/* Added by Ripunj on 12-01-2015 for Draft alert message */
+	draftModeAlert = function(){
+		alert("Already Draft");
+	}
+	
+	/** 
+	 * The {@code isEmptyObject} used to check object / element  
+	 * is empty or undefined.
+	 */
+	var isEmptyObject = function(obj) {
+		if (jQuery.type(obj) === "undefined" || (obj == null || $.trim(obj).length == 0)) {
+			return true;
+		}
+		return false;
+	};
+	
+	var isParseJson=function(obj){
+		var temp=null;
+		try{
+			temp=$.parseJSON(obj);
+		}catch(err) {
+			temp=null;
+		}
+		return temp;
+	}
+
+	
+	</script>
+	<!-- <div id="cAlert"></div> -->
+		<div class="modal fade" id="cAlert" tabindex="-1" role="dialog" >
+						<div class="modal-dialog" >
+								<div class="modal-content">
+					  				<div class="modal-header">
+					  				<h4 class="modal-title">Alert</h4>
+					   					   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					  				</div>
+					  				<div class="modal-body" id="bsalertbody">
+					        
+					  				</div>
+					     			 
+							</div>
+						</div>
+					</div>
+<!-- Added by Sushil on 17-11-2014 -->
+
+ <link href="/resource/common-resource/bootstrap-v5.3.7/datatable/dataTables.bootstrap5.css" rel="stylesheet"> 
+ 
+ 
+ 
+ 
+
+<!-- DataTables CSS -->
+
+<!-- DataTables JS -->
+
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/datatable/dataTables.js"></script>
+
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/datatable/dataTables.bootstrap5.js"></script>
+
+
+
+
+
+
+    <!--  CSS -->
+    
+    <link href="/resource/common-resource/meeteiMayek.css" rel="stylesheet">
+    <link href="/resource/homebody-resource/css/lgd.css" rel="stylesheet">
+	<script src='/dwr/interface/lgdDwrInitialService.js'></script>
+
+
+
+
+    <script>
+        (function(d) {
+            d.className = "dyn" + d.className.substring(6, d.className.length);
+        })(document.documentElement);
+    </script>
+    <script>
+        window.isRTL = false;
+    </script>
+
+   
+   
+    <!-- <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff"> -->
+    <!--FontAwesome CSS-->
+ 	<link rel="stylesheet" href="/resource/homebody-resource/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <!--JQuery-->
+   <!--  <script src="resource/homebody-resource/js/jquery.min.js"></script> -->
+    
+	<style>
+	.modal-open .modal {
+	    overflow-x: auto !important;
+	   
+	}
+	</style>
+</head>
+<body ng-app="app" block-ui="main" class="ng-scope block-ui block-ui-anim-fade fp-viewing-intro" aria-busy="false" style="overflow: visible; height: initial;">
+
+	<!-- Back To Top  -->
+    <div class="totop" ></div>
+   
+      
+  
+  
+
+		
+ <script type="text/javascript" src="/js/bhashiniScript.js"></script> 
+
+		<script type="text/javascript" src="/js/captcha.js"></script>
+
+   <script>var _JS_IS_LocalEnvironment =('' === 'true');</script>
+   <script>
+   $(function() {
+	   $('.font_resize').on('click', function() {
+	     $(this).text(function(i, text) {
+	       if (text === "A+"){
+	    	   $('body').removeClass("smallfont");
+	    	   $('body').toggleClass("bigfont");
+	       }else if(text === "A-"){
+	    	   $('body').removeClass("bigfont");
+	    	   $('body').toggleClass("smallfont");
+	       }else if(text === "A"){
+	    	   $('body').removeClass("bigfont smallfont");
+	       }
+	      
+	     })
+	     
+	   });
+	 });
+   </script>
+   <button class="navbar-toggler navbar-toggler-right text-white d-block d-lg-none float-right" type="button" data-toggle="collapse" 
+              data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			Menu <i class="fa fa-bars"></i></button>
+    <section class="wrapper section-header-wrapper">
+        <div class="container-fluid container-header">
+            <div class="row">
+                <div class="col-2 col-lg-1 text-center"><img class="m-1 mt-lg-0 logo" src="/resource/homebody-resource/images/logo.png" alt="emblem" title="Home" class="img-fluid header-logo"></div>
+                <div class="col-10 col-lg-6">
+                	<div class="row">
+                		<div class="col-lg-10">
+                		 <p class="mb-1" title="LGD-03">
+                		 <span class="upperlogo box-upper-config d-flex">
+                		 <a href="welcome.do">Government of India</a>&nbsp;|&nbsp;<span class="orangefont"> <a href="welcome.do"> Ministry of Panchayati Raj</a></span> </span>
+                		 <span class="logo">Local Government Directory</span>
+                		<div class="box-base-config">
+                		<span class="lowerlogo  d-flex ">Facilitating Data Standardization, Data Sharing & Interoperability Among eGov Applications</span>
+                		</div> 
+                		
+                		 
+                		
+                		 </p>
+                		  
+                		</div>
+                		
+                		
+                	</div>
+                   
+                </div>
+                
+                
+                 <div class="col-12 col-lg-5 text-left">
+              
+                 <div class="collapse navbar-collapse  d-lg-block" id="navbarResponsive">
+               
+                 
+	                  
+                 
+                 <ul class="navbar-nav navbar-expand-lg mr-auto home_button ">
+                 
+                 
+                 
+                 			
+                              
+                                
+	                                
+									
+	                                 
+	                                 	<li class="nav-item btn px-1">
+	                                 		<a href="#" onclick="javascript:location.href='welcome.do?OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D';"
+	                                 		
+	                                 		 class="nav-link  px-1 ">
+	            										<i class="fa fa-2x fa-home" aria-hidden="true"></i>
+	                                 		</a>
+	                                 	</li>
+	                                 
+									
+								
+								
+								
+								
+
+                        </ul>
+                        </div>
+                 </div>   
+            </div>
+        </div>
+         <!-- BEGIN # MODAL LOGIN -->
+         <div class="modal" id="loginModal" style="z-index: 99999;">
+			<div class="modal-dialog modal-md">
+				<div class="modal-content" id="login-content">
+				</div>
+			</div>
+		</div>
+        
+			
+            <!-- END # MODAL LOGIN -->
+
+    </section>
+    <!-- ///////////////////////////////////////////////Header Section //////////////////////////////////////////////////////////////////////-->
+  <Script type="text/javascript">
+            var viewLoginPopup = function() {
+            	
+            	$.ajax({
+  				  type: "GET",
+  				  url: "loginLdap.htm",
+  				  success: function(data){
+  					    //alert(data);
+  					$("#login-content").html(data);
+					$("#loginModal").modal('show');	
+  	  			  }
+  				});
+            	
+				/* $('#loginPopupFrame').attr('src', "login.htm?x=nonpopup");
+				$('#login-modal').modal('show')	 */
+        	};
+        	
+        	function closeIndexModal(){
+				$('#loginModal').modal('hide');
+			}
+         </Script>
+  
+  
+  
+  
+  
+  
+          <!-- accessibility panel -->
+           <link href="https://fonts.cdnfonts.com/css/open-dyslexic" rel="stylesheet"> 
+           <div   class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget"   id="uw-main"   >    
+           <div class="relative second-panel">       
+	          <h3>Accessibility options by UX4G</h3>       
+	          <div class="uwaw-close" onclick="closeMain()"></div>    
+           </div> 
+           <div class="uwaw-body"> 
+                <div class="h-scroll">          
+             <div class="uwaw-features">             
+               <div class="uwaw-features__item reset-feature" id="featureItem_sp">  
+	                <button id="speak" class="uwaw-features__item__i"  data-uw-reader-content="Enable the UserWay screen reader"   
+	                aria-label="Enable the UserWay screen reader"    aria-pressed="false" > 
+ 		                <span class="uwaw-features__item__icon"><span class="ux4g-icon icon-speaker"> </span> </span>                
+ 		                <span class="uwaw-features__item__name">Text To Speech</span>                
+ 		                <span  class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon_sp" style="display: none"> </span>  
+ 	                </button>             
+                 </div>             
+                 <div class="uwaw-features__item reset-feature" id="featureItem"> 
+                 <button   id="btn-s9"  class="uwaw-features__item__i"  data-uw-reader-content="Enable the UserWay screen reader"   
+                 aria-label="Enable the UserWay screen reader" aria-pressed="false">  
+                 <span class="uwaw-features__item__icon">                   
+                 	<span class="ux4g-icon icon-bigger-text"> </span>  
+                 </span>   
+ 				<span class="uwaw-features__item__name">Bigger Text</span> 
+ 				<div  class="uwaw-features__item__steps reset-steps"     id="featureSteps"  >  
+				 Steps span tags will be dynamically added here 
+ 				</div>                  
+ 				 <span  class="tick-active uwaw-features__item__enabled reset-tick"  id="tickIcon"  style="display: none" ></span>   
+ 			</button>            </div>            <div class="uwaw-features__item reset-feature" id="featureItem-st">               <button                  id="btn-small-text"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >                  <span class="uwaw-features__item__icon">                  <span class="ux4g-icon icon-small-text"> </span> </span                     ><span class="uwaw-features__item__name">Small Text</span>                  <div                     class="uwaw-features__item__steps reset-steps"                     id="featureSteps-st"                     >                     Steps span tags will be dynamically added here                  </div>                  <span                     class="tick-active uwaw-features__item__enabled reset-tick"                     id="tickIcon-st"                     style="display: none"                     >                  </span>               </button>            </div>            <div class="uwaw-features__item reset-feature" id="featureItem-lh">               <button                  id="btn-s12"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >                  <span class="uwaw-features__item__icon">                  <span class="ux4g-icon icon-line-hight"> </span>                  </span>                  <span class="uwaw-features__item__name">Line Height</span>                  <div                     class="uwaw-features__item__steps reset-steps"                     id="featureSteps-lh"                     >                     Steps span tags will be dynamically added here                  </div>                  <span                     class="tick-active uwaw-features__item__enabled reset-tick"                     id="tickIcon-lh"                     style="display: none"                     >                  </span>               </button>            </div>            <div class="uwaw-features__item reset-feature" id="featureItem-ht">               <button                  id="btn-s10"                  onclick="highlightLinks()"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >               <span class="uwaw-features__item__icon">               <span class="ux4g-icon icon-highlight-links"> </span>               </span>               <span class="uwaw-features__item__name">Highlight Links</span>               <span                  class="tick-active uwaw-features__item__enabled reset-tick"                  id="tickIcon-ht"                  style="display: none"                  >               </span>               </button>            </div>            <div class="uwaw-features__item reset-feature" id="featureItem-ts">               <button                  id="btn-s13"                  onclick="increaseAndReset()"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >                  <span class="uwaw-features__item__icon">                  <span class="ux4g-icon icon-text-spacing"> </span>                  </span>                  <span class="uwaw-features__item__name">Text Spacing</span>                  <div                     class="uwaw-features__item__steps reset-steps"                     id="featureSteps-ts"                     >                     Steps span tags will be dynamically added here                  </div>                  <span                     class="tick-active uwaw-features__item__enabled reset-tick"                     id="tickIcon-ts"                     style="display: none"                     >                  </span>               </button>            </div>            <div class="uwaw-features__item reset-feature" id="featureItem-df">               <button                  id="btn-df"                  onclick="toggleFontFeature()"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >               <span class="uwaw-features__item__icon">               <span class="ux4g-icon icon-dyslexia-font"> </span>               </span>               <span class="uwaw-features__item__name">Dyslexia Friendly</span>               <span                  class="tick-active uwaw-features__item__enabled reset-tick"                  id="tickIcon-df"                  style="display: none"                  >               </span>               </button>            </div>            <div class="uwaw-features__item reset-feature" id="featureItem-hi">               <button                  id="btn-s11"                  onclick="toggleImages()"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >               <span class="uwaw-features__item__icon">               <span class="ux4g-icon icon-hide-images"> </span>               </span>               <span class="uwaw-features__item__name">Hide Images</span>               <span                  class="tick-active uwaw-features__item__enabled reset-tick"                  id="tickIcon-hi"                  style="display: none"                  >               </span>               </button>            </div>            <div               class="uwaw-features__item reset-feature"               id="featureItem-Cursor"               >               <button                  id="btn-cursor"                  onclick="toggleCursorFeature()"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >               <span class="uwaw-features__item__icon">               <span class="ux4g-icon icon-cursor"> </span>               </span>               <span class="uwaw-features__item__name">Cursor</span>               <span                  class="tick-active uwaw-features__item__enabled reset-tick"                  id="tickIcon-cursor"                  style="display: none"                  >               </span>               </button>            </div>            <div               class="uwaw-features__item reset-feature"               id="featureItem-ht-dark"               >               <button                  id="dark-btn"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >                  <span class="uwaw-features__item__name">                     <span class="light_dark_icon">                        <input                           type="checkbox"                           class="light_mode uwaw-featugres__item__i"                           id="checkbox"                           />                        <label for="checkbox" class="checkbox-label">                           <i class="fas fa-moon-stars">                           <span class="ux4g-icon icon-moon"></span>                           </i>                           <i class="fas fa-sun">                           <span class="ux4g-icon icon-sun"></span>                           </i>                           <span class="ball"></span>                        </label>                     </span>                     <span class="uwaw-features__item__name">Light-Dark</span>                  </span>                  <span                     class="tick-active uwaw-features__item__enabled reset-tick"                     id="tickIcon-ht-dark"                     style="display: none; pointer-events: none"                     >                  </span>               </button>            </div>    <div class="uwaw-features__item reset-feature" id="featureItem-ic">               <button                  id="btn-invert"                  class="uwaw-features__item__i"                  data-uw-reader-content="Enable the UserWay screen reader"                  aria-label="Enable the UserWay screen reader"                  aria-pressed="false"                  >               <span class="uwaw-features__item__icon">               <span class="ux4g-icon icon-invert"> </span>               </span>               <span class="uwaw-features__item__name">Invert Colors</span>               <span                  class="tick-active uwaw-features__item__enabled reset-tick"                  id="tickIcon-ic"                  style="display: none"                  >               </span>               </button>            </div>         </div>      </div>      Reset Button   </div>   <div class="reset-panel">      copyright accessibility bar      <div class="copyrights-accessibility">         <button class="btn-reset-all" id="reset-all" onclick="resetAll()">         <span class="reset-icon"> </span>         <span class="reset-btn-text">Reset All Settings</span>         </button>         <a href="https://www.ux4g.gov.in" target="_blank" class="copyright-text" contenteditable="false" style="cursor: pointer;">         <span class="uwaw-features__item__name ux4g-copy ux4g-copyright">Created by</span>         <img src="https://www.ux4g.gov.in/assets/img/logo/ux4g-logo.svg" alt="logo" loading="lazy">         </a>      </div>   </div></div><button   id="uw-widget-custom-trigger"   class="uw-widget-custom-trigger"   aria-label="Accessibility Widget"   data-uw-trigger="true"   aria-haspopup="dialog"><img src="data:image/svg+xml,%0A%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_1506)'%3E%3Cpath d='M16 7C15.3078 7 14.6311 6.79473 14.0555 6.41015C13.4799 6.02556 13.0313 5.47894 12.7664 4.83939C12.5015 4.19985 12.4322 3.49612 12.5673 2.81719C12.7023 2.13825 13.0356 1.51461 13.5251 1.02513C14.0146 0.535644 14.6383 0.202301 15.3172 0.0672531C15.9961 -0.0677952 16.6999 0.00151652 17.3394 0.266423C17.9789 0.53133 18.5256 0.979934 18.9101 1.55551C19.2947 2.13108 19.5 2.80777 19.5 3.5C19.499 4.42796 19.1299 5.31762 18.4738 5.97378C17.8176 6.62994 16.928 6.99901 16 7Z' fill='white'/%3E%3Cpath d='M27 7.05L26.9719 7.0575L26.9456 7.06563C26.8831 7.08313 26.8206 7.10188 26.7581 7.12125C25.595 7.4625 19.95 9.05375 15.9731 9.05375C12.2775 9.05375 7.14313 7.67875 5.50063 7.21188C5.33716 7.14867 5.17022 7.09483 5.00063 7.05063C3.81313 6.73813 3.00063 7.94438 3.00063 9.04688C3.00063 10.1388 3.98188 10.6588 4.9725 11.0319V11.0494L10.9238 12.9081C11.5319 13.1413 11.6944 13.3794 11.7738 13.5856C12.0319 14.2475 11.8256 15.5581 11.7525 16.0156L11.39 18.8281L9.37813 29.84C9.37188 29.87 9.36625 29.9006 9.36125 29.9319L9.34688 30.0112C9.20188 31.0206 9.94313 32 11.3469 32C12.5719 32 13.1125 31.1544 13.3469 30.0037C13.5813 28.8531 15.0969 20.1556 15.9719 20.1556C16.8469 20.1556 18.6494 30.0037 18.6494 30.0037C18.8838 31.1544 19.4244 32 20.6494 32C22.0569 32 22.7981 31.0162 22.6494 30.0037C22.6363 29.9175 22.6206 29.8325 22.6019 29.75L20.5625 18.8294L20.2006 16.0169C19.9387 14.3788 20.1494 13.8375 20.2206 13.7106C20.2225 13.7076 20.2242 13.7045 20.2256 13.7013C20.2931 13.5763 20.6006 13.2963 21.3181 13.0269L26.8981 11.0763C26.9324 11.0671 26.9662 11.0563 26.9994 11.0438C27.9994 10.6688 28.9994 10.15 28.9994 9.04813C28.9994 7.94625 28.1875 6.73813 27 7.05Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_1506'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A"><span>Accessibility Options</span></button><!-- accessibility panel end -->
+			
+			
+			<script src="/resource//common-resource/UX4G/weights-v1.js"></script> 
+
+ 			<script>    document.getElementById('uw-widget-custom-trigger2').addEventListener('click', function() {    openMain();  });</script> 
+			
+ 			<link rel="stylesheet" href="/resource/common-resource/UX4G/accesibility-style-v2.1.css"> 
+			<!-- end of accessibility panel -->
+			
+			
+			
+<script>
+  const dropdownToggle = document.getElementById("navbarDropdown");
+  const dropdownMenu = dropdownToggle.nextElementSibling;
+
+  dropdownToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    dropdownMenu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+</script>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <!DOCTYPE html >
+<html >
+<!-- content="text/html; -->
+<meta  charset=utf-8" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/resource/common-resource/bootstrap-v5.3.7/bootstrap.min.css">
+<script type="text/javascript" src="/resource/common-resource/jquery.min.js"></script>  
+<script type="text/javascript" src="/resource/common-resource/jquery.cookie.js"></script> 
+
+<link rel="stylesheet" href="/resource/dashboard-resource/dist/css/skins/_all-skins.min.css">
+
+<link rel="stylesheet" href="/resource/common-resource/upgrade/css/jquery-ui.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"rel="stylesheet">
+<script type="text/javascript" src='/dwr/engine.js'> </script>
+<script type='text/javascript' src='/dwr/util.js'> </script>
+
+
+
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/bootstrap.bundle.min.js"></script>
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/bootstrap.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/resource/common-resource/jquery.validate.min.js"></script>   
+
+
+<script src="/resource/common-resource/jquery.blockUI.js"></script> 
+
+ 
+
+
+
+
+ <script src="/resource/common-resource/upgrade/js/jquery-ui.min.js"></script>
+ <script src="/resource/common-resource/jquery.format.js"></script> 
+
+ <script src="resource/dashboard-resource/plugins/fastclick/fastclick.min.js"></script>
+ <script src="resource/dashboard-resource/plugins/select2/select2.full.min.js"></script>
+
+<script src="/resource/common-resource/upgrade/js/jquery-migrate.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script defer src="https://egramswaraj.gov.in/pes_analytics/script.js" data-website-id="b6131538-6618-481e-bb6a-e6d4eccd1c80" data-performance="true"></script> <script defer src="https://egramswaraj.gov.in/pes_analytics/recorder.js" data-website-id="b6131538-6618-481e-bb6a-e6d4eccd1c80" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
+
+<script>
+
+	dwr.engine.setErrorHandler(function(message,exception){
+		var form = document.getElementById("ajaxErrorFrom");			
+		form.submit();
+	});
+	window.onerror = noError;
+	
+	function noError() {
+		return true;
+	}
+
+	displayLoadingImage = function() {
+		  $.blockUI({ 
+				theme:true,
+				/* title: 'Loading...', */
+				message: "<div style='text-align: center'><img  src='/resource/dashboard-resource/dist/img/loader-lgd.gif'/></div>"
+		    });  
+		
+	};
+	
+	showLoadingImage = function() {
+		
+		//alert("mk");
+		// $("#dwrloaderModal").show();
+		
+		 $.blockUI({ 
+			theme:true,
+			/* title: 'Loading...', */
+			message: "<div style='text-align: center'><img  src='/resource/dashboard-resource/dist/img/loader-lgd.gif'/></div>"
+	    });  
+	};
+	
+	hideLoadingImage = function(){
+		  $.unblockUI();  
+		
+		// $("#dwrloaderModal").hide();
+		//$("#dwrloaderModal").hide();
+		
+	};
+	
+	 dwr.engine.setPreHook(showLoadingImage);
+	 dwr.engine.setPostHook(hideLoadingImage); 
+	
+	
+	 customAlert = function(message){
+			//alert(message);
+			$("#bsalertbody").text(message);
+			$('#cAlert').modal('show');	
+		};
+	
+	/* $(document).ready(function() {
+		$('#printable').dataTable({
+		});
+	}); */
+	
+	/* Added by Ripunj on 12-01-2015 for Draft alert message */
+	draftModeAlert = function(){
+		alert("Already Draft");
+	}
+	
+	/** 
+	 * The {@code isEmptyObject} used to check object / element  
+	 * is empty or undefined.
+	 */
+	var isEmptyObject = function(obj) {
+		if (jQuery.type(obj) === "undefined" || (obj == null || $.trim(obj).length == 0)) {
+			return true;
+		}
+		return false;
+	};
+	
+	var isParseJson=function(obj){
+		var temp=null;
+		try{
+			temp=$.parseJSON(obj);
+		}catch(err) {
+			temp=null;
+		}
+		return temp;
+	}
+
+	
+	</script>
+	<!-- <div id="cAlert"></div> -->
+		<div class="modal fade" id="cAlert" tabindex="-1" role="dialog" >
+						<div class="modal-dialog" >
+								<div class="modal-content">
+					  				<div class="modal-header">
+					  				<h4 class="modal-title">Alert</h4>
+					   					   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					  				</div>
+					  				<div class="modal-body" id="bsalertbody">
+					        
+					  				</div>
+					     			 
+							</div>
+						</div>
+					</div>
+<!-- Added by Sushil on 17-11-2014 -->
+
+ <link href="/resource/common-resource/bootstrap-v5.3.7/datatable/dataTables.bootstrap5.css" rel="stylesheet"> 
+ 
+ 
+ 
+ 
+
+<!-- DataTables CSS -->
+
+<!-- DataTables JS -->
+
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/datatable/dataTables.js"></script>
+
+
+<script src="/resource/common-resource/bootstrap-v5.3.7/datatable/dataTables.bootstrap5.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src='/dwr/engine.js'> </script>
+<script type='text/javascript' src='/dwr/util.js'> </script>
+
+
+
+<head>
+
+  <script type="text/javascript" src="/dwr/interface/dwrReportService.js"></script>
+  <script type="text/javascript" src="/dwr/interface/lgdDwrDistrictService.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#filterTable").DataTable({
+        searching: false,
+        paging: true,
+        pageLength: 100,
+        info: false,
+        destroy: true,
+        dom: 'Bfrtip'
+    });
+
+});
+
+getDistrictList=function(stateCode){
+	$('#districtFilter option[value != ""]').remove();
+	lgdDwrDistrictService.getDistrictList(parseInt(stateCode), {
+		callback : function( result ) {
+			var options = $("#districtFilter"); 
+			var option = $("<option/>");
+			$(option).val("-1").text("----------Select----------");
+			options.append(option);
+			jQuery.each(result, function(index, obj) {
+				var option = $("<option />");
+				option.val(obj.districtCode).text(obj.districtNameEnglish);
+				options.append(option);
+			});
+		},
+		errorHandler : function(errorString, exception) { alert(errorString + " Vinay"); alert(exception); },
+		async : true
+	});
+}
+
+getRecentChangeFn = function() {
+    var table = $('#filterTable').DataTable();
+    stateCode = $("#stateFilter").val();
+    districtCode = $("#districtFilter").val();
+  
+
+    $("#preloader").show();
+    districtCode = districtCode != null ? districtCode : -1;
+    table.clear().destroy();
+    $("#recentModificationData").empty();
+    dwrReportService.getLgdRecentModificationsbyFilter(parseInt(stateCode), parseInt(districtCode), -1, -1, {
+        callback: function(data) {
+          
+            var tbodyTmp = $("#recentModificationData");
+            
+            jQuery.each(data, function(index, obj) {
+                var mod = index % 2;
+                var templateTR = $("<tr/>");
+                
+                if (mod == 0) {
+                    templateTR.addClass("even");
+                } else {
+                    templateTR.addClass("odd");
+                }
+                
+                templateTR = createTableWithData(templateTR, obj);
+                tbodyTmp.append(templateTR);
+            });
+            
+            $('#filterTable').DataTable({
+                destroy: true,
+                pageLength: 10,
+                order: [[8, 'desc']]
+            });
+            $("#preloader").hide();
+        },
+        errorHandler: function(exception) { customAlert(exception); },
+        async: true
+    });
+}
+
+
+
+
+
+createTDwithData=function(dataValue){
+	var templateTD = $("<td/>");
+	
+	
+	var templateLbl = $("<span/>");
+	templateLbl.html(dataValue);
+	
+	templateTD.append(templateLbl);
+	return templateTD;
+	
+}
+
+createTDwithDataWithAnchor=function(dataValue){
+	var templateTD = $("<td/>");
+	
+	var templatea = $("<a/>");
+	templatea.attr("href","downloadDraftGovernementOrder.do?filename="+dataValue+"&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D");
+	//href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D"
+			
+	var templateLbl = $("<span/>");
+	templateLbl.html(dataValue);
+	
+	templatea.append(templateLbl);
+	
+	templateTD.append(templatea);
+	return templateTD;
+	
+}
+
+createTableWithData=function(templateTR,obj){
+	col0=createTDwithData(obj.id);
+	col1=createTDwithData(obj.transactionId);
+	col2=createTDwithData(obj.stateName);
+	col3=createTDwithData(obj.districtName);
+	col4=createTDwithData(obj.operationName);
+	col5=createTDwithData(obj.description);
+	col6=createTDwithData(obj.username);
+	col7=createTDwithDataWithAnchor(obj.fileTimestamp);
+	col8=createTDwithData(obj.transactionDateTime.substring(0,16));
+	templateTR.append(col0);
+	templateTR.append(col1);
+	templateTR.append(col2);
+	templateTR.append(col3);
+	templateTR.append(col4);
+	templateTR.append(col5);
+	templateTR.append(col6);
+	templateTR.append(col7);
+	templateTR.append(col8);
+	return templateTR;
+} 
+
+function setStateCode(object){
+	$("#nodal_state").val($(object).find('option:selected').val());
+	var str=$(object).find('option:selected').text();
+	$("#state_name").val(str.replace("State",""));
+/* 	if(code=='')
+		{$("#nodal_state").val('-1');}
+	else
+		{$("#nodal_state").val(code);} */
+}
+/*
+function setDeptCode(code){
+	if(code=='')
+		{$("#nodal_dept").val('-1');}
+	else
+		{$("#nodal_dept").val(code);}
+} */
+
+function validateDeptState(){
+	var deptVal=$("#nodal_dept").val();
+	var stateVal=$("#nodal_state").val();
+	var captcha=$("#captchaAnswer").val();
+	/* if( deptVal=="0"){
+		alert("Please Select Departent");
+		return false;
+	} */
+	
+	if( stateVal=="0"){
+		alert("Please Select State");
+		return false;
+	}
+	 
+	if( captcha==""){
+		alert("Please Enter captcha")
+		return false;
+	}
+	
+	return true;
+}
+
+</script>
+
+<style type="text/css">
+.redborder {
+	border: 1px solid red;
+}
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+select.form-control{
+    display: inline;
+    width: 200px;
+    margin-left: 25px;
+  }
+</style>
+</head>
+
+</head>
+<!-- onload="setStateCode('')" -->
+	<body>
+		<section class="content">
+                <div class="row">
+                    <section class="col-lg-12">
+           
+                    
+                    <div class="card">
+                    <div class="card-header with-border">
+                     
+                      	<h4> Recent Changes/Modifications done in Local Government Directory (LGD)</h4>
+                      	
+											
+                                  
+                    </div>
+                    <div id="displayHierarchy" class="row align-items-center mb-3">
+  
+  <label class="col-sm-2 col-form-label text-end">
+    Select State
+  </label>
+  <div class="col-sm-3">
+    <select id="stateFilter" class="form-control" onchange="getRecentChangeFn(); getDistrictList(this.value)">
+      <option value="-1">Select</option>
+      
+        <option value="35">Andaman And Nicobar Islands</option>
+      
+        <option value="28">Andhra Pradesh</option>
+      
+        <option value="12">Arunachal Pradesh</option>
+      
+        <option value="18">Assam</option>
+      
+        <option value="10">Bihar</option>
+      
+        <option value="4">Chandigarh</option>
+      
+        <option value="22">Chhattisgarh</option>
+      
+        <option value="7">Delhi</option>
+      
+        <option value="30">Goa</option>
+      
+        <option value="24">Gujarat</option>
+      
+        <option value="6">Haryana</option>
+      
+        <option value="2">Himachal Pradesh</option>
+      
+        <option value="1">Jammu And Kashmir</option>
+      
+        <option value="20">Jharkhand</option>
+      
+        <option value="29">Karnataka</option>
+      
+        <option value="32">Kerala</option>
+      
+        <option value="37">Ladakh</option>
+      
+        <option value="31">Lakshadweep</option>
+      
+        <option value="23">Madhya Pradesh</option>
+      
+        <option value="27">Maharashtra</option>
+      
+        <option value="14">Manipur</option>
+      
+        <option value="17">Meghalaya</option>
+      
+        <option value="15">Mizoram</option>
+      
+        <option value="13">Nagaland</option>
+      
+        <option value="21">Odisha</option>
+      
+        <option value="34">Puducherry</option>
+      
+        <option value="3">Punjab</option>
+      
+        <option value="8">Rajasthan</option>
+      
+        <option value="11">Sikkim</option>
+      
+        <option value="33">Tamil Nadu</option>
+      
+        <option value="36">Telangana</option>
+      
+        <option value="38">The Dadra And Nagar Haveli And Daman And Diu</option>
+      
+        <option value="16">Tripura</option>
+      
+        <option value="5">Uttarakhand</option>
+      
+        <option value="9">Uttar Pradesh</option>
+      
+        <option value="19">West Bengal</option>
+      
+    </select>
+  </div>
+
+  <label class="col-sm-2 col-form-label text-end">
+    Select District
+  </label>
+  <div class="col-sm-3">
+    <select id="districtFilter" class="form-control" onchange="getRecentChangeFn()"></select>
+  </div>
+
+</div>
+
+                     
+                    <div class="card-body">
+                    
+                    <div class="state-filter">
+                     
+                      </div>
+                      <div class="table-responsive ">
+                       
+								<table class="table table-striped table-bordered border" id="filterTable" style="width:98% !important; table-layout:fixed">
+								
+										<thead>
+											<tr>
+												
+												<th width="5%">S.NO</th>
+												<th width="10%">Transaction Id</th>
+												<th width="10%" >State/UTs </th>
+												<th width="10%">District </th>
+												<th width="15%">Operation Name</th>
+												<th width="15%">Description</th>
+												<th width="10%">User Name</th>
+												<th width="10%">Government Order</th>
+												<th width="10%">Operation Date & Time</th>
+												
+											</tr>
+										</thead>
+										
+										<tbody id="recentModificationData">
+										 	
+											<tr>
+												<td align="center">1</td>
+												<td>1040145</td>
+												<td>Uttarakhand</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Municipality &#039;Kaladhungi&#039; (Code:248458).</td>
+												
+												<td>Sushil Kumar</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131609_17_10_2026_15_20_53.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131609_17_10_2026_15_20_53.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-17 15:15
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">2</td>
+												<td>1040144</td>
+												<td>Uttarakhand</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Municipality &#039;Champawat&#039; (Code:248451).</td>
+												
+												<td>Sushil Kumar</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131609_17_10_2026_15_19_23.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131609_17_10_2026_15_19_23.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-17 15:15
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">3</td>
+												<td>1040143</td>
+												<td>Uttarakhand</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Municipality &#039;Chamoli Gopeshwar&#039; (Code:248414).</td>
+												
+												<td>Sushil Kumar</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131609_17_10_2026_15_15_48.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131609_17_10_2026_15_15_48.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-17 15:15
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">4</td>
+												<td>1040142</td>
+												<td>Uttarakhand</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Municipal Corporations &#039;Almora&#039; (Code:248449).</td>
+												
+												<td>Sushil Kumar</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131609_17_10_2026_15_14_58.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131609_17_10_2026_15_14_58.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-17 15:15
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">5</td>
+												<td>1040138</td>
+												<td>Punjab</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Municipal Corporations &#039;Phagwara&#039; (Code:248286).</td>
+												
+												<td>Rajinder Rai</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131601_16_10_2026_15_49_07.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131601_16_10_2026_15_49_07.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 15:51
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">6</td>
+												<td>1040136</td>
+												<td>Madhya Pradesh</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Mundri&#039; (Code:143318).</td>
+												
+												<td>Deepak Gautam</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile846_16_10_2026_11_30_43.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile846_16_10_2026_11_30_43.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 10:50
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">7</td>
+												<td>1040135</td>
+												<td>Madhya Pradesh</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Kursibada&#039; (Code:144236).</td>
+												
+												<td>Deepak Gautam</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile846_16_10_2026_11_28_56.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile846_16_10_2026_11_28_56.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 10:50
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">8</td>
+												<td>1040134</td>
+												<td>Madhya Pradesh</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Katangi&#039; (Code:132165).</td>
+												
+												<td>Deepak Gautam</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile846_16_10_2026_11_27_49.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile846_16_10_2026_11_27_49.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 10:50
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">9</td>
+												<td>1040133</td>
+												<td>Madhya Pradesh</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Akya Bika&#039; (Code:143267).</td>
+												
+												<td>Deepak Gautam</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile846_16_10_2026_11_25_46.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile846_16_10_2026_11_25_46.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 11:27
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">10</td>
+												<td>1040132</td>
+												<td>Bihar</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Town Panchayat &#039;Jagdishpur&#039; (Code:249662).</td>
+												
+												<td>Devendra Suman</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131476_16_10_2026_10_50_35.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131476_16_10_2026_10_50_35.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 10:50
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">11</td>
+												<td>1040131</td>
+												<td>Bihar</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Municipal Corporations &#039;Madhubani&#039; (Code:249579).</td>
+												
+												<td>Devendra Suman</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131476_16_10_2026_10_49_45.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131476_16_10_2026_10_49_45.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-16 10:50
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">12</td>
+												<td>1040124</td>
+												<td>Maharashtra</td>
+												<td>N/A</td>
+												<td>Create New village</td>
+												<td>Village, Village Name Kenjal Punarv with Village Code 962639 is formed in the State Maharashtra, District Satara, Sub District Karad.</td>
+												
+												<td>Vikas Mahadu Gajare</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131581_15_10_2026_15_31_57.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131581_15_10_2026_15_31_57.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 15:33
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">13</td>
+												<td>1040123</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Covered Area of Localbody : Surat (251231)has changed.</td>
+												
+												<td>Rami Prakashkumar Parshotambhai</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=SMC_1792052089034.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												SMC_1792052089034.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 13:44
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">14</td>
+												<td>1040122</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Modify ward coverage</td>
+												<td>Ward Coverage is modified</td>
+												
+												<td>PRASANTA KUMAR PUHAN</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 13:09
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">15</td>
+												<td>1040116</td>
+												<td>Madhya Pradesh</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Dhurkuta&#039; (Code:138226).</td>
+												
+												<td>Deepak Gautam</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile846_15_10_2026_12_33_15.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile846_15_10_2026_12_33_15.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 12:34
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">16</td>
+												<td>1040115</td>
+												<td>Madhya Pradesh</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Badpur&#039; (Code:143271).</td>
+												
+												<td>Deepak Gautam</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile846_15_10_2026_12_26_09.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile846_15_10_2026_12_26_09.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 12:33
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">17</td>
+												<td>1040114</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Modify ward coverage</td>
+												<td>Ward Coverage is modified</td>
+												
+												<td>PRASANTA KUMAR PUHAN</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 12:10
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">18</td>
+												<td>1040113</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Modify ward coverage</td>
+												<td>Ward Coverage is modified</td>
+												
+												<td>PRASANTA KUMAR PUHAN</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-15 11:18
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">19</td>
+												<td>1040107</td>
+												<td>Jammu And Kashmir</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (Urban)</td>
+												<td>Change in the covered area for the Notified Area Council &#039;Municipal Council Sopore&#039; (Code:248149).</td>
+												
+												<td>Dhirendra Sharma</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131562_14_10_2026_19_40_04.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131562_14_10_2026_19_40_04.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 19:43
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">20</td>
+												<td>1040106</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Deuli&#039; (Code:121758).</td>
+												
+												<td>SURYA NARAYAN DASH</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile844_14_10_2026_15_30_58.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile844_14_10_2026_15_30_58.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:32
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">21</td>
+												<td>1040105</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Vaswari(523756)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Olpad(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_22_01.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_22_01.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:09
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">22</td>
+												<td>1040104</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Utran(930118),Variyaav(930114),Chhaprabhatha(930116),Amroli(930117),Kosad(930115)...etc  has been shifted to Sub-district Katargam(District Surat) from Sub-district Adajan(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_20_48.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_20_48.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:17
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">23</td>
+												<td>1040103</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Umra(523753)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Olpad(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_19_28.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_19_28.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:09
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">24</td>
+												<td>1040102</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Umber(524197),Talangpor (Og)(524212),Kansad(930319),Pali (Og)(524213),Pardi Kanade (Ct)(524207),Sachin (Ct)(524208)...etc  has been shifted to Sub-district Udhna(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_18_56.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_18_56.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:17
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">25</td>
+												<td>1040101</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Segwasyadla(523757)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Olpad(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_18_11.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_18_11.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:17
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">26</td>
+												<td>1040100</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Saroli(524175),Saniya Hemad(524176)...etc  has been shifted to Sub-district Puna(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_17_30.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_17_30.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:17
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">27</td>
+												<td>1040099</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Samaria(521505)...etc  has been shifted to Sub-district Garudeshwar(District Narmada) from Sub-district Nandod(District Narmada) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_16_57.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_16_57.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:17
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">28</td>
+												<td>1040098</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Mota Varachha(930119)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Adajan(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_15_56.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_15_56.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:10
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">29</td>
+												<td>1040096</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Laskana(524118),Kathodara(524132),Pasodara(524130),Khadsad(524131)...etc  has been shifted to Sub-district Puna(District Surat) from Sub-district Kamrej(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_15_14.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_15_14.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:10
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">30</td>
+												<td>1040095</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Kumbharia(524179)...etc  has been shifted to Sub-district Puna(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_14_36.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_14_36.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:12
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">31</td>
+												<td>1040094</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Gothan(523755)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Olpad(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_12_44.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_12_44.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:12
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">32</td>
+												<td>1040093</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Gabheni(930175),Bhestan(930172),Unn(930178),Sonari(930173)...etc  has been shifted to Sub-district Udhna(District Surat) from Sub-district Majura(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_12_02.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_12_02.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:12
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">33</td>
+												<td>1040092</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Bhesan(524166),Malgama(524165),Okha(524167),Chichi(524168),Vanakala(524169),Ichchhapor (Ct)(524204)...etc  has been shifted to Sub-district Adajan(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_11_15.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_11_15.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:10
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">34</td>
+												<td>1040091</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Bhatpor (Og)(524210)...etc  has been shifted to Sub-district Adajan(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_10_32.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_10_32.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:10
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">35</td>
+												<td>1040090</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Bhatha (Og)(524211)...etc  has been shifted to Sub-district Adajan(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_10_02.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_10_02.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:10
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">36</td>
+												<td>1040089</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Bharthana Kosad (Ct)(524203)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Chorasi(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_09_35.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_09_35.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:09
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">37</td>
+												<td>1040088</td>
+												<td>Gujarat</td>
+												<td>N/A</td>
+												<td>Shift village between Sub-Districts(State)</td>
+												<td>The Village Abrama(524116),Kathor(524104),Velanja(524103),Bhada(524115),Valak(524117)...etc  has been shifted to Sub-district Abrama(District Surat) from Sub-district Kamrej(District Surat) in Gujarat.</td>
+												
+												<td>Jignasha Shroff</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile131553_14_10_2026_15_09_08.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile131553_14_10_2026_15_09_08.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:09
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">38</td>
+												<td>1040087</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Reactivate an Invalidated Local body</td>
+												<td>The Localbody &#039;Luni&#039; (Code:39775) is reactivated with effect from 14/10/2026.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile800578_14_10_2026_15_00_00.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile800578_14_10_2026_15_00_00.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 15:00
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">39</td>
+												<td>1040086</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Change in the covered area for the Village Panchayat &#039;Deuli&#039; (Code:121758).</td>
+												
+												<td>SURYA NARAYAN DASH</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=eSignGOFile844_14_10_2026_13_29_25.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												eSignGOFile844_14_10_2026_13_29_25.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 13:30
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">40</td>
+												<td>1040078</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Modify ward coverage</td>
+												<td>Ward Coverage is modified</td>
+												
+												<td>PRASANTA KUMAR PUHAN</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 12:21
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">41</td>
+												<td>1040076</td>
+												<td>Odisha</td>
+												<td>N/A</td>
+												<td>Modify ward coverage</td>
+												<td>Ward Coverage is modified</td>
+												
+												<td>PRASANTA KUMAR PUHAN</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 11:48
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">42</td>
+												<td>1040073</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Map Parliament/Assembly Constituency to local Govt</td>
+												<td>The coverage of Assembly Constituency (Code:531) is defined.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:37
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">43</td>
+												<td>1040072</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Hanuman Nagar (294483)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102945_1791954280176.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102945_1791954280176.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:28
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">44</td>
+												<td>1040071</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Hajipur (262473)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102652_1791954193641.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102652_1791954193641.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:28
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">45</td>
+												<td>1040070</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Kasba Dahra (34318)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102945_1791954149857.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102945_1791954149857.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:31
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">46</td>
+												<td>1040069</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Madho Garh (34320)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102945_1791954104576.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102945_1791954104576.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:31
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">47</td>
+												<td>1040068</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Dhahalawas (34310)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102945_1791954053337.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102945_1791954053337.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:28
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">48</td>
+												<td>1040067</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Mehri Rajviyan (36938)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102945_1791954018806.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102945_1791954018806.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:28
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">49</td>
+												<td>1040066</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Rohilakalan (39815)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102652_1791953927791.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102652_1791953927791.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:28
+												</td>
+												
+											</tr>
+										
+											<tr>
+												<td align="center">50</td>
+												<td>1040065</td>
+												<td>Rajasthan</td>
+												<td>N/A</td>
+												<td>Change Covered Land Region (PRI)</td>
+												<td>Covered Area of Localbody : Kharwa (262836)has changed.</td>
+												
+												<td>ruchi mittal</td>
+												<td>
+												<a href="downloadDraftGovernementOrder.do?filename=govOrder20261014-102652_1791953881343.pdf&OWASP_CSRFTOKEN=82QA-94E9-WB5N-EAK9-ELQB-WAFU-OS98-MF2D">
+												govOrder20261014-102652_1791953881343.pdf
+													</a>
+												
+												
+												</td>
+												
+												<td>
+												   2026-10-14 10:28
+												</td>
+												
+											</tr>
+										
+									</tbody>
+								</table>
+								</div> 
+						
+								<div id="preloader"  class="center-screen" style="display: none;">
+			  			<div class="spinner-border" role="status" style="height:8rem; width:8rem;">
+	 							<span class="sr-only">Loading...</span>
+						</div>
+		  			</div>   
+                	</div>
+		            <div class="card-footer">                    
+						    <button type="button" class="btn btn-danger float-end" id="close" name="close" value="Close" onclick="location.href='welcome.do'">
+						        <i class="fa fa-times-circle"></i> Close
+						    </button>
+						</div>
+			          </div>
+                        
+                    </section>
+                </div>
+            </section>
+	</body>
+</html>
+    
+            <footer class="scroll fp-auto-height footer-mainpage fp-section fp-table" id="footer-main" data-anchor="footer">             
+               <style>
+				  .socialAnchor {
+				    width: 40px;
+				    height: 40px;
+				  }
+             </style>
+                <div class="container">
+                    <div class="row title">
+
+                        <div class="col-12 mx-auto text-center">
+                            <a href="https://panchayat.gov.in/" title="Panchayat Raj( External Site that opens in a new window)" target="_blank">
+                             <img src="/resource/homebody-resource/images/panchayati-raj.png" class="img-fluid center-block" alt="panchayat Raj Logo" title="panchayat Raj Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row title">
+                        <div class="col-12 mx-auto ad_images">
+                            <ul>
+
+                                <li>
+                                    <a href="https://www.digitalindia.gov.in/" title="Digital India( External Site that opens in a new window)" target="_blank"> <img src="/resource/homebody-resource/images/digital-india-logo.png" width="115" height="39" alt="Digital India Logo" title="Digital India Logo"></a>
+                                </li>
+                                <li>
+                                    <a href="https://data.gov.in/" title="Data Portal (External Site that opens in a new window)" target="_blank"><img src="/resource/homebody-resource/images/data-gov-logo.png" width="140" height="40" alt="Data.gov.in Logo" title="Data.gov.in Logo"></a>
+                                </li>
+                                <li>
+                                    <a href="https://india.gov.in/" title="NPI (External Site that opens in a new window)" target="_blank"><img src="/resource/homebody-resource/images/india-gov-logo.png" width="61" height="40" alt="India.gov.in Logo" title="India.gov.in Logo"></a>
+                                </li>
+                                <li>
+                                    <a href="https://meity.gov.in/" title="MeitY (External Site that opens in a new window)" target="_blank"><img src="/resource/homebody-resource/images/meity.png" alt="MeitY Logo" title="MeitY Logo"></a>
+                                </li>
+                                <li>
+                                    <a href="https://pmindia.gov.in/" title="PM INDIA (External Site that opens in a new window)" target="_blank"><img src="/resource/homebody-resource/images/pm-india-logo.png" alt="PM India Logo" title="PM India Logo"></a>
+                                </li>
+                                 <li>
+                                    <a href="https://www.nic.in/" title="NIC (External Site that opens in a new window)" target="_blank"><img src="/resource/homebody-resource/images/Nic_new.png" alt="NIC Logo" title="NIC Logo"></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row title text-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                            <p class="whitefont">
+                                Site is designed, hosted and maintained by National Informatics Centre. Contents on this website is owned, updated and managed by the Panchayats and State Panchayati Raj Department as a part of e-Panchayat MMP of Ministry of Panchayati Raj.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                       <!--  <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                            <div class="copyright">Designed and Developed by National Informatics Centre. </div>
+                        </div> -->
+
+                    </div>
+<div class="row justify-content-center">
+  <div class="col-auto">
+    <ul class="footer_links text-center extlink p-0 pt-1 mb-1 list-group list-group-horizontal justify-content-center">
+      <li class="p-0 m-0 mb-1 list-group-item">
+        <a class="socialAnchor" href="https://www.facebook.com/ministryofpanchayatiraj" target="_blank">
+          <img title="Facebook Icon" alt="Facebook Icon" src="/resource/homebody-resource/images/social-media/icon_facebook.png">
+        </a>
+      </li>
+      <li class="p-0 m-0 mb-1 list-group-item">
+        <a class="socialAnchor" href="https://twitter.com/mopr_goi" target="_blank">
+          <img title="Twitter Icon" alt="Twitter Icon" src="/resource/homebody-resource/images/social-media/icon_twitter.png">
+        </a>
+      </li>
+      <li class="p-0 m-0 mb-1 list-group-item">
+        <a class="socialAnchor" href="https://www.youtube.com/channel/UCZpNLrx-YCGg9ixfuUrQ_dw" title="Channel 1" target="_blank">
+          <img title="Youtube Channel 1 Icon" alt="Youtube Channel 1 Icon" src="/resource/homebody-resource/images/social-media/icon_youtube_red.png">
+        </a>
+      </li>
+      <li class="p-0 m-0 mb-1 list-group-item">
+        <a class="socialAnchor" href="https://www.youtube.com/channel/UCEVBqQXipAuDqZsinwto4nA/videos" title="Channel 2" target="_blank">
+          <img title="Youtube Channel 2 Icon" alt="Youtube Channel 2 Icon" src="/resource/homebody-resource/images/social-media/icon_youtube_black.png">
+        </a>
+      </li>
+      <li class="p-0 m-0 mb-1 list-group-item">
+        <a class="socialAnchor" href="https://instagram.com/ministryofpanchayatiraj?utm_medium=copy_link" title="MoPR Instagram" target="_blank">
+          <img title="Instagram Icon" alt="Instagram Icon" src="/resource/homebody-resource/images/social-media/instagram.png">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+                </div>
+
+            </footer>
+            
+            
+            
+            
+
+    
+    
+    
+    
+    <!-- Supporting document Modal ends -->
+	
+	
+              <script type="text/javascript" defer="">
+            setTimeout(function() {
+                var a = document.createElement("script");
+                var b = document.getElementsByTagName("script")[0];
+                //a.src = document.location.protocol + "//script.crazyegg.com/pages/scripts/0039/8964.js?" + Math.floor(new Date().getTime() / 3600000);
+                a.defer = true;
+                a.type = "text/javascript";
+                b.parentNode.insertBefore(a, b)
+            }, 1);
+        </script>
+
+        <!-- counter-->
+        <script>
+            $('.count').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        </script>
+
+    <!-- #####################################################################
+   For Modal Login
+   ##################################################################### -->
+        <script>
+            $(function() {
+
+                var $formLogin = $('#login-form');
+                var $formLost = $('#lost-form');
+                var $divForms = $('#div-forms');
+                var $modalAnimateTime = 300;
+                var $msgAnimateTime = 150;
+                var $msgShowTime = 2000;
+
+                
+
+                $('#login_lost_btn').click(function() {
+                    modalAnimate($formLogin, $formLost);
+                });
+                $('#lost_login_btn').click(function() {
+                    modalAnimate($formLost, $formLogin);
+                });
+
+                function modalAnimate($oldForm, $newForm) {
+                    var $oldH = $oldForm.height();
+                    var $newH = $newForm.height();
+                    $divForms.css("height", $oldH);
+                    $oldForm.fadeToggle($modalAnimateTime, function() {
+                        $divForms.animate({
+                            height: $newH
+                        }, $modalAnimateTime, function() {
+                            $newForm.fadeToggle($modalAnimateTime);
+                        });
+                    });
+                }
+
+                function msgFade($msgId, $msgText) {
+                    $msgId.fadeOut($msgAnimateTime, function() {
+                        $(this).text($msgText).fadeIn($msgAnimateTime);
+                    });
+                }
+
+                function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+                    var $msgOld = $divTag.text();
+                    msgFade($textTag, $msgText);
+                    $divTag.addClass($divClass);
+                    $iconTag.removeClass("glyphicon-chevron-right");
+                    $iconTag.addClass($iconClass + " " + $divClass);
+                    setTimeout(function() {
+                        msgFade($textTag, $msgOld);
+                        $divTag.removeClass($divClass);
+                        $iconTag.addClass("glyphicon-chevron-right");
+                        $iconTag.removeClass($iconClass + " " + $divClass);
+                    }, $msgShowTime);
+                }
+            });
+        </script>
+		 <!--    For Top scrolling button              -->
+    <script type="text/javascript">        
+		$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.totop').fadeIn();
+        } else {
+            $('.totop').fadeOut();
+        }
+    });
+
+    // scroll body to 0px on click
+    $('.totop').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1600);
+        return false;
+    });
+});
+    </script>
+    </body>
