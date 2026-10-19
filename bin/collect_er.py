@@ -111,7 +111,9 @@ def gp_lists(out, sc, delay):
             if rows is None:  # times out for Maharashtra and Punjab
                 q = f"findElectedStateBpByZpCode.do?stateCode={sc}&year={YEAR}&zpCode={zp}"
                 rows = get(out, q, f"{sc}/bp_alt_{zp}.json", delay)
-            bps = [b["bpCode"] for b in rows or [] if b.get("gperCount", 1)]
+            # The fallback endpoint's rows carry gperCount null, not 0: skip a
+            # block only when the site says it has no GP members.
+            bps = [b["bpCode"] for b in rows or [] if b.get("gperCount") != 0]
             bps = [b for b in bps if str(b).isdigit()]
         for bp in bps:
             q = f"findGpNameAndERCountByBpCode.do?stateCode={sc}&year={YEAR}&bpCode={bp}"
