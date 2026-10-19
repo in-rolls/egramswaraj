@@ -58,5 +58,6 @@ redistribution; check them before any bulk run.
 - `raw/`: the responses looked at, with `mobno` and `emailid` removed.
 - `log.tsv`: every request (URL, UTC time, status, sha256 of the response **as
   received**, before the contact fields were removed).
+- `bin/collect_er.py`: the full collector (every GP's elected representatives, state by state; resumable; drops the masked contact fields as it saves). Run on a VM in India: `python3 bin/collect_er.py --out er --workers 3`.
 - `bin/`: the survey scripts. They route through a SOCKS proxy at localhost:1080
   (an SSH tunnel to a VM in India) and cache each response under `raw/`.
