@@ -70,7 +70,9 @@ The site stores some people twice: 923 GPs' responses repeat a row exactly
 (2,963 rows; the site's own counts include them). Repeats are dropped and
 counted in `gps.members_repeated`. Ten GPs list one head twice with a change
 (ward, case, a stray letter, gender); the first entry is kept, or the one with a
-recorded gender, and the pairs are in `checks.json` (`merged_head_reentries`).
+recorded gender, or the one a ruling in `KEEP_GENDER` names (NEERAJ RANI,
+Haryana, listed Male and Female, is kept Female); the pairs are in `checks.json`
+(`merged_head_reentries`).
 Six GPs list two different people as head (`heads_listed = 2`), with no date to
 say which is current; neither is chosen.
 

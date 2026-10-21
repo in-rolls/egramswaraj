@@ -1194,8 +1194,8 @@
    "gp_zero_member_rows": 0,
    "members": 62527,
    "members_by_gender": {
-    "Male": 32360,
-    "Female": 30162,
+    "Male": 32359,
+    "Female": 30163,
     "Transgender": 5,
     "N/A": 0
    },
@@ -1219,9 +1219,9 @@
    "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
-   "share_female_head": 0.486122,
+   "share_female_head": 0.486285,
    "share_female_ward_member": 0.481975,
-   "share_female_all": 0.482384,
+   "share_female_all": 0.4824,
    "share_heads_also_listed_as_ward_member": 0.026781,
    "empty_names": 0,
    "empty_name_examples": [],
@@ -6073,16 +6073,16 @@
   },
   {
    "gp_code": 246093,
-   "kept_index": 0,
+   "kept_index": 3,
    "kept": [
     "NEERAJ RANI",
-    "Male",
+    "Female",
     null
    ],
-   "dropped_index": 3,
+   "dropped_index": 0,
    "dropped": [
     "NEERAJ RANI",
-    "Female",
+    "Male",
     null
    ]
   }
@@ -6092,8 +6092,8 @@
   "gps_with_members": 148495,
   "members": 1541551,
   "gender_values": {
-   "Female": 892149,
-   "Male": 649184,
+   "Female": 892150,
+   "Male": 649183,
    "Transgender": 218,
    "N/A": 0
   },

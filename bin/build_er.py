@@ -452,9 +452,15 @@ def same_person(a, b):
     )
 
 
+# Reviewed rulings on a head entered twice with two recorded genders: keep the
+# entry with this gender. Haryana's NEERAJ RANI is listed Male then Female.
+KEEP_GENDER = {246093: "Female"}
+
+
 def merge_head_reentries(m):
     """Keep one row where a GP lists the same head twice. The first-listed entry
-    is kept, unless only a later one carries a recorded gender (not 'N/A')."""
+    is kept, unless only a later one carries a recorded gender (not 'N/A') or a
+    ruling in KEEP_GENDER picks the other."""
     heads = m[m.designation_class == "head"]
     drop, merged = set(), []
     for gp, rows in heads.groupby("gp_code"):
@@ -466,6 +472,8 @@ def merge_head_reentries(m):
             if not same_person(keep.elected_name, other.elected_name):
                 continue
             if str(keep.gender) == "N/A" and str(other.gender) != "N/A":
+                keep, other = other, keep
+            if KEEP_GENDER.get(int(gp)) == str(other.gender):
                 keep, other = other, keep
             drop.add((gp, int(other.member_index)))
             merged.append(
