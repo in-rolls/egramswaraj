@@ -61,7 +61,7 @@ request log (`er/log.jsonl`: URL, time, status, bytes, SHA-256).
 
 The built tables are in `data/`: `gps.parquet`, `members.parquet` and
 `checks.json`, as below. `build_er.py` writes `gps.parquet` (150,019 GPs listed, 148,495 with members)
-and `members.parquet` (1,541,561 members), validated against `schema/`, and
+and `members.parquet` (1,541,551 members), validated against `schema/`, and
 `checks.json` comparing them with the site's own published counts. It stops on
 any designation not classified in `DESIGNATION_CLASS` (head, ward_member,
 other).
