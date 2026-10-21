@@ -16,6 +16,7 @@ class in DESIGNATION_CLASS.
 
 import argparse
 import collections
+import difflib
 import json
 import pathlib
 import random
@@ -197,6 +198,9 @@ GPS_DTYPES = {
     "site_female_count": "int32",
     "site_other_count": "int32",
     "members_parsed": "Int32",
+    "members_repeated": "Int32",
+    "heads_merged": "Int16",
+    "heads_listed": "Int16",
     "members_file": "string",
     "members_sha256": "string",
     "fetched_at": "datetime64[us, UTC]",
@@ -359,6 +363,7 @@ def parse_members(src, sc, gps, log, problems):
         rel = f"{sc}/members/{g['gp_code']}.json"
         path = src / rel
         g["members_parsed"] = g["members_file"] = g["members_sha256"] = g["fetched_at"] = None
+        g["members_repeated"] = None
         if not path.exists():
             if g["site_er_count"]:
                 problems.append(f"missing member file {rel} (site_er_count {g['site_er_count']})")
@@ -373,7 +378,17 @@ def parse_members(src, sc, gps, log, problems):
         g["members_file"] = rel
         g["members_sha256"], g["fetched_at"] = log[rel]
         g["members_parsed"] = len(data)
+        # The site stores some people twice: 923 GPs' responses repeat a row
+        # exactly (all four fields), and in 871 of them the site's own ER count
+        # includes the repeat. A repeat is dropped; member_index keeps the
+        # position in the response, and members_repeated says how many went.
+        seen, g["members_repeated"] = set(), 0
         for i, r in enumerate(data):
+            key = json.dumps(r, sort_keys=True)
+            if key in seen:
+                g["members_repeated"] += 1
+                continue
+            seen.add(key)
             if not isinstance(r, dict) or set(r) != MEMBER_KEYS:
                 problems.append(
                     f"{rel}[{i}]: unexpected keys {sorted(r) if isinstance(r, dict) else r}"
@@ -409,7 +424,69 @@ def to_frames(gps, members, problems):
     m["ward_no"] = [ward_no(w) for w in m["ward_name"]]
     m = m[list(MEMBERS_DTYPES)].astype(MEMBERS_DTYPES)
     m = m.sort_values(["state_code", "gp_code", "member_index"], ignore_index=True)
-    return g, m
+    m, merged = merge_head_reentries(m)
+    g["heads_merged"] = g.gp_code.map(collections.Counter(r["gp_code"] for r in merged))
+    g["heads_merged"] = g["heads_merged"].fillna(0).astype("Int16")
+    g.loc[g.members_file.isna(), "heads_merged"] = pd.NA
+    # Two heads left are two different people (a successor kept beside the
+    # predecessor, or a husband beside a woman sarpanch; the site has no
+    # dates). Counted, not chosen.
+    heads = m[m.designation_class == "head"].groupby("gp_code").size()
+    g["heads_listed"] = g.gp_code.map(heads).fillna(0).astype("Int16")
+    g.loc[g.members_file.isna(), "heads_listed"] = pd.NA
+    return g, m, merged
+
+
+def same_person(a, b):
+    """One person entered twice: the names agree once case and spacing are
+    ignored, or differ by a single stray character ('Malti devi', 'Malti deviw')."""
+    a, b = (re.sub(r"\s+", " ", (x or "").strip().lower()) for x in (a, b))
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    return difflib.SequenceMatcher(None, a, b).ratio() >= 0.9 and (
+        a.startswith(b) or b.startswith(a) or len(a) == len(b)
+    )
+
+
+# Reviewed rulings on a head entered twice with two recorded genders: keep the
+# entry with this gender. Haryana's NEERAJ RANI is listed Male then Female.
+KEEP_GENDER = {246093: "Female"}
+
+
+def merge_head_reentries(m):
+    """Keep one row where a GP lists the same head twice. The first-listed entry
+    is kept, unless only a later one carries a recorded gender (not 'N/A') or a
+    ruling in KEEP_GENDER picks the other."""
+    heads = m[m.designation_class == "head"]
+    drop, merged = set(), []
+    for gp, rows in heads.groupby("gp_code"):
+        if len(rows) < 2:
+            continue
+        rows = rows.sort_values("member_index")
+        keep = rows.iloc[0]
+        for _, other in rows.iloc[1:].iterrows():
+            if not same_person(keep.elected_name, other.elected_name):
+                continue
+            if str(keep.gender) == "N/A" and str(other.gender) != "N/A":
+                keep, other = other, keep
+            if KEEP_GENDER.get(int(gp)) == str(other.gender):
+                keep, other = other, keep
+            drop.add((gp, int(other.member_index)))
+            merged.append(
+                {
+                    "gp_code": int(gp),
+                    "kept_index": int(keep.member_index),
+                    "kept": [keep.elected_name, str(keep.gender), keep.ward_name],
+                    "dropped_index": int(other.member_index),
+                    "dropped": [other.elected_name, str(other.gender), other.ward_name],
+                }
+            )
+    out = m[[(g, i) not in drop for g, i in zip(m.gp_code, m.member_index)]]
+    return out.reset_index(drop=True), merged
 
 
 def validate(path, schema_path, dtypes):
@@ -680,7 +757,7 @@ def main():
         if fetched != done[sc]:
             problems.append(f"state {sc}: run.out says {done[sc]} GPs saved, parsed {fetched}")
         print(f"state {sc}: {len(gps)} GPs listed, {fetched} with members", flush=True)
-    gps_df, mem_df = to_frames(all_gps, all_members, problems)
+    gps_df, mem_df, merged_heads = to_frames(all_gps, all_members, problems)
     if gps_df.gp_code.duplicated().any():
         problems.append(
             f"duplicate gp_code: {gps_df.gp_code[gps_df.gp_code.duplicated()].tolist()[:10]}"
@@ -697,6 +774,7 @@ def main():
 
     sample = build_sample(gps_df, mem_df, sorted(done), args.seed)
     checks = {"src": str(src), "finished_states": sorted(done), "states": {}}
+    checks["merged_head_reentries"] = merged_heads
     for sc in sorted(done):
         picked = [b["bp_code"] or b["zp_code"] for b in sample[sc]]
         checks["states"][sc] = state_checks(sc, states[sc], gps_df, mem_df, units[sc], picked)

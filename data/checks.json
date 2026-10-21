@@ -46,7 +46,7 @@
    "zp_units_compared": 12,
    "zp_gp_count_agreement": 0.833333,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
+   "zp_male_female_agreement": 0.916667,
    "zp_mismatch_examples (gps, ers, male, female)": [
     {
      "zp_code": 16,
@@ -79,23 +79,69 @@
       21,
       54
      ]
+    },
+    {
+     "zp_code": 25,
+     "name": "Solan",
+     "parsed": [
+      255,
+      1802,
+      701,
+      1092
+     ],
+     "site": [
+      255,
+      1802,
+      705,
+      1097
+     ]
     }
    ],
    "bp_units_compared": 90,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 1.0,
-   "bp_male_female_agreement": 1.0,
-   "bp_mismatch_examples (gps, ers, male, female)": [],
+   "bp_male_female_agreement": 0.988889,
+   "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 305300,
+     "name": "Patta",
+     "parsed": [
+      26,
+      192,
+      74,
+      109
+     ],
+     "site": [
+      26,
+      192,
+      78,
+      114
+     ]
+    }
+   ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.999727,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 10144,
+     "gp_name": "Mandhala",
+     "site_er_count": 19,
+     "members_parsed": 19,
+     "site_male_count": 8,
+     "Male": 4.0,
+     "site_female_count": 11,
+     "Female": 6.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 24832,
+   "members": 24823,
    "members_by_gender": {
-    "Male": 9383,
-    "Female": 15449,
+    "Male": 9379,
+    "Female": 15444,
     "Transgender": 0,
     "N/A": 0
    },
@@ -105,11 +151,11 @@
     "Female": 15583,
     "Transgender": 0
    },
-   "state_er_count_share": 0.991812,
+   "state_er_count_share": 0.991453,
    "site_zp_er_sum": 24832,
    "site_gp_listing_er_sum": 24832,
    "designations": {
-    "Ward Members -> ward_member": 20654,
+    "Ward Members -> ward_member": 20645,
     "President GP -> head": 3667,
     "Vice President -> ward_member": 511
    },
@@ -121,22 +167,22 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.528497,
-   "share_female_ward_member": 0.638365,
-   "share_female_all": 0.622141,
+   "share_female_ward_member": 0.6384,
+   "share_female_all": 0.622165,
    "share_heads_also_listed_as_ward_member": 0.015271,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 52,
-   "placeholder_name_share": 0.002094,
+   "placeholder_name_share": 0.002095,
    "placeholder_name_top": {
     "nil": 42,
     "na": 6,
     "sss": 3,
     "abc": 1
    },
-   "rows_with_duplicate_name_in_gp": 465,
-   "gps_with_duplicate_name": 204,
-   "share_gps_with_duplicate_name": 0.055631,
+   "rows_with_duplicate_name_in_gp": 447,
+   "gps_with_duplicate_name": 203,
+   "share_gps_with_duplicate_name": 0.055359,
    "duplicate_name_examples": [
     {
      "gp_code": 7529,
@@ -174,8 +220,8 @@
      "ward_name": "Ward No. 6"
     }
    ],
-   "ward_name_present": 21165,
-   "ward_no_parsed_share": 0.90867,
+   "ward_name_present": 21156,
+   "ward_no_parsed_share": 0.908631,
    "ward_name_unparsed_top": {
     "Damtal-N": 8,
     "Kyarda-N": 7,
@@ -211,12 +257,93 @@
    "zp_units_compared": 23,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
-   "zp_mismatch_examples (gps, ers, male, female)": [],
+   "zp_male_female_agreement": 0.478261,
+   "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 27,
+     "name": "Amritsar",
+     "parsed": [
+      860,
+      6452,
+      3381,
+      3066
+     ],
+     "site": [
+      860,
+      6452,
+      3382,
+      3069
+     ]
+    },
+    {
+     "zp_code": 30,
+     "name": "Fatehgarh Sahib",
+     "parsed": [
+      429,
+      2893,
+      1504,
+      1388
+     ],
+     "site": [
+      429,
+      2893,
+      1505,
+      1388
+     ]
+    },
+    {
+     "zp_code": 260791,
+     "name": "Fazilka",
+     "parsed": [
+      482,
+      3757,
+      1990,
+      1753
+     ],
+     "site": [
+      482,
+      3757,
+      1998,
+      1759
+     ]
+    },
+    {
+     "zp_code": 32,
+     "name": "Gurdaspur",
+     "parsed": [
+      1285,
+      8489,
+      3835,
+      4653
+     ],
+     "site": [
+      1285,
+      8489,
+      3836,
+      4653
+     ]
+    },
+    {
+     "zp_code": 33,
+     "name": "Hoshiarpur",
+     "parsed": [
+      1405,
+      8992,
+      4473,
+      4518
+     ],
+     "site": [
+      1405,
+      8992,
+      4474,
+      4518
+     ]
+    }
+   ],
    "bp_units_compared": 155,
    "bp_gp_count_agreement": 0.535484,
    "bp_er_count_agreement": 0.541935,
-   "bp_male_female_agreement": 0.541935,
+   "bp_male_female_agreement": 0.496774,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
      "bp_code": 797,
@@ -256,8 +383,8 @@
      "parsed": [
       83,
       627,
-      313,
-      314
+      312,
+      311
      ],
      "site": [
       null,
@@ -302,13 +429,74 @@
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.998865,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 11538,
+     "gp_name": "Wazir Nagar",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 2,
+     "Male": 1.0,
+     "site_female_count": 5,
+     "Female": 5.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 12704,
+     "gp_name": "Karwalian",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 5,
+     "Male": 4.0,
+     "site_female_count": 2,
+     "Female": 2.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 13348,
+     "gp_name": "Lahri Sarmon",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 1,
+     "Male": 1.0,
+     "site_female_count": 6,
+     "Female": 5.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 14200,
+     "gp_name": "Bassi Jamal Khan",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 4,
+     "Male": 3.0,
+     "site_female_count": 3,
+     "Female": 3.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 15505,
+     "gp_name": "Abadi G.T. Road Gohawar",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 4,
+     "Male": 4.0,
+     "site_female_count": 3,
+     "Female": 2.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 94096,
+   "members": 94059,
    "members_by_gender": {
-    "Male": 47397,
-    "Female": 46698,
+    "Male": 47379,
+    "Female": 46679,
     "Transgender": 1,
     "N/A": 0
    },
@@ -318,30 +506,28 @@
     "Female": 46770,
     "Transgender": 1
    },
-   "state_er_count_share": 0.998472,
+   "state_er_count_share": 0.998079,
    "site_zp_er_sum": 94096,
    "site_gp_listing_er_sum": 94096,
    "designations": {
-    "Panch -> ward_member": 80879,
-    "Sarpanch -> head": 13217
+    "Panch -> ward_member": 80843,
+    "Sarpanch -> head": 13216
    },
    "gps_with_members": 13216,
-   "heads": 13217,
+   "heads": 13216,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.999924,
-   "share_gps_2plus_heads": 7.6e-05,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    12704
-   ],
-   "share_female_head": 0.538322,
-   "share_female_ward_member": 0.48941,
-   "share_female_all": 0.49628,
-   "share_heads_also_listed_as_ward_member": 0.036922,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.538363,
+   "share_female_ward_member": 0.489393,
+   "share_female_all": 0.496274,
+   "share_heads_also_listed_as_ward_member": 0.036925,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 85,
-   "placeholder_name_share": 0.000903,
+   "placeholder_name_share": 0.000904,
    "placeholder_name_top": {
     "abc": 27,
     "abcd": 27,
@@ -350,9 +536,9 @@
     "nil": 7,
     "sarpanch": 3
    },
-   "rows_with_duplicate_name_in_gp": 4058,
-   "gps_with_duplicate_name": 1581,
-   "share_gps_with_duplicate_name": 0.119628,
+   "rows_with_duplicate_name_in_gp": 3987,
+   "gps_with_duplicate_name": 1574,
+   "share_gps_with_duplicate_name": 0.119098,
    "duplicate_name_examples": [
     {
      "gp_code": 10532,
@@ -390,8 +576,8 @@
      "ward_name": "Ward No. 1"
     }
    ],
-   "ward_name_present": 80880,
-   "ward_no_parsed_share": 0.985942,
+   "ward_name_present": 80844,
+   "ward_no_parsed_share": 0.985948,
    "ward_name_unparsed_top": {
     "E": 54,
     "Ward No, N": 53,
@@ -421,104 +607,246 @@
    "zp_units_compared": 13,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
-   "zp_mismatch_examples (gps, ers, male, female)": [],
+   "zp_male_female_agreement": 0.384615,
+   "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 45,
+     "name": "Almora",
+     "parsed": [
+      1160,
+      8249,
+      2444,
+      5799
+     ],
+     "site": [
+      1160,
+      8249,
+      2444,
+      5805
+     ]
+    },
+    {
+     "zp_code": 47,
+     "name": "Chamoli",
+     "parsed": [
+      615,
+      4316,
+      1290,
+      3025
+     ],
+     "site": [
+      615,
+      4316,
+      1290,
+      3026
+     ]
+    },
+    {
+     "zp_code": 48,
+     "name": "Champawat",
+     "parsed": [
+      312,
+      2170,
+      613,
+      1552
+     ],
+     "site": [
+      312,
+      2170,
+      613,
+      1556
+     ]
+    },
+    {
+     "zp_code": 51,
+     "name": "Nainital",
+     "parsed": [
+      475,
+      3533,
+      1222,
+      2310
+     ],
+     "site": [
+      475,
+      3533,
+      1222,
+      2311
+     ]
+    },
+    {
+     "zp_code": 52,
+     "name": "Pauri Garhwal",
+     "parsed": [
+      1166,
+      7934,
+      2491,
+      5425
+     ],
+     "site": [
+      1166,
+      7934,
+      2496,
+      5438
+     ]
+    }
+   ],
    "bp_units_compared": 95,
    "bp_gp_count_agreement": 0.842105,
    "bp_er_count_agreement": 0.842105,
-   "bp_male_female_agreement": 0.842105,
+   "bp_male_female_agreement": 0.726316,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
-     "bp_code": 982,
-     "name": "Bironkhal",
+     "bp_code": 938,
+     "name": "Dhauladevi",
      "parsed": [
-      95,
-      366,
-      132,
-      234
+      110,
+      780,
+      240,
+      539
      ],
      "site": [
-      null,
-      32,
-      16,
-      16
+      110,
+      780,
+      240,
+      540
      ]
     },
     {
-     "bp_code": 983,
-     "name": "Duggada",
+     "bp_code": 939,
+     "name": "Dwarahat",
+     "parsed": [
+      122,
+      879,
+      222,
+      652
+     ],
+     "site": [
+      122,
+      879,
+      222,
+      657
+     ]
+    },
+    {
+     "bp_code": 953,
+     "name": "Joshimath",
+     "parsed": [
+      58,
+      450,
+      145,
+      304
+     ],
+     "site": [
+      58,
+      450,
+      145,
+      305
+     ]
+    },
+    {
+     "bp_code": 960,
+     "name": "Lohaghat",
      "parsed": [
       67,
-      522,
-      163,
-      359
+      516,
+      145,
+      367
      ],
      "site": [
-      null,
-      21,
-      4,
-      17
+      67,
+      516,
+      145,
+      371
      ]
     },
     {
-     "bp_code": 984,
-     "name": "Dwarikhal",
+     "bp_code": 979,
+     "name": "Okhalkanda",
      "parsed": [
-      97,
-      686,
-      183,
-      503
+      75,
+      342,
+      111,
+      230
      ],
      "site": [
-      null,
-      28,
-      12,
-      16
-     ]
-    },
-    {
-     "bp_code": 985,
-     "name": "Ekeshwar",
-     "parsed": [
-      82,
-      580,
-      182,
-      398
-     ],
-     "site": [
-      null,
-      24,
-      10,
-      14
-     ]
-    },
-    {
-     "bp_code": 986,
-     "name": "Kaljikhal",
-     "parsed": [
-      87,
-      649,
-      210,
-      439
-     ],
-     "site": [
-      null,
-      24,
-      11,
-      13
+      75,
+      342,
+      111,
+      231
      ]
     }
    ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.997653,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 20870,
+     "gp_name": "Cham Tola",
+     "site_er_count": 11,
+     "members_parsed": 11,
+     "site_male_count": 3,
+     "Male": 3.0,
+     "site_female_count": 8,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 20987,
+     "gp_name": "Dida",
+     "site_er_count": 9,
+     "members_parsed": 9,
+     "site_male_count": 0,
+     "Male": 0.0,
+     "site_female_count": 9,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 21044,
+     "gp_name": "Riyuni Malli",
+     "site_er_count": 9,
+     "members_parsed": 9,
+     "site_male_count": 0,
+     "Male": 0.0,
+     "site_female_count": 9,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 21058,
+     "gp_name": "Uroli",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 1,
+     "Male": 1.0,
+     "site_female_count": 6,
+     "Female": 5.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 22329,
+     "gp_name": "Gulab Koti",
+     "site_er_count": 3,
+     "members_parsed": 3,
+     "site_male_count": 0,
+     "Male": 0.0,
+     "site_female_count": 3,
+     "Female": 2.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 59369,
+   "members": 59319,
    "members_by_gender": {
-    "Male": 18299,
-    "Female": 41066,
+    "Male": 18289,
+    "Female": 41026,
     "Transgender": 4,
     "N/A": 0
    },
@@ -528,13 +856,13 @@
     "Female": 41790,
     "Transgender": 4
    },
-   "state_er_count_share": 0.982654,
+   "state_er_count_share": 0.981826,
    "site_zp_er_sum": 59369,
    "site_gp_listing_er_sum": 59369,
    "designations": {
-    "Member Gram Panchayat -> ward_member": 49913,
+    "Member Gram Panchayat -> ward_member": 49864,
     "Pradhan Gram Panchayat  -> head": 7668,
-    "Uppradhan Gram Panchayat -> ward_member": 1788
+    "Uppradhan Gram Panchayat -> ward_member": 1787
    },
    "gps_with_members": 7668,
    "heads": 7668,
@@ -544,15 +872,15 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.589202,
-   "share_female_ward_member": 0.706911,
-   "share_female_all": 0.691708,
+   "share_female_ward_member": 0.706821,
+   "share_female_all": 0.691617,
    "share_heads_also_listed_as_ward_member": 0.023605,
    "empty_names": 0,
    "empty_name_examples": [],
-   "placeholder_names": 401,
-   "placeholder_name_share": 0.006754,
+   "placeholder_names": 400,
+   "placeholder_name_share": 0.006743,
    "placeholder_name_top": {
-    "na": 120,
+    "na": 119,
     "xyz": 88,
     "nil": 38,
     "aaaaaaaaa": 21,
@@ -563,9 +891,9 @@
     "ggg": 5,
     "yyyy": 4
    },
-   "rows_with_duplicate_name_in_gp": 2626,
-   "gps_with_duplicate_name": 974,
-   "share_gps_with_duplicate_name": 0.127021,
+   "rows_with_duplicate_name_in_gp": 2531,
+   "gps_with_duplicate_name": 965,
+   "share_gps_with_duplicate_name": 0.125848,
    "duplicate_name_examples": [
     {
      "gp_code": 20627,
@@ -603,8 +931,8 @@
      "ward_name": null
     }
    ],
-   "ward_name_present": 51701,
-   "ward_no_parsed_share": 0.999865,
+   "ward_name_present": 51651,
+   "ward_no_parsed_share": 0.999864,
    "ward_name_unparsed_top": {
     "Ward.NoN": 6,
     "Ward.No.N": 1
@@ -628,7 +956,7 @@
    "zp_units_compared": 22,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 0.954545,
-   "zp_male_female_agreement": 0.954545,
+   "zp_male_female_agreement": 0.5,
    "zp_mismatch_examples (gps, ers, male, female)": [
     {
      "zp_code": 61,
@@ -636,7 +964,7 @@
      "parsed": [
       259,
       2664,
-      1413,
+      1410,
       1251
      ],
      "site": [
@@ -645,13 +973,93 @@
       1416,
       1253
      ]
+    },
+    {
+     "zp_code": 63,
+     "name": "Hisar",
+     "parsed": [
+      309,
+      4135,
+      2166,
+      1967
+     ],
+     "site": [
+      309,
+      4135,
+      2168,
+      1967
+     ]
+    },
+    {
+     "zp_code": 65,
+     "name": "Jind",
+     "parsed": [
+      300,
+      3635,
+      1903,
+      1729
+     ],
+     "site": [
+      300,
+      3635,
+      1904,
+      1730
+     ]
+    },
+    {
+     "zp_code": 67,
+     "name": "Karnal",
+     "parsed": [
+      395,
+      4210,
+      2167,
+      2039
+     ],
+     "site": [
+      395,
+      4210,
+      2170,
+      2040
+     ]
+    },
+    {
+     "zp_code": 68,
+     "name": "Kurukshetra",
+     "parsed": [
+      403,
+      3743,
+      1931,
+      1810
+     ],
+     "site": [
+      403,
+      3743,
+      1931,
+      1811
+     ]
     }
    ],
    "bp_units_compared": 143,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 0.993007,
-   "bp_male_female_agreement": 0.993007,
+   "bp_male_female_agreement": 0.846154,
    "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 1052,
+     "name": "Bhattu Kalan",
+     "parsed": [
+      24,
+      156,
+      70,
+      83
+     ],
+     "site": [
+      24,
+      156,
+      73,
+      83
+     ]
+    },
     {
      "bp_code": 1053,
      "name": "Bhuna",
@@ -667,13 +1075,85 @@
       191,
       166
      ]
+    },
+    {
+     "bp_code": 1070,
+     "name": "Hansi-I",
+     "parsed": [
+      55,
+      694,
+      361,
+      332
+     ],
+     "site": [
+      55,
+      694,
+      362,
+      332
+     ]
+    },
+    {
+     "bp_code": 1073,
+     "name": "Hisar-Ii",
+     "parsed": [
+      42,
+      564,
+      292,
+      271
+     ],
+     "site": [
+      42,
+      564,
+      293,
+      271
+     ]
+    },
+    {
+     "bp_code": 1084,
+     "name": "Narwana",
+     "parsed": [
+      37,
+      421,
+      215,
+      205
+     ],
+     "site": [
+      37,
+      421,
+      215,
+      206
+     ]
     }
    ],
    "gp_er_count_agreement": 0.999838,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 1,
-   "gp_gender_count_agreement": 0.999838,
+   "gp_gender_count_agreement": 0.996267,
    "gp_mismatch_examples": [
+    {
+     "gp_code": 28950,
+     "gp_name": "Dhabi Kalan",
+     "site_er_count": 15,
+     "members_parsed": 15,
+     "site_male_count": 9,
+     "Male": 7.0,
+     "site_female_count": 6,
+     "Female": 6.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 28954,
+     "gp_name": "Dhingsara",
+     "site_er_count": 11,
+     "members_parsed": 11,
+     "site_male_count": 5,
+     "Male": 4.0,
+     "site_female_count": 6,
+     "Female": 6.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
     {
      "gp_code": 28977,
      "gp_name": "Dehman",
@@ -685,13 +1165,37 @@
      "Female": 5.0,
      "site_other_count": 0,
      "Transgender": 0.0
+    },
+    {
+     "gp_code": 29369,
+     "gp_name": "Adbar",
+     "site_er_count": 22,
+     "members_parsed": 22,
+     "site_male_count": 13,
+     "Male": 12.0,
+     "site_female_count": 9,
+     "Female": 9.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 29405,
+     "gp_name": "Jai Singh Pur",
+     "site_er_count": 17,
+     "members_parsed": 17,
+     "site_male_count": 8,
+     "Male": 8.0,
+     "site_female_count": 9,
+     "Female": 8.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 62570,
+   "members": 62527,
    "members_by_gender": {
-    "Male": 32390,
-    "Female": 30175,
+    "Male": 32359,
+    "Female": 30163,
     "Transgender": 5,
     "N/A": 0
    },
@@ -701,34 +1205,28 @@
     "Female": 30485,
     "Transgender": 5
    },
-   "state_er_count_share": 0.989781,
+   "state_er_count_share": 0.989101,
    "site_zp_er_sum": 62575,
    "site_gp_listing_er_sum": 62575,
    "designations": {
-    "Panch -> ward_member": 56401,
-    "Sarpanch -> head": 6169
+    "Panch -> ward_member": 56366,
+    "Sarpanch -> head": 6161
    },
    "gps_with_members": 6161,
-   "heads": 6169,
+   "heads": 6161,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.999188,
-   "share_gps_2plus_heads": 0.000812,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    29405,
-    29919,
-    30362,
-    31197,
-    246093
-   ],
-   "share_female_head": 0.48614,
-   "share_female_ward_member": 0.481835,
-   "share_female_all": 0.48226,
-   "share_heads_also_listed_as_ward_member": 0.026747,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.486285,
+   "share_female_ward_member": 0.481975,
+   "share_female_all": 0.4824,
+   "share_heads_also_listed_as_ward_member": 0.026781,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 35,
-   "placeholder_name_share": 0.000559,
+   "placeholder_name_share": 0.00056,
    "placeholder_name_top": {
     "na": 6,
     "xxxx": 6,
@@ -741,9 +1239,9 @@
     "xxxxxx": 1,
     "xxxxx": 1
    },
-   "rows_with_duplicate_name_in_gp": 2062,
-   "gps_with_duplicate_name": 886,
-   "share_gps_with_duplicate_name": 0.143808,
+   "rows_with_duplicate_name_in_gp": 1980,
+   "gps_with_duplicate_name": 872,
+   "share_gps_with_duplicate_name": 0.141535,
    "duplicate_name_examples": [
     {
      "gp_code": 27787,
@@ -781,7 +1279,7 @@
      "ward_name": "Ward 7"
     }
    ],
-   "ward_name_present": 56407,
+   "ward_name_present": 56372,
    "ward_no_parsed_share": 0.999982,
    "ward_name_unparsed_top": {
     "N Ward": 1
@@ -811,7 +1309,7 @@
    "zp_units_compared": 38,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 0.052632,
-   "zp_male_female_agreement": 0.052632,
+   "zp_male_female_agreement": 0.026316,
    "zp_mismatch_examples (gps, ers, male, female)": [
     {
      "zp_code": 179,
@@ -819,8 +1317,8 @@
      "parsed": [
       211,
       3090,
-      1440,
-      1650
+      1437,
+      1647
      ],
      "site": [
       211,
@@ -835,8 +1333,8 @@
      "parsed": [
       64,
       1285,
-      588,
-      697
+      585,
+      695
      ],
      "site": [
       64,
@@ -851,8 +1349,8 @@
      "parsed": [
       200,
       4165,
-      1801,
-      2364
+      1790,
+      2358
      ],
      "site": [
       200,
@@ -867,8 +1365,8 @@
      "parsed": [
       182,
       3995,
-      1817,
-      2178
+      1807,
+      2168
      ],
      "site": [
       182,
@@ -883,8 +1381,8 @@
      "parsed": [
       217,
       3581,
-      1594,
-      1987
+      1591,
+      1982
      ],
      "site": [
       217,
@@ -897,7 +1395,7 @@
    "bp_units_compared": 533,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 0.529081,
-   "bp_male_female_agreement": 0.529081,
+   "bp_male_female_agreement": 0.409006,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
      "bp_code": 2206,
@@ -913,6 +1411,22 @@
       491,
       226,
       265
+     ]
+    },
+    {
+     "bp_code": 2207,
+     "name": "Bhargama",
+     "parsed": [
+      20,
+      289,
+      137,
+      149
+     ],
+     "site": [
+      20,
+      289,
+      138,
+      151
      ]
     },
     {
@@ -932,6 +1446,22 @@
      ]
     },
     {
+     "bp_code": 2212,
+     "name": "Palasi",
+     "parsed": [
+      21,
+      290,
+      131,
+      156
+     ],
+     "site": [
+      21,
+      290,
+      133,
+      157
+     ]
+    },
+    {
      "bp_code": 2214,
      "name": "Sikty",
      "parsed": [
@@ -946,44 +1476,12 @@
       100,
       115
      ]
-    },
-    {
-     "bp_code": 6804,
-     "name": "Arwal",
-     "parsed": [
-      12,
-      153,
-      73,
-      80
-     ],
-     "site": [
-      12,
-      190,
-      86,
-      104
-     ]
-    },
-    {
-     "bp_code": 6805,
-     "name": "Kaler",
-     "parsed": [
-      15,
-      305,
-      140,
-      165
-     ],
-     "site": [
-      15,
-      317,
-      144,
-      173
-     ]
     }
    ],
    "gp_er_count_agreement": 0.936788,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 505,
-   "gp_gender_count_agreement": 0.936788,
+   "gp_gender_count_agreement": 0.909125,
    "gp_mismatch_examples": [
     {
      "gp_code": 93644,
@@ -1010,6 +1508,30 @@
      "Transgender": 0.0
     },
     {
+     "gp_code": 93683,
+     "gp_name": "Shankar Pur",
+     "site_er_count": 15,
+     "members_parsed": 15,
+     "site_male_count": 8,
+     "Male": 7.0,
+     "site_female_count": 7,
+     "Female": 6.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 93684,
+     "gp_name": "Simarbani",
+     "site_er_count": 13,
+     "members_parsed": 13,
+     "site_male_count": 3,
+     "Male": 3.0,
+     "site_female_count": 10,
+     "Female": 9.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
      "gp_code": 93747,
      "gp_name": "Dumaria",
      "site_er_count": 18,
@@ -1020,37 +1542,13 @@
      "Female": 9.0,
      "site_other_count": 0,
      "Transgender": 0.0
-    },
-    {
-     "gp_code": 93845,
-     "gp_name": "Bhirbhiri",
-     "site_er_count": 16,
-     "members_parsed": 13,
-     "site_male_count": 7,
-     "Male": 6.0,
-     "site_female_count": 9,
-     "Female": 7.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 93856,
-     "gp_name": "Bela",
-     "site_er_count": 32,
-     "members_parsed": 26,
-     "site_male_count": 11,
-     "Male": 8.0,
-     "site_female_count": 21,
-     "Female": 18.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 143619,
+   "members": 143183,
    "members_by_gender": {
-    "Male": 64530,
-    "Female": 79064,
+    "Male": 64327,
+    "Female": 78831,
     "Transgender": 25,
     "N/A": 0
    },
@@ -1060,35 +1558,29 @@
     "Female": 81411,
     "Transgender": 25
    },
-   "state_er_count_share": 0.972482,
+   "state_er_count_share": 0.969529,
    "site_zp_er_sum": 146382,
    "site_gp_listing_er_sum": 146382,
    "designations": {
-    "Ward Member -> ward_member": 104104,
-    "Panch -> other": 24212,
-    "Mukhiya -> head": 8018,
-    "Up Mukhiya -> ward_member": 3315,
-    "Sarpanch -> other": 2307,
-    "Up Sarpanch -> other": 1592,
+    "Ward Member -> ward_member": 103828,
+    "Panch -> other": 24129,
+    "Mukhiya -> head": 7989,
+    "Up Mukhiya -> ward_member": 3292,
+    "Sarpanch -> other": 2290,
+    "Up Sarpanch -> other": 1584,
     "Data Entry Operator -> other": 71
    },
    "gps_with_members": 7989,
-   "heads": 8018,
+   "heads": 7989,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.996996,
-   "share_gps_2plus_heads": 0.003004,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    94158,
-    94623,
-    94880,
-    95088,
-    95121
-   ],
-   "share_female_head": 0.532178,
-   "share_female_ward_member": 0.533881,
-   "share_female_all": 0.550512,
-   "share_heads_also_listed_as_ward_member": 0.019955,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.531981,
+   "share_female_ward_member": 0.533971,
+   "share_female_all": 0.550561,
+   "share_heads_also_listed_as_ward_member": 0.020028,
    "empty_names": 15,
    "empty_name_examples": [
     {
@@ -1118,7 +1610,7 @@
     }
    ],
    "placeholder_names": 141,
-   "placeholder_name_share": 0.000982,
+   "placeholder_name_share": 0.000985,
    "placeholder_name_top": {
     "na": 42,
     "ward": 41,
@@ -1131,9 +1623,9 @@
     "abcd": 1,
     "jjjj": 1
    },
-   "rows_with_duplicate_name_in_gp": 9466,
-   "gps_with_duplicate_name": 2680,
-   "share_gps_with_duplicate_name": 0.335461,
+   "rows_with_duplicate_name_in_gp": 8641,
+   "gps_with_duplicate_name": 2584,
+   "share_gps_with_duplicate_name": 0.323445,
    "duplicate_name_examples": [
     {
      "gp_code": 93639,
@@ -1171,7 +1663,7 @@
      "ward_name": "Ward no 12"
     }
    ],
-   "ward_name_present": 135610,
+   "ward_name_present": 135201,
    "ward_no_parsed_share": 0.999993,
    "ward_name_unparsed_top": {
     "Ward No. NWard No. N": 1
@@ -1770,23 +2262,246 @@
    "zp_units_compared": 27,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
-   "zp_mismatch_examples (gps, ers, male, female)": [],
+   "zp_male_female_agreement": 0.666667,
+   "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 299746,
+     "name": "Bajali",
+     "parsed": [
+      27,
+      247,
+      73,
+      173
+     ],
+     "site": [
+      27,
+      247,
+      73,
+      174
+     ]
+    },
+    {
+     "zp_code": 245,
+     "name": "Cachar",
+     "parsed": [
+      162,
+      1842,
+      576,
+      1239
+     ],
+     "site": [
+      162,
+      1842,
+      584,
+      1258
+     ]
+    },
+    {
+     "zp_code": 277403,
+     "name": "Charaideo",
+     "parsed": [
+      36,
+      307,
+      112,
+      194
+     ],
+     "site": [
+      36,
+      307,
+      113,
+      194
+     ]
+    },
+    {
+     "zp_code": 248,
+     "name": "Dhubri",
+     "parsed": [
+      128,
+      1296,
+      510,
+      785
+     ],
+     "site": [
+      128,
+      1296,
+      511,
+      785
+     ]
+    },
+    {
+     "zp_code": 254,
+     "name": "Kamrup",
+     "parsed": [
+      139,
+      1483,
+      507,
+      946
+     ],
+     "site": [
+      139,
+      1483,
+      519,
+      964
+     ]
+    }
+   ],
    "bp_units_compared": 182,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 1.0,
-   "bp_male_female_agreement": 1.0,
-   "bp_mismatch_examples (gps, ers, male, female)": [],
+   "bp_male_female_agreement": 0.901099,
+   "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 2907,
+     "name": "Bajali",
+     "parsed": [
+      20,
+      172,
+      56,
+      115
+     ],
+     "site": [
+      20,
+      172,
+      56,
+      116
+     ]
+    },
+    {
+     "bp_code": 2923,
+     "name": "Banskandi",
+     "parsed": [
+      9,
+      129,
+      34,
+      87
+     ],
+     "site": [
+      9,
+      129,
+      36,
+      93
+     ]
+    },
+    {
+     "bp_code": 2936,
+     "name": "Tapang",
+     "parsed": [
+      16,
+      195,
+      55,
+      121
+     ],
+     "site": [
+      16,
+      195,
+      61,
+      134
+     ]
+    },
+    {
+     "bp_code": 3070,
+     "name": "Sapekhati",
+     "parsed": [
+      11,
+      52,
+      18,
+      33
+     ],
+     "site": [
+      11,
+      52,
+      19,
+      33
+     ]
+    },
+    {
+     "bp_code": 2960,
+     "name": "Nayeralga",
+     "parsed": [
+      11,
+      109,
+      52,
+      56
+     ],
+     "site": [
+      11,
+      109,
+      53,
+      56
+     ]
+    }
+   ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.988884,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 105605,
+     "gp_name": "Sathisamuka Bamunpara",
+     "site_er_count": 12,
+     "members_parsed": 12,
+     "site_male_count": 4,
+     "Male": 4.0,
+     "site_female_count": 8,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 105903,
+     "gp_name": "Chengduar",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 12,
+     "Male": 6.0,
+     "site_female_count": 29,
+     "Female": 16.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 105908,
+     "gp_name": "Neairgram Bagpur",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 7,
+     "Male": 5.0,
+     "site_female_count": 34,
+     "Female": 28.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 106103,
+     "gp_name": "Char Hatipota",
+     "site_er_count": 12,
+     "members_parsed": 12,
+     "site_male_count": 6,
+     "Male": 5.0,
+     "site_female_count": 6,
+     "Female": 6.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 106142,
+     "gp_name": "Borairalga",
+     "site_er_count": 21,
+     "members_parsed": 21,
+     "site_male_count": 8,
+     "Male": 4.0,
+     "site_female_count": 13,
+     "Female": 8.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 21555,
+   "members": 21394,
    "members_by_gender": {
-    "Male": 7642,
-    "Female": 13913,
+    "Male": 7579,
+    "Female": 13815,
     "Transgender": 0,
     "N/A": 0
    },
@@ -1796,31 +2511,29 @@
     "Female": 14603,
     "Transgender": 0
    },
-   "state_er_count_share": 0.950104,
+   "state_er_count_share": 0.943007,
    "site_zp_er_sum": 21555,
    "site_gp_listing_er_sum": 21555,
    "designations": {
-    "Ward Member -> ward_member": 17559,
-    "President -> head": 2160,
-    "Vice President -> ward_member": 1836
+    "Ward Member -> ward_member": 17406,
+    "President -> head": 2159,
+    "Vice President -> ward_member": 1829
    },
    "gps_with_members": 2159,
-   "heads": 2160,
+   "heads": 2159,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.999537,
-   "share_gps_2plus_heads": 0.000463,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    107494
-   ],
-   "share_female_head": 0.671296,
-   "share_female_ward_member": 0.642588,
-   "share_female_all": 0.645465,
-   "share_heads_also_listed_as_ward_member": 0.372685,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.671607,
+   "share_female_ward_member": 0.642839,
+   "share_female_all": 0.645742,
+   "share_heads_also_listed_as_ward_member": 0.372858,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 731,
-   "placeholder_name_share": 0.033913,
+   "placeholder_name_share": 0.034168,
    "placeholder_name_top": {
     "member": 108,
     "xyz": 73,
@@ -1833,9 +2546,9 @@
     "abc": 31,
     "aaa": 21
    },
-   "rows_with_duplicate_name_in_gp": 3624,
-   "gps_with_duplicate_name": 1027,
-   "share_gps_with_duplicate_name": 0.475683,
+   "rows_with_duplicate_name_in_gp": 3339,
+   "gps_with_duplicate_name": 1021,
+   "share_gps_with_duplicate_name": 0.472904,
    "duplicate_name_examples": [
     {
      "gp_code": 105591,
@@ -1873,8 +2586,8 @@
      "ward_name": "Ward No 9"
     }
    ],
-   "ward_name_present": 19397,
-   "ward_no_parsed_share": 0.932876,
+   "ward_name_present": 19237,
+   "ward_no_parsed_share": 0.932318,
    "ward_name_unparsed_top": {
     "Lalacherra Vernerpur N": 10,
     "Mahmadpur Joykrishnapur N": 10,
@@ -1915,40 +2628,246 @@
    "zp_units_compared": 22,
    "zp_gp_count_agreement": 0.954545,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
+   "zp_male_female_agreement": 0.272727,
    "zp_mismatch_examples (gps, ers, male, female)": [
     {
-     "zp_code": 264,
-     "name": "South 24 Parganas",
+     "zp_code": 265,
+     "name": "Bankura",
      "parsed": [
-      306,
-      5461,
-      2317,
-      3144
+      190,
+      2966,
+      1272,
+      1677
      ],
      "site": [
-      310,
-      5461,
-      2317,
-      3144
+      190,
+      2966,
+      1279,
+      1687
+     ]
+    },
+    {
+     "zp_code": 267,
+     "name": "Birbhum",
+     "parsed": [
+      167,
+      2447,
+      930,
+      1516
+     ],
+     "site": [
+      167,
+      2447,
+      931,
+      1516
+     ]
+    },
+    {
+     "zp_code": 268,
+     "name": "Coochbehar",
+     "parsed": [
+      128,
+      2244,
+      891,
+      1349
+     ],
+     "site": [
+      128,
+      2244,
+      892,
+      1352
+     ]
+    },
+    {
+     "zp_code": 270,
+     "name": "Dakshin Dinajpur",
+     "parsed": [
+      64,
+      1146,
+      454,
+      690
+     ],
+     "site": [
+      64,
+      1146,
+      455,
+      691
+     ]
+    },
+    {
+     "zp_code": 272,
+     "name": "Hooghly",
+     "parsed": [
+      207,
+      3604,
+      1580,
+      2021
+     ],
+     "site": [
+      207,
+      3604,
+      1581,
+      2021
      ]
     }
    ],
    "bp_units_compared": 344,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 1.0,
-   "bp_male_female_agreement": 1.0,
-   "bp_mismatch_examples (gps, ers, male, female)": [],
+   "bp_male_female_agreement": 0.895349,
+   "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 3146,
+     "name": "Bankura-I",
+     "parsed": [
+      6,
+      123,
+      58,
+      64
+     ],
+     "site": [
+      6,
+      123,
+      59,
+      64
+     ]
+    },
+    {
+     "bp_code": 3148,
+     "name": "Barjora",
+     "parsed": [
+      11,
+      154,
+      68,
+      85
+     ],
+     "site": [
+      11,
+      154,
+      68,
+      86
+     ]
+    },
+    {
+     "bp_code": 3151,
+     "name": "Hirbandh",
+     "parsed": [
+      5,
+      91,
+      32,
+      45
+     ],
+     "site": [
+      5,
+      91,
+      38,
+      53
+     ]
+    },
+    {
+     "bp_code": 3162,
+     "name": "Saltora",
+     "parsed": [
+      8,
+      136,
+      50,
+      85
+     ],
+     "site": [
+      8,
+      136,
+      50,
+      86
+     ]
+    },
+    {
+     "bp_code": 3207,
+     "name": "Murarai-I",
+     "parsed": [
+      7,
+      137,
+      54,
+      82
+     ],
+     "site": [
+      7,
+      137,
+      55,
+      82
+     ]
+    }
+   ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.986031,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 107951,
+     "gp_name": "Bayermari-I",
+     "site_er_count": 15,
+     "members_parsed": 15,
+     "site_male_count": 6,
+     "Male": 6.0,
+     "site_female_count": 9,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 108000,
+     "gp_name": "Chunakhali",
+     "site_er_count": 27,
+     "members_parsed": 27,
+     "site_male_count": 10,
+     "Male": 10.0,
+     "site_female_count": 17,
+     "Female": 15.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 108035,
+     "gp_name": "Panakua",
+     "site_er_count": 29,
+     "members_parsed": 29,
+     "site_male_count": 13,
+     "Male": 13.0,
+     "site_female_count": 16,
+     "Female": 15.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 108047,
+     "gp_name": "Panchanan",
+     "site_er_count": 28,
+     "members_parsed": 28,
+     "site_male_count": 15,
+     "Male": 15.0,
+     "site_female_count": 13,
+     "Female": 12.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 108053,
+     "gp_name": "Nischintapur",
+     "site_er_count": 29,
+     "members_parsed": 29,
+     "site_male_count": 15,
+     "Male": 14.0,
+     "site_female_count": 14,
+     "Female": 14.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 55973,
+   "members": 55887,
    "members_by_gender": {
-    "Male": 23252,
-    "Female": 32716,
+    "Male": 23214,
+    "Female": 32668,
     "Transgender": 5,
     "N/A": 0
    },
@@ -1958,45 +2877,43 @@
     "Female": 37195,
     "Transgender": 5
    },
-   "state_er_count_share": 0.878628,
+   "state_er_count_share": 0.877278,
    "site_zp_er_sum": 55973,
    "site_gp_listing_er_sum": 55973,
    "designations": {
-    "MEMBER -> ward_member": 41547,
-    "CHAIRMAN -> head": 2936,
-    "VICE CHAIRMAN -> ward_member": 2092,
-    "Shilpa O Parikathamo -> ward_member": 1966,
-    "Krishi O Pranisampad -> ward_member": 1956,
-    "Nari O Sishu Unnayan -> ward_member": 1956,
-    "Sikha O Jana Swastha -> ward_member": 1934,
-    "Artha O Parikalpana -> ward_member": 1119,
-    "CHARMAN STANDING COMMITTEE -> ward_member": 467
+    "MEMBER -> ward_member": 41493,
+    "CHAIRMAN -> head": 2935,
+    "VICE CHAIRMAN -> ward_member": 2085,
+    "Shilpa O Parikathamo -> ward_member": 1963,
+    "Krishi O Pranisampad -> ward_member": 1952,
+    "Nari O Sishu Unnayan -> ward_member": 1952,
+    "Sikha O Jana Swastha -> ward_member": 1931,
+    "Artha O Parikalpana -> ward_member": 1111,
+    "CHARMAN STANDING COMMITTEE -> ward_member": 465
    },
    "gps_with_members": 2935,
-   "heads": 2936,
+   "heads": 2935,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.999659,
-   "share_gps_2plus_heads": 0.000341,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    108185
-   ],
-   "share_female_head": 0.674728,
-   "share_female_ward_member": 0.579501,
-   "share_female_all": 0.584496,
-   "share_heads_also_listed_as_ward_member": 0.808583,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.674617,
+   "share_female_ward_member": 0.579544,
+   "share_female_all": 0.584537,
+   "share_heads_also_listed_as_ward_member": 0.808859,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 12,
-   "placeholder_name_share": 0.000214,
+   "placeholder_name_share": 0.000215,
    "placeholder_name_top": {
     "abc": 8,
     "member": 3,
     "test": 1
    },
-   "rows_with_duplicate_name_in_gp": 6322,
-   "gps_with_duplicate_name": 2486,
-   "share_gps_with_duplicate_name": 0.847019,
+   "rows_with_duplicate_name_in_gp": 6160,
+   "gps_with_duplicate_name": 2479,
+   "share_gps_with_duplicate_name": 0.844634,
    "duplicate_name_examples": [
     {
      "gp_code": 107779,
@@ -2034,8 +2951,8 @@
      "ward_name": "Beraberia-XII"
     }
    ],
-   "ward_name_present": 53062,
-   "ward_no_parsed_share": 0.003637,
+   "ward_name_present": 52977,
+   "ward_no_parsed_share": 0.003624,
    "ward_name_unparsed_top": {
     "Rajibpur Bira/I-N": 21,
     "Dhalhara-N": 21,
@@ -2065,7 +2982,7 @@
    "zp_units_compared": 24,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 0.583333,
-   "zp_male_female_agreement": 0.583333,
+   "zp_male_female_agreement": 0.208333,
    "zp_mismatch_examples (gps, ers, male, female)": [
     {
      "zp_code": 281,
@@ -2073,8 +2990,8 @@
      "parsed": [
       249,
       3254,
-      1169,
-      2085
+      1157,
+      2064
      ],
      "site": [
       249,
@@ -2090,7 +3007,7 @@
       152,
       1981,
       663,
-      1318
+      1314
      ],
      "site": [
       152,
@@ -2105,8 +3022,8 @@
      "parsed": [
       194,
       2580,
-      909,
-      1671
+      905,
+      1667
      ],
      "site": [
       194,
@@ -2116,13 +3033,29 @@
      ]
     },
     {
+     "zp_code": 284,
+     "name": "Dhanbad",
+     "parsed": [
+      256,
+      2993,
+      1048,
+      1940
+     ],
+     "site": [
+      256,
+      2993,
+      1050,
+      1943
+     ]
+    },
+    {
      "zp_code": 286,
      "name": "East Singhbum",
      "parsed": [
       231,
       2614,
-      900,
-      1714
+      897,
+      1707
      ],
      "site": [
       231,
@@ -2130,28 +3063,12 @@
       910,
       1734
      ]
-    },
-    {
-     "zp_code": 289,
-     "name": "Godda",
-     "parsed": [
-      197,
-      2657,
-      852,
-      1800
-     ],
-     "site": [
-      197,
-      2658,
-      852,
-      1801
-     ]
     }
    ],
    "bp_units_compared": 264,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 0.935606,
-   "bp_male_female_agreement": 0.935606,
+   "bp_male_female_agreement": 0.772727,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
      "bp_code": 3429,
@@ -2159,8 +3076,8 @@
      "parsed": [
       38,
       549,
-      239,
-      310
+      234,
+      302
      ],
      "site": [
       38,
@@ -2186,59 +3103,95 @@
      ]
     },
     {
-     "bp_code": 3440,
-     "name": "Kunda",
+     "bp_code": 3430,
+     "name": "Chas",
      "parsed": [
-      5,
-      43,
-      13,
-      30
+      54,
+      676,
+      232,
+      440
      ],
      "site": [
-      5,
-      44,
-      13,
-      31
+      54,
+      676,
+      235,
+      441
      ]
     },
     {
-     "bp_code": 3449,
-     "name": "Madhupur",
+     "bp_code": 3431,
+     "name": "Gomia",
      "parsed": [
-      21,
-      273,
-      100,
-      173
+      36,
+      496,
+      174,
+      320
      ],
      "site": [
-      21,
-      286,
-      105,
-      181
+      36,
+      496,
+      174,
+      322
      ]
     },
     {
-     "bp_code": 3453,
-     "name": "Sarwan",
+     "bp_code": 3434,
+     "name": "Nawadih",
      "parsed": [
-      14,
-      179,
-      64,
-      115
+      24,
+      312,
+      97,
+      208
      ],
      "site": [
-      14,
-      192,
-      68,
-      124
+      24,
+      312,
+      99,
+      213
      ]
     }
    ],
    "gp_er_count_agreement": 0.994465,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 24,
-   "gp_gender_count_agreement": 0.994465,
+   "gp_gender_count_agreement": 0.973247,
    "gp_mismatch_examples": [
+    {
+     "gp_code": 111157,
+     "gp_name": "Adita",
+     "site_er_count": 20,
+     "members_parsed": 20,
+     "site_male_count": 8,
+     "Male": 8.0,
+     "site_female_count": 12,
+     "Female": 11.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 111158,
+     "gp_name": "Bagula",
+     "site_er_count": 15,
+     "members_parsed": 15,
+     "site_male_count": 6,
+     "Male": 5.0,
+     "site_female_count": 9,
+     "Female": 8.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 111165,
+     "gp_name": "Chandra",
+     "site_er_count": 17,
+     "members_parsed": 17,
+     "site_male_count": 4,
+     "Male": 4.0,
+     "site_female_count": 13,
+     "Female": 11.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
     {
      "gp_code": 111169,
      "gp_name": "Devgram",
@@ -2252,59 +3205,23 @@
      "Transgender": 0.0
     },
     {
-     "gp_code": 111455,
-     "gp_name": "Sikidag",
-     "site_er_count": 7,
-     "members_parsed": 6,
-     "site_male_count": 1,
-     "Male": 1.0,
-     "site_female_count": 6,
-     "Female": 5.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 111601,
-     "gp_name": "Gariya",
-     "site_er_count": 15,
-     "members_parsed": 2,
-     "site_male_count": 5,
-     "Male": 0.0,
-     "site_female_count": 10,
-     "Female": 2.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 111718,
-     "gp_name": "Rakti",
-     "site_er_count": 15,
-     "members_parsed": 2,
-     "site_male_count": 4,
-     "Male": 0.0,
-     "site_female_count": 11,
-     "Female": 2.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 112322,
-     "gp_name": "Bhaduwa",
-     "site_er_count": 13,
-     "members_parsed": 12,
+     "gp_code": 111178,
+     "gp_name": "Lalpur",
+     "site_er_count": 14,
+     "members_parsed": 14,
      "site_male_count": 7,
-     "Male": 7.0,
-     "site_female_count": 6,
-     "Female": 5.0,
+     "Male": 6.0,
+     "site_female_count": 7,
+     "Female": 7.0,
      "site_other_count": 0,
      "Transgender": 0.0
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 55098,
+   "members": 54886,
    "members_by_gender": {
-    "Male": 18903,
-    "Female": 36155,
+    "Male": 18837,
+    "Female": 36009,
     "Transgender": 40,
     "N/A": 0
    },
@@ -2314,37 +3231,31 @@
     "Female": 36307,
     "Transgender": 40
    },
-   "state_er_count_share": 0.995753,
+   "state_er_count_share": 0.991922,
    "site_zp_er_sum": 55214,
    "site_gp_listing_er_sum": 55214,
    "designations": {
-    "WARD MEMBER -> ward_member": 47730,
-    "Mukhiya -> head": 4343,
-    "UP MUKHIYA -> ward_member": 3025
+    "WARD MEMBER -> ward_member": 47537,
+    "Mukhiya -> head": 4336,
+    "UP MUKHIYA -> ward_member": 3013
    },
    "gps_with_members": 4336,
-   "heads": 4343,
+   "heads": 4336,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.998616,
-   "share_gps_2plus_heads": 0.001384,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    111983,
-    113137,
-    113195,
-    114510,
-    114519
-   ],
-   "share_female_head": 0.615473,
-   "share_female_ward_member": 0.659679,
-   "share_female_all": 0.656194,
-   "share_heads_also_listed_as_ward_member": 0.025558,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.615544,
+   "share_female_ward_member": 0.659545,
+   "share_female_all": 0.656069,
+   "share_heads_also_listed_as_ward_member": 0.0256,
    "empty_names": 0,
    "empty_name_examples": [],
-   "placeholder_names": 197,
-   "placeholder_name_share": 0.003575,
+   "placeholder_names": 194,
+   "placeholder_name_share": 0.003535,
    "placeholder_name_top": {
-    "na": 115,
+    "na": 112,
     "nil": 44,
     "ward": 17,
     "abcd": 4,
@@ -2355,9 +3266,9 @@
     "aaaaaaaaaaaaaa": 1,
     "ffffffffff": 1
    },
-   "rows_with_duplicate_name_in_gp": 3733,
-   "gps_with_duplicate_name": 1107,
-   "share_gps_with_duplicate_name": 0.255304,
+   "rows_with_duplicate_name_in_gp": 3340,
+   "gps_with_duplicate_name": 1054,
+   "share_gps_with_duplicate_name": 0.243081,
    "duplicate_name_examples": [
     {
      "gp_code": 111122,
@@ -2395,10 +3306,10 @@
      "ward_name": "Ward No. - 9"
     }
    ],
-   "ward_name_present": 50762,
-   "ward_no_parsed_share": 0.596844,
+   "ward_name_present": 50556,
+   "ward_no_parsed_share": 0.596408,
    "ward_name_unparsed_top": {
-    "Ward No. - N": 2893,
+    "Ward No. - N": 2860,
     "हजारीबाग/N/N/बहेरा-(N)": 30,
     "Viii/Deoghar/N/N/Jarka N-N": 26,
     "XXIV EAST SINGHBHUM-N-N-FOREST BLOCK N": 26,
@@ -2426,7 +3337,7 @@
    "zp_units_compared": 30,
    "zp_gp_count_agreement": 0.866667,
    "zp_er_count_agreement": 0.6,
-   "zp_male_female_agreement": 0.6,
+   "zp_male_female_agreement": 0.1,
    "zp_mismatch_examples (gps, ers, male, female)": [
     {
      "zp_code": 303,
@@ -2434,8 +3345,8 @@
      "parsed": [
       224,
       3136,
-      1280,
-      1856
+      1279,
+      1854
      ],
      "site": [
       224,
@@ -2445,13 +3356,61 @@
      ]
     },
     {
+     "zp_code": 304,
+     "name": "Balangir",
+     "parsed": [
+      315,
+      3862,
+      1498,
+      2361
+     ],
+     "site": [
+      315,
+      3862,
+      1499,
+      2362
+     ]
+    },
+    {
+     "zp_code": 305,
+     "name": "Baleshwar",
+     "parsed": [
+      353,
+      4990,
+      2007,
+      2979
+     ],
+     "site": [
+      353,
+      4990,
+      2009,
+      2981
+     ]
+    },
+    {
+     "zp_code": 307,
+     "name": "Bhadrak",
+     "parsed": [
+      216,
+      3077,
+      1172,
+      1901
+     ],
+     "site": [
+      216,
+      3077,
+      1172,
+      1903
+     ]
+    },
+    {
      "zp_code": 308,
      "name": "Boudh",
      "parsed": [
       69,
       1024,
-      345,
-      678
+      341,
+      667
      ],
      "site": [
       68,
@@ -2459,60 +3418,12 @@
       345,
       678
      ]
-    },
-    {
-     "zp_code": 309,
-     "name": "Cuttack",
-     "parsed": [
-      367,
-      5658,
-      2390,
-      3267
-     ],
-     "site": [
-      367,
-      5659,
-      2390,
-      3268
-     ]
-    },
-    {
-     "zp_code": 313,
-     "name": "Ganjam",
-     "parsed": [
-      501,
-      7406,
-      2763,
-      4643
-     ],
-     "site": [
-      493,
-      7302,
-      2723,
-      4579
-     ]
-    },
-    {
-     "zp_code": 315,
-     "name": "Jajapur",
-     "parsed": [
-      308,
-      4676,
-      1914,
-      2762
-     ],
-     "site": [
-      308,
-      4684,
-      1914,
-      2770
-     ]
     }
    ],
    "bp_units_compared": 314,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 0.949045,
-   "bp_male_female_agreement": 0.949045,
+   "bp_male_female_agreement": 0.789809,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
      "bp_code": 3639,
@@ -2520,7 +3431,7 @@
      "parsed": [
       34,
       507,
-      201,
+      200,
       306
      ],
      "site": [
@@ -2531,75 +3442,87 @@
      ]
     },
     {
-     "bp_code": 3704,
-     "name": "Niali",
+     "bp_code": 3642,
+     "name": "Chhendipada",
      "parsed": [
-      23,
-      489,
-      206,
-      283
+      34,
+      467,
+      202,
+      264
      ],
      "site": [
-      23,
-      490,
-      206,
-      284
+      34,
+      467,
+      202,
+      265
      ]
     },
     {
-     "bp_code": 3730,
-     "name": "Bhanjanagar",
+     "bp_code": 3644,
+     "name": "Kishorenagar",
      "parsed": [
-      22,
-      338,
-      123,
-      215
+      23,
+      309,
+      129,
+      179
      ],
      "site": [
-      22,
-      307,
+      23,
+      309,
+      129,
+      180
+     ]
+    },
+    {
+     "bp_code": 3647,
+     "name": "Agalpur",
+     "parsed": [
+      20,
+      256,
+      93,
+      162
+     ],
+     "site": [
+      20,
+      256,
+      94,
+      162
+     ]
+    },
+    {
+     "bp_code": 3653,
+     "name": "Khaprakhol",
+     "parsed": [
+      21,
+      275,
       111,
-      196
-     ]
-    },
-    {
-     "bp_code": 3732,
-     "name": "Chatrapur",
-     "parsed": [
-      18,
-      284,
-      101,
-      183
+      163
      ],
      "site": [
-      18,
-      225,
-      78,
-      147
-     ]
-    },
-    {
-     "bp_code": 3735,
-     "name": "Digapahandi",
-     "parsed": [
-      25,
-      410,
-      161,
-      249
-     ],
-     "site": [
-      25,
-      412,
-      162,
-      250
+      21,
+      275,
+      111,
+      164
      ]
     }
    ],
    "gp_er_count_agreement": 0.997905,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 14,
-   "gp_gender_count_agreement": 0.997905,
+   "gp_gender_count_agreement": 0.987277,
    "gp_mismatch_examples": [
+    {
+     "gp_code": 115552,
+     "gp_name": "Badakantakul",
+     "site_er_count": 19,
+     "members_parsed": 19,
+     "site_male_count": 8,
+     "Male": 7.0,
+     "site_female_count": 11,
+     "Female": 11.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
     {
      "gp_code": 115576,
      "gp_name": "Rantalai",
@@ -2613,59 +3536,47 @@
      "Transgender": 0.0
     },
     {
-     "gp_code": 117068,
-     "gp_name": "Pahanga",
-     "site_er_count": 27,
-     "members_parsed": 26,
-     "site_male_count": 11,
-     "Male": 11.0,
-     "site_female_count": 16,
-     "Female": 15.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 117724,
-     "gp_name": "Ankorada",
-     "site_er_count": 16,
-     "members_parsed": 15,
-     "site_male_count": 2,
-     "Male": 2.0,
-     "site_female_count": 14,
-     "Female": 13.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 117745,
-     "gp_name": "Sahadeva Tikarapada",
+     "gp_code": 115654,
+     "gp_name": "Nuagaon",
      "site_er_count": 13,
-     "members_parsed": 12,
-     "site_male_count": 6,
+     "members_parsed": 13,
+     "site_male_count": 5,
      "Male": 5.0,
-     "site_female_count": 7,
+     "site_female_count": 8,
      "Female": 7.0,
      "site_other_count": 0,
      "Transgender": 0.0
     },
     {
-     "gp_code": 118432,
-     "gp_name": "Rudrapur",
+     "gp_code": 115706,
+     "gp_name": "Nakehi",
      "site_er_count": 13,
-     "members_parsed": 6,
+     "members_parsed": 13,
      "site_male_count": 5,
      "Male": 5.0,
      "site_female_count": 8,
-     "Female": 1.0,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 115765,
+     "gp_name": "Budula",
+     "site_er_count": 18,
+     "members_parsed": 18,
+     "site_male_count": 9,
+     "Male": 8.0,
+     "site_female_count": 9,
+     "Female": 9.0,
      "site_other_count": 0,
      "Transgender": 0.0
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 94101,
+   "members": 94001,
    "members_by_gender": {
-    "Male": 37613,
-    "Female": 56470,
+    "Male": 37579,
+    "Female": 56404,
     "Transgender": 18,
     "N/A": 0
    },
@@ -2675,31 +3586,27 @@
     "Female": 57477,
     "Transgender": 18
    },
-   "state_er_count_share": 0.982429,
+   "state_er_count_share": 0.981385,
    "site_zp_er_sum": 93939,
    "site_gp_listing_er_sum": 94123,
    "designations": {
-    "Member -> ward_member": 82330,
-    "Sarpanch -> head": 6688,
-    "Naib Sarpanch -> ward_member": 5083
+    "Member -> ward_member": 82243,
+    "Sarpanch -> head": 6682,
+    "Naib Sarpanch -> ward_member": 5076
    },
    "gps_with_members": 6681,
-   "heads": 6688,
+   "heads": 6682,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.998952,
-   "share_gps_2plus_heads": 0.001048,
+   "share_gps_1_head": 0.99985,
+   "share_gps_2plus_heads": 0.00015,
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [
-    116072,
-    116819,
-    116823,
-    118219,
-    118655
+    116819
    ],
-   "share_female_head": 0.589862,
-   "share_female_ward_member": 0.600883,
-   "share_female_all": 0.6001,
-   "share_heads_also_listed_as_ward_member": 0.020185,
+   "share_female_head": 0.589943,
+   "share_female_ward_member": 0.600809,
+   "share_female_all": 0.600036,
+   "share_heads_also_listed_as_ward_member": 0.020204,
    "empty_names": 2,
    "empty_name_examples": [
     {
@@ -2714,7 +3621,7 @@
     }
    ],
    "placeholder_names": 51,
-   "placeholder_name_share": 0.000542,
+   "placeholder_name_share": 0.000543,
    "placeholder_name_top": {
     "na": 19,
     "xxxx": 6,
@@ -2727,24 +3634,10 @@
     "xxxxxxxxx": 1,
     "xxxxxxxxxxxxxxx": 1
    },
-   "rows_with_duplicate_name_in_gp": 1961,
-   "gps_with_duplicate_name": 752,
-   "share_gps_with_duplicate_name": 0.112558,
+   "rows_with_duplicate_name_in_gp": 1764,
+   "gps_with_duplicate_name": 700,
+   "share_gps_with_duplicate_name": 0.104775,
    "duplicate_name_examples": [
-    {
-     "gp_code": 115552,
-     "member_index": 17,
-     "elected_name": "SANGRAM SAHU",
-     "designation": "Naib Sarpanch",
-     "ward_name": "Ward No. 9"
-    },
-    {
-     "gp_code": 115552,
-     "member_index": 18,
-     "elected_name": "SANGRAM SAHU",
-     "designation": "Naib Sarpanch",
-     "ward_name": "Ward No. 9"
-    },
     {
      "gp_code": 115557,
      "member_index": 7,
@@ -2765,9 +3658,23 @@
      "elected_name": "MANORANJAN TRIPATHY",
      "designation": "Member",
      "ward_name": "Ward No. 4"
+    },
+    {
+     "gp_code": 115566,
+     "member_index": 19,
+     "elected_name": "MANORANJAN TRIPATHY",
+     "designation": "Naib Sarpanch",
+     "ward_name": "Ward No. 4"
+    },
+    {
+     "gp_code": 115567,
+     "member_index": 4,
+     "elected_name": "Dinabandhu behera",
+     "designation": "Member",
+     "ward_name": "Ward No. 11"
     }
    ],
-   "ward_name_present": 87431,
+   "ward_name_present": 87337,
    "ward_no_parsed_share": 0.999989,
    "ward_name_unparsed_top": {
     "Ward No. Nz": 1
@@ -2791,16 +3698,80 @@
    "zp_units_compared": 33,
    "zp_gp_count_agreement": 0.969697,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
+   "zp_male_female_agreement": 0.515152,
    "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 272333,
+     "name": "Balod",
+     "parsed": [
+      436,
+      6717,
+      2556,
+      4140
+     ],
+     "site": [
+      436,
+      6717,
+      2561,
+      4155
+     ]
+    },
+    {
+     "zp_code": 272736,
+     "name": "Balodabazar",
+     "parsed": [
+      519,
+      7403,
+      2912,
+      4471
+     ],
+     "site": [
+      519,
+      7403,
+      2918,
+      4483
+     ]
+    },
+    {
+     "zp_code": 272740,
+     "name": "Balrampur",
+     "parsed": [
+      476,
+      6714,
+      2676,
+      4037
+     ],
+     "site": [
+      476,
+      6714,
+      2676,
+      4038
+     ]
+    },
+    {
+     "zp_code": 334,
+     "name": "Bilaspur",
+     "parsed": [
+      486,
+      7901,
+      3237,
+      4662
+     ],
+     "site": [
+      486,
+      7901,
+      3237,
+      4663
+     ]
+    },
     {
      "zp_code": 336,
      "name": "Dhamtari",
      "parsed": [
       370,
       6099,
-      2528,
-      3569
+      2516,
+      3558
      ],
      "site": [
       369,
@@ -2813,18 +3784,160 @@
    "bp_units_compared": 146,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 1.0,
-   "bp_male_female_agreement": 1.0,
-   "bp_mismatch_examples (gps, ers, male, female)": [],
+   "bp_male_female_agreement": 0.849315,
+   "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 3997,
+     "name": "Dondilohara",
+     "parsed": [
+      120,
+      1763,
+      660,
+      1084
+     ],
+     "site": [
+      120,
+      1763,
+      665,
+      1098
+     ]
+    },
+    {
+     "bp_code": 3999,
+     "name": "Gunderdehi",
+     "parsed": [
+      117,
+      1786,
+      698,
+      1087
+     ],
+     "site": [
+      117,
+      1786,
+      698,
+      1088
+     ]
+    },
+    {
+     "bp_code": 4069,
+     "name": "Simga",
+     "parsed": [
+      104,
+      1525,
+      637,
+      870
+     ],
+     "site": [
+      104,
+      1525,
+      643,
+      882
+     ]
+    },
+    {
+     "bp_code": 4093,
+     "name": "Ramchandrapur",
+     "parsed": [
+      94,
+      1427,
+      537,
+      889
+     ],
+     "site": [
+      94,
+      1427,
+      537,
+      890
+     ]
+    },
+    {
+     "bp_code": 254884,
+     "name": "Takhatpur",
+     "parsed": [
+      124,
+      1989,
+      820,
+      1168
+     ],
+     "site": [
+      124,
+      1989,
+      820,
+      1169
+     ]
+    }
+   ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.99774,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 123064,
+     "gp_name": "Farhada",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 15,
+     "Male": 9.0,
+     "site_female_count": 26,
+     "Female": 13.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 123200,
+     "gp_name": "Savatpur",
+     "site_er_count": 20,
+     "members_parsed": 20,
+     "site_male_count": 7,
+     "Male": 6.0,
+     "site_female_count": 13,
+     "Female": 10.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 123247,
+     "gp_name": "Ghutaku",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 16,
+     "Male": 16.0,
+     "site_female_count": 25,
+     "Female": 24.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 123437,
+     "gp_name": "Chitalnar",
+     "site_er_count": 37,
+     "members_parsed": 37,
+     "site_male_count": 17,
+     "Male": 14.0,
+     "site_female_count": 20,
+     "Female": 19.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 123608,
+     "gp_name": "Palachalma",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 22,
+     "Male": 15.0,
+     "site_female_count": 19,
+     "Female": 18.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 169684,
+   "members": 169501,
    "members_by_gender": {
-    "Male": 66229,
-    "Female": 103438,
+    "Male": 66157,
+    "Female": 103327,
     "Transgender": 17,
     "N/A": 0
    },
@@ -2834,13 +3947,13 @@
     "Female": 105064,
     "Transgender": 17
    },
-   "state_er_count_share": 0.984309,
+   "state_er_count_share": 0.983247,
    "site_zp_er_sum": 169684,
    "site_gp_listing_er_sum": 169684,
    "designations": {
-    "Panch -> ward_member": 150832,
+    "Panch -> ward_member": 150654,
     "Sarpanch -> head": 11504,
-    "Up Sarpanch -> ward_member": 7180,
+    "Up Sarpanch -> ward_member": 7175,
     "PESA Gram Sabha Adhyaksh -> other": 168
    },
    "gps_with_members": 11504,
@@ -2851,13 +3964,13 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.579016,
-   "share_female_ward_member": 0.612023,
-   "share_female_all": 0.609592,
+   "share_female_ward_member": 0.612029,
+   "share_female_all": 0.609595,
    "share_heads_also_listed_as_ward_member": 0.015473,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 585,
-   "placeholder_name_share": 0.003448,
+   "placeholder_name_share": 0.003451,
    "placeholder_name_top": {
     "abc": 146,
     "nil": 105,
@@ -2870,9 +3983,9 @@
     "llllllllllllllllllllllll": 6,
     "aaaaaaaaaa": 4
    },
-   "rows_with_duplicate_name_in_gp": 5577,
-   "gps_with_duplicate_name": 1355,
-   "share_gps_with_duplicate_name": 0.117785,
+   "rows_with_duplicate_name_in_gp": 5223,
+   "gps_with_duplicate_name": 1350,
+   "share_gps_with_duplicate_name": 0.11735,
    "duplicate_name_examples": [
     {
      "gp_code": 121787,
@@ -2910,14 +4023,14 @@
      "ward_name": null
     }
    ],
-   "ward_name_present": 158180,
-   "ward_no_parsed_share": 0.778758,
+   "ward_name_present": 157997,
+   "ward_no_parsed_share": 0.778869,
    "ward_name_unparsed_top": {
-    "Ward NN-N": 595,
+    "Ward NN-N": 591,
     "House No.N To House No. N": 513,
     "House No.N To House No.N": 430,
     "Ward Numbar N": 348,
-    "Ward-No-N": 346,
+    "Ward-No-N": 329,
     "Ward No. One": 276,
     "Ward No. Ten": 262,
     "Ward No. Eight": 261
@@ -2941,8 +4054,24 @@
    "zp_units_compared": 52,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 0.596154,
-   "zp_male_female_agreement": 0.615385,
+   "zp_male_female_agreement": 0.192308,
    "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 349,
+     "name": "Anuppur",
+     "parsed": [
+      277,
+      4740,
+      1954,
+      2774
+     ],
+     "site": [
+      277,
+      4740,
+      1959,
+      2781
+     ]
+    },
     {
      "zp_code": 350,
      "name": "Ashoknagar",
@@ -2950,7 +4079,7 @@
       328,
       4644,
       1780,
-      2863
+      2862
      ],
      "site": [
       328,
@@ -2965,8 +4094,8 @@
      "parsed": [
       690,
       12119,
-      5049,
-      7069
+      5042,
+      7059
      ],
      "site": [
       690,
@@ -2981,7 +4110,7 @@
      "parsed": [
       409,
       7423,
-      3222,
+      3214,
       4200
      ],
      "site": [
@@ -2992,43 +4121,43 @@
      ]
     },
     {
-     "zp_code": 354,
-     "name": "Bhind",
+     "zp_code": 353,
+     "name": "Betul",
      "parsed": [
-      439,
-      8476,
-      3441,
-      5034
+      554,
+      10067,
+      3951,
+      6096
      ],
      "site": [
-      439,
-      8477,
-      3442,
-      5034
-     ]
-    },
-    {
-     "zp_code": 357,
-     "name": "Chhatarpur",
-     "parsed": [
-      559,
-      8461,
-      3339,
-      5122
-     ],
-     "site": [
-      559,
-      8462,
-      3340,
-      5122
+      554,
+      10067,
+      3959,
+      6107
      ]
     }
    ],
    "bp_units_compared": 313,
    "bp_gp_count_agreement": 0.837061,
    "bp_er_count_agreement": 0.757188,
-   "bp_male_female_agreement": 0.760383,
+   "bp_male_female_agreement": 0.603834,
    "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 4100,
+     "name": "Jaithari",
+     "parsed": [
+      78,
+      1423,
+      580,
+      831
+     ],
+     "site": [
+      78,
+      1423,
+      585,
+      838
+     ]
+    },
     {
      "bp_code": 4103,
      "name": "Ashoknagar",
@@ -3036,7 +4165,7 @@
       104,
       1433,
       561,
-      872
+      871
      ],
      "site": [
       104,
@@ -3051,8 +4180,8 @@
      "parsed": [
       54,
       914,
-      359,
-      555
+      353,
+      545
      ],
      "site": [
       null,
@@ -3092,29 +4221,25 @@
       8,
       10
      ]
-    },
-    {
-     "bp_code": 4110,
-     "name": "Katangi",
-     "parsed": [
-      81,
-      1390,
-      589,
-      801
-     ],
-     "site": [
-      null,
-      26,
-      11,
-      15
-     ]
     }
    ],
    "gp_er_count_agreement": 0.998736,
    "gp_er_count_more_than_site": 1,
    "gp_er_count_fewer_than_site": 28,
-   "gp_gender_count_agreement": 0.99878,
+   "gp_gender_count_agreement": 0.99538,
    "gp_mismatch_examples": [
+    {
+     "gp_code": 131664,
+     "gp_name": "Venkatnagar",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 18,
+     "Male": 13.0,
+     "site_female_count": 23,
+     "Female": 16.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
     {
      "gp_code": 131903,
      "gp_name": "Semrahat",
@@ -3128,61 +4253,49 @@
      "Transgender": 0.0
     },
     {
-     "gp_code": 132759,
-     "gp_name": "Shejana",
-     "site_er_count": 13,
+     "gp_code": 131910,
+     "gp_name": "Sowat",
+     "site_er_count": 12,
      "members_parsed": 12,
      "site_male_count": 5,
-     "Male": 4.0,
-     "site_female_count": 8,
-     "Female": 8.0,
+     "Male": 5.0,
+     "site_female_count": 7,
+     "Female": 6.0,
      "site_other_count": 0,
      "Transgender": 0.0
     },
     {
-     "gp_code": 132899,
-     "gp_name": "Kannadgaon",
-     "site_er_count": 16,
-     "members_parsed": 15,
-     "site_male_count": 7,
-     "Male": 6.0,
-     "site_female_count": 9,
-     "Female": 9.0,
+     "gp_code": 132154,
+     "gp_name": "Garhi",
+     "site_er_count": 41,
+     "members_parsed": 41,
+     "site_male_count": 14,
+     "Male": 8.0,
+     "site_female_count": 27,
+     "Female": 17.0,
      "site_other_count": 0,
      "Transgender": 0.0
     },
     {
-     "gp_code": 133990,
-     "gp_name": "Girgaon",
-     "site_er_count": 19,
-     "members_parsed": 18,
+     "gp_code": 132452,
+     "gp_name": "Miragpur",
+     "site_er_count": 22,
+     "members_parsed": 22,
      "site_male_count": 12,
      "Male": 11.0,
-     "site_female_count": 7,
-     "Female": 7.0,
-     "site_other_count": 0,
-     "Transgender": 0.0
-    },
-    {
-     "gp_code": 134766,
-     "gp_name": "Biharwara",
-     "site_er_count": 15,
-     "members_parsed": 14,
-     "site_male_count": 8,
-     "Male": 7.0,
-     "site_female_count": 7,
-     "Female": 7.0,
+     "site_female_count": 10,
+     "Female": 10.0,
      "site_other_count": 0,
      "Transgender": 0.0
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 380985,
+   "members": 380548,
    "members_by_gender": {
-    "Male": 157634,
-    "Female": 223310,
+    "Male": 157463,
+    "Female": 223045,
     "Transgender": 40,
-    "N/A": 1
+    "N/A": 0
    },
    "site_state_er_count": 382139,
    "site_state_by_gender": {
@@ -3190,32 +4303,32 @@
     "Female": 223974,
     "Transgender": 40
    },
-   "state_er_count_share": 0.99698,
+   "state_er_count_share": 0.995837,
    "site_zp_er_sum": 381029,
    "site_gp_listing_er_sum": 381029,
    "designations": {
-    "Panch -> ward_member": 344874,
-    "Sarpanch -> head": 22962,
-    "Upsarpanch -> ward_member": 12475,
-    "Sachiv -> other": 674
+    "Panch -> ward_member": 344456,
+    "Sarpanch -> head": 22949,
+    "Upsarpanch -> ward_member": 12470,
+    "Sachiv -> other": 673
    },
    "gps_with_members": 22944,
-   "heads": 22962,
+   "heads": 22949,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.999346,
-   "share_gps_2plus_heads": 0.000654,
+   "share_gps_1_head": 0.999782,
+   "share_gps_2plus_heads": 0.000218,
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [
-    132452,
-    134403,
-    138418,
-    138610,
-    138729
+    139471,
+    139490,
+    139612,
+    144200,
+    145846
    ],
-   "share_female_head": 0.563801,
-   "share_female_ward_member": 0.587991,
-   "share_female_all": 0.586139,
-   "share_heads_also_listed_as_ward_member": 0.020164,
+   "share_female_head": 0.563728,
+   "share_female_ward_member": 0.587971,
+   "share_female_all": 0.586115,
+   "share_heads_also_listed_as_ward_member": 0.020175,
    "empty_names": 2,
    "empty_name_examples": [
     {
@@ -3229,13 +4342,13 @@
      "designation": "Panch"
     }
    ],
-   "placeholder_names": 745,
+   "placeholder_names": 744,
    "placeholder_name_share": 0.001955,
    "placeholder_name_top": {
     "na": 165,
     "nil": 143,
     "ppp": 65,
-    "abcd": 55,
+    "abcd": 54,
     "xyz": 52,
     "xxx": 52,
     "ward": 26,
@@ -3243,9 +4356,9 @@
     "hhh": 15,
     "sarpanch": 14
    },
-   "rows_with_duplicate_name_in_gp": 18049,
-   "gps_with_duplicate_name": 4919,
-   "share_gps_with_duplicate_name": 0.214392,
+   "rows_with_duplicate_name_in_gp": 17259,
+   "gps_with_duplicate_name": 4890,
+   "share_gps_with_duplicate_name": 0.213128,
    "duplicate_name_examples": [
     {
      "gp_code": 131535,
@@ -3283,10 +4396,10 @@
      "ward_name": "Ward No 7"
     }
    ],
-   "ward_name_present": 358085,
-   "ward_no_parsed_share": 0.228932,
+   "ward_name_present": 357661,
+   "ward_no_parsed_share": 0.228753,
    "ward_name_unparsed_top": {
-    "N to N": 5308,
+    "N to N": 5300,
     "N TO N": 2216,
     "house no N to N": 1376,
     "N to N ": 1362,
@@ -3314,8 +4427,72 @@
    "zp_units_compared": 34,
    "zp_gp_count_agreement": 0.970588,
    "zp_er_count_agreement": 0.941176,
-   "zp_male_female_agreement": 0.941176,
+   "zp_male_female_agreement": 0.264706,
    "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 397,
+     "name": "Ahmedabad",
+     "parsed": [
+      473,
+      2830,
+      1376,
+      1423
+     ],
+     "site": [
+      473,
+      2830,
+      1398,
+      1429
+     ]
+    },
+    {
+     "zp_code": 398,
+     "name": "Amreli",
+     "parsed": [
+      598,
+      4074,
+      1708,
+      2242
+     ],
+     "site": [
+      598,
+      4074,
+      1757,
+      2314
+     ]
+    },
+    {
+     "zp_code": 399,
+     "name": "Anand",
+     "parsed": [
+      346,
+      2672,
+      1110,
+      1561
+     ],
+     "site": [
+      346,
+      2672,
+      1110,
+      1562
+     ]
+    },
+    {
+     "zp_code": 274433,
+     "name": "Arvalli",
+     "parsed": [
+      344,
+      1577,
+      663,
+      897
+     ],
+     "site": [
+      344,
+      1577,
+      672,
+      905
+     ]
+    },
     {
      "zp_code": 400,
      "name": "Banas Kantha",
@@ -3331,137 +4508,166 @@
       1852,
       2497
      ]
-    },
-    {
-     "zp_code": 420,
-     "name": "Vadodara",
-     "parsed": [
-      531,
-      4124,
-      1715,
-      2402
-     ],
-     "site": [
-      530,
-      4124,
-      1715,
-      2402
-     ]
-    },
-    {
-     "zp_code": 421,
-     "name": "Valsad",
-     "parsed": [
-      374,
-      3408,
-      1477,
-      1931
-     ],
-     "site": [
-      374,
-      3399,
-      1472,
-      1927
-     ]
     }
    ],
    "bp_units_compared": 263,
    "bp_gp_count_agreement": 0.961977,
    "bp_er_count_agreement": 0.958175,
-   "bp_male_female_agreement": 0.958175,
+   "bp_male_female_agreement": 0.707224,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
-     "bp_code": 4441,
-     "name": "Amirgadh",
+     "bp_code": 4416,
+     "name": "Dhandhuka",
      "parsed": [
-      34,
-      305,
-      133,
-      172
-     ],
-     "site": [
-      null,
-      21,
-      11,
-      10
-     ]
-    },
-    {
-     "bp_code": 4443,
-     "name": "Danta",
-     "parsed": [
-      39,
-      39,
-      3,
-      36
-     ],
-     "site": [
-      null,
-      21,
-      10,
-      11
-     ]
-    },
-    {
-     "bp_code": 4444,
-     "name": "Dantivada",
-     "parsed": [
+      40,
+      105,
       45,
-      403,
-      182,
-      221
+      59
      ],
      "site": [
-      null,
-      19,
-      8,
-      11
+      40,
+      105,
+      46,
+      59
      ]
     },
     {
-     "bp_code": 4445,
-     "name": "Deesa",
+     "bp_code": 4417,
+     "name": "Dholka",
      "parsed": [
-      110,
-      988,
-      427,
-      561
+      65,
+      546,
+      253,
+      284
      ],
      "site": [
-      null,
-      39,
-      16,
-      23
+      65,
+      546,
+      256,
+      289
      ]
     },
     {
-     "bp_code": 4447,
-     "name": "Dhanera",
+     "bp_code": 4418,
+     "name": "Mandal",
+     "parsed": [
+      36,
+      340,
+      287,
+      37
+     ],
+     "site": [
+      36,
+      340,
+      303,
+      37
+     ]
+    },
+    {
+     "bp_code": 4421,
+     "name": "Viramgam",
+     "parsed": [
+      68,
+      314,
+      125,
+      184
+     ],
+     "site": [
+      68,
+      314,
+      127,
+      185
+     ]
+    },
+    {
+     "bp_code": 4422,
+     "name": "Amreli",
      "parsed": [
       67,
-      602,
-      287,
-      315
+      687,
+      266,
+      368
      ],
      "site": [
-      null,
-      27,
-      14,
-      13
+      67,
+      687,
+      283,
+      401
      ]
     }
    ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.988233,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 154488,
+     "gp_name": "Chokdi",
+     "site_er_count": 33,
+     "members_parsed": 33,
+     "site_male_count": 15,
+     "Male": 15.0,
+     "site_female_count": 18,
+     "Female": 17.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 154491,
+     "gp_name": "Kapadiyali",
+     "site_er_count": 33,
+     "members_parsed": 33,
+     "site_male_count": 16,
+     "Male": 15.0,
+     "site_female_count": 17,
+     "Female": 17.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 154656,
+     "gp_name": "Adval",
+     "site_er_count": 10,
+     "members_parsed": 10,
+     "site_male_count": 5,
+     "Male": 4.0,
+     "site_female_count": 5,
+     "Female": 5.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 154739,
+     "gp_name": "Ingoli",
+     "site_er_count": 17,
+     "members_parsed": 17,
+     "site_male_count": 3,
+     "Male": 3.0,
+     "site_female_count": 14,
+     "Female": 12.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 154742,
+     "gp_name": "Jalalpur Vazifa",
+     "site_er_count": 17,
+     "members_parsed": 17,
+     "site_male_count": 11,
+     "Male": 8.0,
+     "site_female_count": 6,
+     "Female": 3.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 105526,
+   "members": 104465,
    "members_by_gender": {
-    "Male": 45623,
-    "Female": 59860,
-    "Transgender": 43,
+    "Male": 45203,
+    "Female": 59220,
+    "Transgender": 42,
     "N/A": 0
    },
    "site_state_er_count": 105931,
@@ -3470,12 +4676,12 @@
     "Female": 60112,
     "Transgender": 44
    },
-   "state_er_count_share": 0.996177,
+   "state_er_count_share": 0.986161,
    "site_zp_er_sum": 105508,
    "site_gp_listing_er_sum": 105526,
    "designations": {
-    "VAHIVATDAR -> ward_member": 52973,
-    "TALATI -> ward_member": 38021,
+    "VAHIVATDAR -> ward_member": 52326,
+    "TALATI -> ward_member": 37607,
     "SARPANCH -> head": 14532
    },
    "gps_with_members": 14532,
@@ -3486,28 +4692,28 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.560418,
-   "share_female_ward_member": 0.568345,
-   "share_female_all": 0.567254,
+   "share_female_ward_member": 0.567934,
+   "share_female_all": 0.566888,
    "share_heads_also_listed_as_ward_member": 0.083953,
    "empty_names": 0,
    "empty_name_examples": [],
-   "placeholder_names": 7464,
-   "placeholder_name_share": 0.070731,
+   "placeholder_names": 7274,
+   "placeholder_name_share": 0.069631,
    "placeholder_name_top": {
-    "abcd": 1079,
+    "abcd": 1076,
     "sarpanch": 746,
-    "wordno": 636,
-    "vahivatdar": 612,
-    "ward": 378,
-    "abc": 376,
+    "wordno": 630,
+    "vahivatdar": 546,
+    "ward": 372,
+    "abc": 358,
     "aaaaaaaaaaaaa": 340,
-    "talati": 334,
+    "talati": 315,
     "xyz": 310,
-    "shabhy one": 304
+    "shabhy one": 288
    },
-   "rows_with_duplicate_name_in_gp": 19131,
-   "gps_with_duplicate_name": 2969,
-   "share_gps_with_duplicate_name": 0.204308,
+   "rows_with_duplicate_name_in_gp": 17483,
+   "gps_with_duplicate_name": 2907,
+   "share_gps_with_duplicate_name": 0.200041,
    "duplicate_name_examples": [
     {
      "gp_code": 154485,
@@ -3545,8 +4751,8 @@
      "ward_name": "Ward No. 3"
     }
    ],
-   "ward_name_present": 90996,
-   "ward_no_parsed_share": 0.999286,
+   "ward_name_present": 89935,
+   "ward_no_parsed_share": 0.999277,
    "ward_name_unparsed_top": {
     "Barsaleda-N": 8,
     "Amlipani Chhotra-N": 8,
@@ -3576,12 +4782,93 @@
    "zp_units_compared": 34,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
-   "zp_mismatch_examples (gps, ers, male, female)": [],
+   "zp_male_female_agreement": 0.529412,
+   "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 424,
+     "name": "Ahilyanagar",
+     "parsed": [
+      1330,
+      5644,
+      2017,
+      3626
+     ],
+     "site": [
+      1330,
+      5644,
+      2017,
+      3627
+     ]
+    },
+    {
+     "zp_code": 426,
+     "name": "Amravati",
+     "parsed": [
+      843,
+      3442,
+      1255,
+      2184
+     ],
+     "site": [
+      843,
+      3442,
+      1256,
+      2186
+     ]
+    },
+    {
+     "zp_code": 428,
+     "name": "Beed",
+     "parsed": [
+      1042,
+      4215,
+      1559,
+      2564
+     ],
+     "site": [
+      1042,
+      4215,
+      1634,
+      2581
+     ]
+    },
+    {
+     "zp_code": 430,
+     "name": "Buldhana",
+     "parsed": [
+      876,
+      3683,
+      1222,
+      2458
+     ],
+     "site": [
+      876,
+      3683,
+      1222,
+      2459
+     ]
+    },
+    {
+     "zp_code": 431,
+     "name": "Chandrapur",
+     "parsed": [
+      825,
+      3826,
+      1395,
+      2430
+     ],
+     "site": [
+      825,
+      3826,
+      1395,
+      2431
+     ]
+    }
+   ],
    "bp_units_compared": 351,
    "bp_gp_count_agreement": 0.287749,
    "bp_er_count_agreement": 0.287749,
-   "bp_male_female_agreement": 0.287749,
+   "bp_male_female_agreement": 0.276353,
    "bp_mismatch_examples (gps, ers, male, female)": [
     {
      "bp_code": 4639,
@@ -3654,7 +4941,7 @@
       75,
       348,
       110,
-      238
+      237
      ],
      "site": [
       null,
@@ -3667,13 +4954,74 @@
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.996589,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 167874,
+     "gp_name": "Ghoyegaon",
+     "site_er_count": 4,
+     "members_parsed": 4,
+     "site_male_count": 0,
+     "Male": 0.0,
+     "site_female_count": 4,
+     "Female": 3.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 169724,
+     "gp_name": "Takarkheda Purna",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 2,
+     "Male": 1.0,
+     "site_female_count": 5,
+     "Female": 4.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 169839,
+     "gp_name": "Shirajda",
+     "site_er_count": 7,
+     "members_parsed": 7,
+     "site_male_count": 1,
+     "Male": 1.0,
+     "site_female_count": 6,
+     "Female": 5.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 170749,
+     "gp_name": "Kanhori",
+     "site_er_count": 4,
+     "members_parsed": 4,
+     "site_male_count": 0,
+     "Male": 0.0,
+     "site_female_count": 4,
+     "Female": 3.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
+    {
+     "gp_code": 171145,
+     "gp_name": "Bandkhel",
+     "site_er_count": 4,
+     "members_parsed": 4,
+     "site_male_count": 0,
+     "Male": 0.0,
+     "site_female_count": 4,
+     "Female": 3.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 115405,
+   "members": 115261,
    "members_by_gender": {
-    "Male": 40846,
-    "Female": 74552,
+    "Male": 40753,
+    "Female": 74501,
     "Transgender": 7,
     "N/A": 0
    },
@@ -3683,46 +5031,44 @@
     "Female": 74966,
     "Transgender": 8
    },
-   "state_er_count_share": 0.994708,
+   "state_er_count_share": 0.993467,
    "site_zp_er_sum": 115405,
    "site_gp_listing_er_sum": 115405,
    "designations": {
-    "GRAMPANCHAYAT SADASYA -> ward_member": 68009,
-    "SARPANCH -> head": 27849,
-    "DEPUTY SARPANCH -> ward_member": 19547
+    "GRAMPANCHAYAT SADASYA -> ward_member": 67882,
+    "SARPANCH -> head": 27848,
+    "DEPUTY SARPANCH -> ward_member": 19531
    },
    "gps_with_members": 27848,
-   "heads": 27849,
+   "heads": 27848,
    "share_gps_0_heads": 0.0,
-   "share_gps_1_head": 0.999964,
-   "share_gps_2plus_heads": 3.6e-05,
+   "share_gps_1_head": 1.0,
+   "share_gps_2plus_heads": 0.0,
    "gps_0_heads_examples": [],
-   "gps_2plus_heads_examples": [
-    173765
-   ],
-   "share_female_head": 0.615606,
-   "share_female_ward_member": 0.655672,
-   "share_female_all": 0.646003,
-   "share_heads_also_listed_as_ward_member": 0.05835,
+   "gps_2plus_heads_examples": [],
+   "share_female_head": 0.615592,
+   "share_female_ward_member": 0.656172,
+   "share_female_all": 0.646368,
+   "share_heads_also_listed_as_ward_member": 0.058352,
    "empty_names": 0,
    "empty_name_examples": [],
-   "placeholder_names": 1665,
-   "placeholder_name_share": 0.014427,
+   "placeholder_names": 1660,
+   "placeholder_name_share": 0.014402,
    "placeholder_name_top": {
-    "na": 584,
+    "na": 582,
     "abc": 374,
     "xyz": 167,
     "sarpanch": 148,
-    "abcd": 104,
+    "abcd": 102,
     "ward": 30,
     "aaa": 21,
     "mmmm": 21,
     "nil": 17,
     "member": 17
    },
-   "rows_with_duplicate_name_in_gp": 7449,
-   "gps_with_duplicate_name": 2817,
-   "share_gps_with_duplicate_name": 0.101156,
+   "rows_with_duplicate_name_in_gp": 7243,
+   "gps_with_duplicate_name": 2763,
+   "share_gps_with_duplicate_name": 0.099217,
    "duplicate_name_examples": [
     {
      "gp_code": 167569,
@@ -3760,17 +5106,17 @@
      "ward_name": "Bharvanath Ward"
     }
    ],
-   "ward_name_present": 87593,
-   "ward_no_parsed_share": 0.614136,
+   "ward_name_present": 87450,
+   "ward_no_parsed_share": 0.615049,
    "ward_name_unparsed_top": {
     "Hanuman Ward": 983,
-    "Ward No": 510,
+    "Ward No": 507,
     "C": 487,
     "B": 484,
     "A": 460,
     "Gandhi Ward": 378,
     "Laxmi Ward": 278,
-    "N A": 264
+    "N A": 263
    },
    "sample_blocks": [
     4934,
@@ -3791,8 +5137,24 @@
    "zp_units_compared": 2,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 0.5,
-   "zp_male_female_agreement": 0.5,
+   "zp_male_female_agreement": 0.0,
    "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 506,
+     "name": "North Goa",
+     "parsed": [
+      102,
+      895,
+      464,
+      420
+     ],
+     "site": [
+      102,
+      895,
+      469,
+      426
+     ]
+    },
     {
      "zp_code": 507,
      "name": "South Goa",
@@ -3813,8 +5175,20 @@
    "gp_er_count_agreement": 0.994595,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 1,
-   "gp_gender_count_agreement": 0.994595,
+   "gp_gender_count_agreement": 0.989189,
    "gp_mismatch_examples": [
+    {
+     "gp_code": 254508,
+     "gp_name": "St. Cruz",
+     "site_er_count": 23,
+     "members_parsed": 23,
+     "site_male_count": 10,
+     "Male": 5.0,
+     "site_female_count": 13,
+     "Female": 7.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    },
     {
      "gp_code": 254534,
      "gp_name": "Volvoi",
@@ -3829,10 +5203,10 @@
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 1699,
+   "members": 1688,
    "members_by_gender": {
-    "Male": 893,
-    "Female": 806,
+    "Male": 888,
+    "Female": 800,
     "Transgender": 0,
     "N/A": 0
    },
@@ -3842,13 +5216,13 @@
     "Female": 834,
     "Transgender": 0
    },
-   "state_er_count_share": 0.968643,
+   "state_er_count_share": 0.962372,
    "site_zp_er_sum": 1703,
    "site_gp_listing_er_sum": 1703,
    "designations": {
-    "Panch Member -> ward_member": 1374,
+    "Panch Member -> ward_member": 1364,
     "Sarpanch -> head": 185,
-    "Deputy Sarpanch -> ward_member": 138,
+    "Deputy Sarpanch -> ward_member": 137,
     "Coopted member -> other": 2
    },
    "gps_with_members": 185,
@@ -3859,15 +5233,15 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.486486,
-   "share_female_ward_member": 0.472884,
-   "share_female_all": 0.474397,
+   "share_female_ward_member": 0.472352,
+   "share_female_all": 0.473934,
    "share_heads_also_listed_as_ward_member": 0.751351,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 0,
    "placeholder_name_share": 0.0,
    "placeholder_name_top": {},
-   "rows_with_duplicate_name_in_gp": 302,
+   "rows_with_duplicate_name_in_gp": 281,
    "gps_with_duplicate_name": 140,
    "share_gps_with_duplicate_name": 0.756757,
    "duplicate_name_examples": [
@@ -3907,7 +5281,7 @@
      "ward_name": null
     }
    ],
-   "ward_name_present": 1515,
+   "ward_name_present": 1504,
    "ward_no_parsed_share": 1.0,
    "ward_name_unparsed_top": {},
    "sample_blocks": [
@@ -4124,7 +5498,7 @@
       33,
       362,
       213,
-      149
+      148
      ],
      "site": [
       33,
@@ -4137,8 +5511,24 @@
    "bp_units_compared": 7,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 0.857143,
-   "bp_male_female_agreement": 0.857143,
+   "bp_male_female_agreement": 0.714286,
    "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 6799,
+     "name": "Campbell Bay",
+     "parsed": [
+      3,
+      35,
+      18,
+      16
+     ],
+     "site": [
+      3,
+      35,
+      18,
+      17
+     ]
+    },
     {
      "bp_code": 6794,
      "name": "Ferrargunj",
@@ -4159,7 +5549,7 @@
    "gp_er_count_agreement": 0.985714,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 1,
-   "gp_gender_count_agreement": 0.985714,
+   "gp_gender_count_agreement": 0.971429,
    "gp_mismatch_examples": [
     {
      "gp_code": 234491,
@@ -4172,13 +5562,25 @@
      "Female": 4,
      "site_other_count": 0,
      "Transgender": 0
+    },
+    {
+     "gp_code": 234529,
+     "gp_name": "Campbell Bay",
+     "site_er_count": 12,
+     "members_parsed": 12,
+     "site_male_count": 6,
+     "Male": 6,
+     "site_female_count": 6,
+     "Female": 5,
+     "site_other_count": 0,
+     "Transgender": 0
     }
    ],
    "gp_zero_member_rows": 0,
-   "members": 760,
+   "members": 759,
    "members_by_gender": {
     "Male": 440,
-    "Female": 320,
+    "Female": 319,
     "Transgender": 0,
     "N/A": 0
    },
@@ -4188,11 +5590,11 @@
     "Female": 320,
     "Transgender": 0
    },
-   "state_er_count_share": 0.998686,
+   "state_er_count_share": 0.997372,
    "site_zp_er_sum": 761,
    "site_gp_listing_er_sum": 761,
    "designations": {
-    "Ward Member -> ward_member": 502,
+    "Ward Member -> ward_member": 501,
     "Pradhan -> head": 70,
     "UP Pradhan -> ward_member": 69,
     "Sarpanch -> other": 62,
@@ -4206,17 +5608,17 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.342857,
-   "share_female_ward_member": 0.462347,
-   "share_female_all": 0.421053,
+   "share_female_ward_member": 0.461404,
+   "share_female_all": 0.42029,
    "share_heads_also_listed_as_ward_member": 0.0,
    "empty_names": 0,
    "empty_name_examples": [],
    "placeholder_names": 0,
    "placeholder_name_share": 0.0,
    "placeholder_name_top": {},
-   "rows_with_duplicate_name_in_gp": 8,
-   "gps_with_duplicate_name": 4,
-   "share_gps_with_duplicate_name": 0.057143,
+   "rows_with_duplicate_name_in_gp": 6,
+   "gps_with_duplicate_name": 3,
+   "share_gps_with_duplicate_name": 0.042857,
    "duplicate_name_examples": [
     {
      "gp_code": 234486,
@@ -4254,8 +5656,8 @@
      "ward_name": "Sippighat - 1"
     }
    ],
-   "ward_name_present": 690,
-   "ward_no_parsed_share": 0.011594,
+   "ward_name_present": 689,
+   "ward_no_parsed_share": 0.011611,
    "ward_name_unparsed_top": {
     "Bambooflat-N": 25,
     "HutbayN": 14,
@@ -4285,22 +5687,69 @@
    "zp_units_compared": 31,
    "zp_gp_count_agreement": 1.0,
    "zp_er_count_agreement": 1.0,
-   "zp_male_female_agreement": 1.0,
-   "zp_mismatch_examples (gps, ers, male, female)": [],
+   "zp_male_female_agreement": 0.967742,
+   "zp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "zp_code": 289868,
+     "name": "Mancherial",
+     "parsed": [
+      306,
+      2929,
+      1514,
+      1413
+     ],
+     "site": [
+      306,
+      2929,
+      1516,
+      1413
+     ]
+    }
+   ],
    "bp_units_compared": 565,
    "bp_gp_count_agreement": 1.0,
    "bp_er_count_agreement": 1.0,
-   "bp_male_female_agreement": 1.0,
-   "bp_mismatch_examples (gps, ers, male, female)": [],
+   "bp_male_female_agreement": 0.99823,
+   "bp_mismatch_examples (gps, ers, male, female)": [
+    {
+     "bp_code": 5033,
+     "name": "Tandur",
+     "parsed": [
+      15,
+      161,
+      82,
+      77
+     ],
+     "site": [
+      15,
+      161,
+      84,
+      77
+     ]
+    }
+   ],
    "gp_er_count_agreement": 1.0,
    "gp_er_count_more_than_site": 0,
    "gp_er_count_fewer_than_site": 0,
-   "gp_gender_count_agreement": 1.0,
-   "gp_mismatch_examples": [],
+   "gp_gender_count_agreement": 0.999921,
+   "gp_mismatch_examples": [
+    {
+     "gp_code": 195701,
+     "gp_name": "Kothapalle",
+     "site_er_count": 13,
+     "members_parsed": 13,
+     "site_male_count": 8,
+     "Male": 6.0,
+     "site_female_count": 5,
+     "Female": 5.0,
+     "site_other_count": 0,
+     "Transgender": 0.0
+    }
+   ],
    "gp_zero_member_rows": 0,
-   "members": 125010,
+   "members": 125008,
    "members_by_gender": {
-    "Male": 63931,
+    "Male": 63929,
     "Female": 61067,
     "Transgender": 12,
     "N/A": 0
@@ -4311,11 +5760,11 @@
     "Female": 61226,
     "Transgender": 12
    },
-   "state_er_count_share": 0.997319,
+   "state_er_count_share": 0.997303,
    "site_zp_er_sum": 125010,
    "site_gp_listing_er_sum": 125010,
    "designations": {
-    "Ward Member -> ward_member": 100357,
+    "Ward Member -> ward_member": 100355,
     "Sarpanch -> head": 12717,
     "Upa Sarpanch -> ward_member": 11911,
     "Co-Opted Member -> other": 25
@@ -4328,8 +5777,8 @@
    "gps_0_heads_examples": [],
    "gps_2plus_heads_examples": [],
    "share_female_head": 0.504128,
-   "share_female_ward_member": 0.486755,
-   "share_female_all": 0.488497,
+   "share_female_ward_member": 0.486764,
+   "share_female_all": 0.488505,
    "share_heads_also_listed_as_ward_member": 0.006291,
    "empty_names": 0,
    "empty_name_examples": [],
@@ -4347,9 +5796,9 @@
     "sarpanch": 1,
     "aaa": 1
    },
-   "rows_with_duplicate_name_in_gp": 2235,
-   "gps_with_duplicate_name": 487,
-   "share_gps_with_duplicate_name": 0.038295,
+   "rows_with_duplicate_name_in_gp": 2232,
+   "gps_with_duplicate_name": 486,
+   "share_gps_with_duplicate_name": 0.038217,
    "duplicate_name_examples": [
     {
      "gp_code": 194941,
@@ -4387,7 +5836,7 @@
      "ward_name": "Ward No 3"
     }
    ],
-   "ward_name_present": 112293,
+   "ward_name_present": 112291,
    "ward_no_parsed_share": 0.961333,
    "ward_name_unparsed_top": {
     "Nth Ward": 742,
@@ -4486,20 +5935,172 @@
    ]
   }
  },
+ "merged_head_reentries": [
+  {
+   "gp_code": 96124,
+   "kept_index": 0,
+   "kept": [
+    "VEENA KUMARI",
+    "Female",
+    null
+   ],
+   "dropped_index": 3,
+   "dropped": [
+    "VEENA KUMARI",
+    "Female",
+    "Ward no 14"
+   ]
+  },
+  {
+   "gp_code": 97210,
+   "kept_index": 0,
+   "kept": [
+    "Malti devi",
+    "Female",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "Malti deviw",
+    "Female",
+    null
+   ]
+  },
+  {
+   "gp_code": 97502,
+   "kept_index": 0,
+   "kept": [
+    "Arun kumar",
+    "Male",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "Arun Kumar",
+    "Male",
+    null
+   ]
+  },
+  {
+   "gp_code": 99666,
+   "kept_index": 0,
+   "kept": [
+    "MD RIYAZ UDDIN",
+    "Male",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "MD RIYAZ UDDIN",
+    "Male",
+    "Ward No 04"
+   ]
+  },
+  {
+   "gp_code": 111983,
+   "kept_index": 0,
+   "kept": [
+    "YASMIN FATMA",
+    "Female",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "YASMIN FATMA",
+    "Female",
+    "Ward 1"
+   ]
+  },
+  {
+   "gp_code": 138418,
+   "kept_index": 0,
+   "kept": [
+    "vipat bhorga",
+    "Male",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "Vipat Bhorga",
+    "Male",
+    null
+   ]
+  },
+  {
+   "gp_code": 138729,
+   "kept_index": 0,
+   "kept": [
+    "jamnabai bhuryale",
+    "Female",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "JAMNABAI BHURYALE",
+    "Female",
+    null
+   ]
+  },
+  {
+   "gp_code": 141957,
+   "kept_index": 0,
+   "kept": [
+    "Shanti Bai Yadav",
+    "Female",
+    null
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "Shanti Bai Yadav",
+    "N/A",
+    null
+   ]
+  },
+  {
+   "gp_code": 153396,
+   "kept_index": 0,
+   "kept": [
+    "MIRA BAI",
+    "Female",
+    "m. N. 204 gabbaajee ke ghar se m. N. 220 seemaa ke ghar tak"
+   ],
+   "dropped_index": 1,
+   "dropped": [
+    "MIRA BAI",
+    "Female",
+    null
+   ]
+  },
+  {
+   "gp_code": 246093,
+   "kept_index": 3,
+   "kept": [
+    "NEERAJ RANI",
+    "Female",
+    null
+   ],
+   "dropped_index": 0,
+   "dropped": [
+    "NEERAJ RANI",
+    "Male",
+    null
+   ]
+  }
+ ],
  "overall": {
   "gp_listing_rows": 150019,
   "gps_with_members": 148495,
-  "members": 1544524,
+  "members": 1541551,
   "gender_values": {
-   "Female": 893891,
-   "Male": 650413,
-   "Transgender": 219,
-   "N/A": 1
+   "Female": 892150,
+   "Male": 649183,
+   "Transgender": 218,
+   "N/A": 0
   },
   "designation_class_values": {
-   "ward_member": 1366778,
-   "head": 148568,
-   "other": 29178
+   "ward_member": 1363981,
+   "head": 148501,
+   "other": 29069
   }
  }
 }
