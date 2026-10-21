@@ -47,8 +47,7 @@ zp and bp codes are LGD local-body codes, a different series from LGD district a
 block codes.
 
 A full sweep is about 175,000 requests; at the measured 7.5 s each, about 15 days
-sequentially and 350 MB. The site's terms of use restrict copying and
-redistribution; check them before any bulk run.
+sequentially and 350 MB.
 
 ### Full collection (2026-10-20)
 
@@ -60,7 +59,8 @@ request log (`er/log.jsonl`: URL, time, status, bytes, SHA-256).
     tar xzf raw/er_2026-10-20.tgz -C /tmp
     uv run python bin/build_er.py --src /tmp/er --out er_build
 
-`build_er.py` writes `gps.parquet` (150,019 GPs listed, 148,495 with members)
+The built tables are in `data/`: `gps.parquet`, `members.parquet` and
+`checks.json`, as below. `build_er.py` writes `gps.parquet` (150,019 GPs listed, 148,495 with members)
 and `members.parquet` (1,544,524 members), validated against `schema/`, and
 `checks.json` comparing them with the site's own published counts. It stops on
 any designation not classified in `DESIGNATION_CLASS` (head, ward_member,
@@ -81,3 +81,16 @@ member counts match the site's in 5% of districts.
 - `bin/collect_er.py`: the full collector (every GP's elected representatives, state by state; resumable; drops the masked contact fields as it saves). Run on a VM in India: `python3 bin/collect_er.py --out er --workers 3`.
 - `bin/`: the survey scripts. They route through a SOCKS proxy at localhost:1080
   (an SSH tunnel to a VM in India) and cache each response under `raw/`.
+
+## Source, permission and attribution
+
+The data come from [eGramSwaraj](https://egramswaraj.gov.in), whose contents are
+owned, updated and managed by the Panchayats and State Panchayati Raj Departments
+under the Ministry of Panchayati Raj's e-Panchayat Mission Mode Project; the site
+is hosted by the National Informatics Centre. Its copyright policy allows
+reproduction with permission and prominent acknowledgement of the source. The
+Ministry's permission was obtained for this research release. Phone numbers and
+email addresses, masked by the site, are removed from every file here.
+
+Cite: Ministry of Panchayati Raj, Government of India, eGramSwaraj elected
+representatives, retrieved 18-20 October 2026.
