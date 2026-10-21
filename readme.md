@@ -61,10 +61,17 @@ request log (`er/log.jsonl`: URL, time, status, bytes, SHA-256).
 
 The built tables are in `data/`: `gps.parquet`, `members.parquet` and
 `checks.json`, as below. `build_er.py` writes `gps.parquet` (150,019 GPs listed, 148,495 with members)
-and `members.parquet` (1,544,524 members), validated against `schema/`, and
+and `members.parquet` (1,541,561 members), validated against `schema/`, and
 `checks.json` comparing them with the site's own published counts. It stops on
 any designation not classified in `DESIGNATION_CLASS` (head, ward_member,
 other).
+
+The site stores some people twice: 923 GPs' responses repeat a row exactly
+(2,963 rows; the site's own counts include them). Repeats are dropped and
+counted in `gps.members_repeated`. Sixteen GPs still list two heads
+(`heads_listed = 2`): nine are one person entered twice with a change (ward,
+case, spelling, gender), seven are two different people with no date to say
+which is current. Neither is chosen.
 
 Care: Maharashtra lists about 4 members per GP against at least 7 seats, and
 the site's own counts agree, so the site is incomplete there; Bihar's district
@@ -88,7 +95,7 @@ member counts match the site's in 5% of districts.
 import pandas as pd
 gps = pd.read_parquet("data/gps.parquet")
 heads = pd.read_parquet("data/members.parquet").query("designation_class == 'head'")
-heads.merge(gps, on=["state_code", "gp_code"])  # one row per GP head
+heads.merge(gps.query("heads_listed == 1"), on=["state_code", "gp_code"])  # one head per GP
 ```
 
 Types are as stored; `bin/describe.py` writes this section from the files and
@@ -114,14 +121,16 @@ Types are as stored; `bin/describe.py` writes this section from the files and
 | `site_male_count` | int32 | yes | 0– | Male ERs the GP listing reports (maleCount). |
 | `site_female_count` | int32 | yes | 0– | Female ERs the GP listing reports (femaleCount). |
 | `site_other_count` | int32 | yes | 0– | Other-gender ERs the GP listing reports (otherCount); corresponds to gender 'Transgender' in member responses. |
-| `members_parsed` | int32 |  | 0– | Rows in the GP's member response. Null when the member response was not fetched (site_er_count is 0). |
+| `members_parsed` | int32 |  | 0– | Rows in the GP's member response as received, repeats included (the site's own ER count includes them). Null when the member response was not fetched (site_er_count is 0). |
+| `members_repeated` | int32 |  | 0– | Rows that exactly repeat an earlier row of the same response (all four fields) and are left out of members.parquet. Null when not fetched. |
+| `heads_listed` | int16 |  | 0– | Members classed head after repeats are dropped. Above 1 means the site lists the same person twice with differences, or two people (a successor beside a predecessor, undated); none is chosen here. Null when not fetched. |
 | `members_file` | string |  |  | Member response path relative to the collection directory, e.g. '10/members/93638.json'. Null when not fetched. |
 | `members_sha256` | string |  |  | sha256 of the member response as received (before mobno/emailid were dropped), from log.jsonl. |
 | `fetched_at` | timestamp (UTC) |  |  | UTC time the member response was saved, from log.jsonl. |
 
 ### `data/members.parquet`
 
-1,544,524 rows; one row per `gp_code`, `member_index`.
+1,541,561 rows; one row per `gp_code`, `member_index`.
 
 | Column | Type | Required | Allowed | Description |
 |---|---|---|---|---|

@@ -14,7 +14,9 @@
     {"name": "site_male_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Male ERs the GP listing reports (maleCount)."},
     {"name": "site_female_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Female ERs the GP listing reports (femaleCount)."},
     {"name": "site_other_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Other-gender ERs the GP listing reports (otherCount); corresponds to gender 'Transgender' in member responses."},
-    {"name": "members_parsed", "type": "integer", "constraints": {"minimum": 0}, "description": "Rows in the GP's member response. Null when the member response was not fetched (site_er_count is 0)."},
+    {"name": "members_parsed", "type": "integer", "constraints": {"minimum": 0}, "description": "Rows in the GP's member response as received, repeats included (the site's own ER count includes them). Null when the member response was not fetched (site_er_count is 0)."},
+    {"name": "members_repeated", "type": "integer", "constraints": {"minimum": 0}, "description": "Rows that exactly repeat an earlier row of the same response (all four fields) and are left out of members.parquet. Null when not fetched."},
+    {"name": "heads_listed", "type": "integer", "constraints": {"minimum": 0}, "description": "Members classed head after repeats are dropped. Above 1 means the site lists the same person twice with differences, or two people (a successor beside a predecessor, undated); none is chosen here. Null when not fetched."},
     {"name": "members_file", "type": "string", "description": "Member response path relative to the collection directory, e.g. '10/members/93638.json'. Null when not fetched."},
     {"name": "members_sha256", "type": "string", "constraints": {"pattern": "[0-9a-f]{64}"}, "description": "sha256 of the member response as received (before mobno/emailid were dropped), from log.jsonl."},
     {"name": "fetched_at", "type": "datetime", "description": "UTC time the member response was saved, from log.jsonl."}

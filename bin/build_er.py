@@ -197,6 +197,8 @@ GPS_DTYPES = {
     "site_female_count": "int32",
     "site_other_count": "int32",
     "members_parsed": "Int32",
+    "members_repeated": "Int32",
+    "heads_listed": "Int16",
     "members_file": "string",
     "members_sha256": "string",
     "fetched_at": "datetime64[us, UTC]",
@@ -359,6 +361,7 @@ def parse_members(src, sc, gps, log, problems):
         rel = f"{sc}/members/{g['gp_code']}.json"
         path = src / rel
         g["members_parsed"] = g["members_file"] = g["members_sha256"] = g["fetched_at"] = None
+        g["members_repeated"] = None
         if not path.exists():
             if g["site_er_count"]:
                 problems.append(f"missing member file {rel} (site_er_count {g['site_er_count']})")
@@ -373,7 +376,17 @@ def parse_members(src, sc, gps, log, problems):
         g["members_file"] = rel
         g["members_sha256"], g["fetched_at"] = log[rel]
         g["members_parsed"] = len(data)
+        # The site stores some people twice: 923 GPs' responses repeat a row
+        # exactly (all four fields), and in 871 of them the site's own ER count
+        # includes the repeat. A repeat is dropped; member_index keeps the
+        # position in the response, and members_repeated says how many went.
+        seen, g["members_repeated"] = set(), 0
         for i, r in enumerate(data):
+            key = json.dumps(r, sort_keys=True)
+            if key in seen:
+                g["members_repeated"] += 1
+                continue
+            seen.add(key)
             if not isinstance(r, dict) or set(r) != MEMBER_KEYS:
                 problems.append(
                     f"{rel}[{i}]: unexpected keys {sorted(r) if isinstance(r, dict) else r}"
@@ -409,6 +422,12 @@ def to_frames(gps, members, problems):
     m["ward_no"] = [ward_no(w) for w in m["ward_name"]]
     m = m[list(MEMBERS_DTYPES)].astype(MEMBERS_DTYPES)
     m = m.sort_values(["state_code", "gp_code", "member_index"], ignore_index=True)
+    # More than one head after repeats are dropped: the same person entered
+    # twice with a spelling, ward or gender change, or two different people
+    # (a successor kept beside the predecessor, undated). Counted, not chosen.
+    heads = m[m.designation_class == "head"].groupby("gp_code").size()
+    g["heads_listed"] = g.gp_code.map(heads).fillna(0).astype("Int16")
+    g.loc[g.members_file.isna(), "heads_listed"] = pd.NA
     return g, m
 
 
