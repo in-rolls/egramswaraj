@@ -129,7 +129,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="er")
     ap.add_argument("--workers", type=int, default=3)
-    ap.add_argument("--delay", type=float, default=2.0, help="seconds before each request, per worker")
+    ap.add_argument(
+        "--delay", type=float, default=2.0, help="seconds before each request, per worker"
+    )
     ap.add_argument("--states", default="", help="comma-separated state codes; default all")
     args = ap.parse_args()
     out = pathlib.Path(args.out)

@@ -1,0 +1,16 @@
+{
+  "title": "eGramSwaraj elected representatives",
+  "description": "One row per person in a GP's member response (ElectedMemberRepresent.do, level=V), in response order. Current term only; no reservation, caste or election year.",
+  "fields": [
+    {"name": "state_code", "type": "integer", "constraints": {"required": true, "minimum": 1, "maximum": 99}, "description": "eGramSwaraj / LGD state code."},
+    {"name": "gp_code", "type": "integer", "constraints": {"required": true, "minimum": 1}, "description": "Gram panchayat LGD local-body code; joins to gps.gp_code."},
+    {"name": "member_index", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "0-based position of the person in the GP's member response."},
+    {"name": "elected_name", "type": "string", "description": "electedname exactly as printed, including stray whitespace and placeholder entries."},
+    {"name": "designation", "type": "string", "constraints": {"required": true}, "description": "designationname exactly as printed."},
+    {"name": "designation_class", "type": "string", "constraints": {"required": true, "enum": ["head", "ward_member", "other"]}, "description": "head: the GP's elected chief (Sarpanch, Mukhiya, Pradhan, President...). ward_member: a ward-elected GP member, including deputies who hold a ward. other: offices of other bodies (e.g. Bihar's Gram Kachahari), staff, co-opted members. Mapping per state is DESIGNATION_CLASS in bin/build_er.py."},
+    {"name": "ward_name", "type": "string", "description": "wardName exactly as printed; null for most heads."},
+    {"name": "ward_no", "type": "integer", "constraints": {"minimum": 0, "maximum": 999}, "description": "Ward number parsed from ward_name when it is an explicit ward number ('Ward No. 5', 'Ward-5', '5', 'Five', 'Wimc no.5', '5 No. Ward'); null otherwise (place names, village segments)."},
+    {"name": "gender", "type": "string", "constraints": {"required": true, "enum": ["Male", "Female", "Transgender", "N/A"]}, "description": "gender exactly as the site codes it (N/A on one member)."}
+  ],
+  "primaryKey": ["gp_code", "member_index"]
+}

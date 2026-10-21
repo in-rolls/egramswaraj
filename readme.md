@@ -50,6 +50,26 @@ A full sweep is about 175,000 requests; at the measured 7.5 s each, about 15 day
 sequentially and 350 MB. The site's terms of use restrict copying and
 redistribution; check them before any bulk run.
 
+### Full collection (2026-10-20)
+
+`bin/collect_er.py` ran from a VM in Mumbai, 18-20 October 2026, and finished
+with no failed requests. `raw/er_2026-10-20.tgz` (37 MB, SHA-256 in the
+`.sha256` beside it) holds every response, contact fields removed, and the
+request log (`er/log.jsonl`: URL, time, status, bytes, SHA-256).
+
+    tar xzf raw/er_2026-10-20.tgz -C /tmp
+    uv run python bin/build_er.py --src /tmp/er --out er_build
+
+`build_er.py` writes `gps.parquet` (150,019 GPs listed, 148,495 with members)
+and `members.parquet` (1,544,524 members), validated against `schema/`, and
+`checks.json` comparing them with the site's own published counts. It stops on
+any designation not classified in `DESIGNATION_CLASS` (head, ward_member,
+other).
+
+Care: Maharashtra lists about 4 members per GP against at least 7 seats, and
+the site's own counts agree, so the site is incomplete there; Bihar's district
+member counts match the site's in 5% of districts.
+
 ### Files
 
 - `samples/sample_heads_OD_MP_PB.csv`: 60 heads, 20 GPs each in Odisha (Anugul),

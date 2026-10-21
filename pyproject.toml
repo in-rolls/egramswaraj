@@ -1,0 +1,23 @@
+[project]
+name = "egramswaraj"
+version = "0.1.0"
+description = "Collect and parse eGramSwaraj elected-representative data"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=3.0.6",
+    "pandera[frictionless]>=0.34.1",
+    "pyarrow>=26.0.0",
+]
+
+[dependency-groups]
+dev = ["black", "isort", "flake8"]
+
+[tool.uv]
+package = false
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100

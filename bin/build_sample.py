@@ -13,13 +13,25 @@ for sc, bp, sname in blocks:
         path = f"ElectedMemberRepresent.do?code={g['gpCode']}&stateCode={sc}&level=V"
         m = get(path, f"egs_ER_{sc}_mem_{g['gpCode']}.json")
         for r in m:
-            row = {"state_code": sc, "state": sname, "block_lb_code": bp, "gp_lgd_code": g["gpCode"],
-                   "gp_name": g["gpName"], "name": r["electedname"], "designation": r["designationname"],
-                   "ward": r["wardName"], "gender": r["gender"], "request": BASE + path}
+            row = {
+                "state_code": sc,
+                "state": sname,
+                "block_lb_code": bp,
+                "gp_lgd_code": g["gpCode"],
+                "gp_name": g["gpName"],
+                "name": r["electedname"],
+                "designation": r["designationname"],
+                "ward": r["wardName"],
+                "gender": r["gender"],
+                "request": BASE + path,
+            }
             everyone.append(row)
             if (r["designationname"] or "").strip().lower() in HEAD:
                 heads.append(row)
-for fn, rows in (("sample_heads_OD_MP_PB.csv", heads), ("sample_all_members_OD_MP_PB.csv", everyone)):
+for fn, rows in (
+    ("sample_heads_OD_MP_PB.csv", heads),
+    ("sample_all_members_OD_MP_PB.csv", everyone),
+):
     with open(D / "samples" / fn, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()

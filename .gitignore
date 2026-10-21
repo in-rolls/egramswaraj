@@ -1,0 +1,4 @@
+er_partial/
+er_build/
+.venv/
+__pycache__/

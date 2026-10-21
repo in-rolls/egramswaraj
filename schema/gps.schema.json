@@ -1,0 +1,23 @@
+{
+  "title": "eGramSwaraj gram panchayats",
+  "description": "One row per gram panchayat (GP) listed by eGramSwaraj's elected-representative report (year=2026), with the site's own published counts and what was parsed from the GP's member response.",
+  "fields": [
+    {"name": "state_code", "type": "integer", "constraints": {"required": true, "minimum": 1, "maximum": 99}, "description": "eGramSwaraj / LGD state code."},
+    {"name": "state_name", "type": "string", "constraints": {"required": true}, "description": "State name as in states.json."},
+    {"name": "zp_code", "type": "integer", "constraints": {"required": true, "minimum": 1}, "description": "District panchayat (zila parishad) code: an LGD local-body code, not an LGD district code."},
+    {"name": "zp_name", "type": "string", "constraints": {"required": true}, "description": "District panchayat name as printed."},
+    {"name": "bp_code", "type": "integer", "constraints": {"minimum": 1}, "description": "Block panchayat code (LGD local-body code). Null in two-tier states, where GPs hang off the district panchayat."},
+    {"name": "bp_name", "type": "string", "description": "Block panchayat name as printed. Null in two-tier states."},
+    {"name": "gp_code", "type": "integer", "constraints": {"required": true, "minimum": 1}, "description": "Gram panchayat LGD local-body code."},
+    {"name": "gp_name", "type": "string", "constraints": {"required": true}, "description": "Gram panchayat name as printed."},
+    {"name": "site_er_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Elected representatives the GP listing reports for this GP (gperCount). The collector fetches members only when this is above zero."},
+    {"name": "site_male_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Male ERs the GP listing reports (maleCount)."},
+    {"name": "site_female_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Female ERs the GP listing reports (femaleCount)."},
+    {"name": "site_other_count", "type": "integer", "constraints": {"required": true, "minimum": 0}, "description": "Other-gender ERs the GP listing reports (otherCount); corresponds to gender 'Transgender' in member responses."},
+    {"name": "members_parsed", "type": "integer", "constraints": {"minimum": 0}, "description": "Rows in the GP's member response. Null when the member response was not fetched (site_er_count is 0)."},
+    {"name": "members_file", "type": "string", "description": "Member response path relative to the collection directory, e.g. '10/members/93638.json'. Null when not fetched."},
+    {"name": "members_sha256", "type": "string", "constraints": {"pattern": "[0-9a-f]{64}"}, "description": "sha256 of the member response as received (before mobno/emailid were dropped), from log.jsonl."},
+    {"name": "fetched_at", "type": "datetime", "description": "UTC time the member response was saved, from log.jsonl."}
+  ],
+  "primaryKey": ["gp_code"]
+}
