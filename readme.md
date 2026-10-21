@@ -81,16 +81,3 @@ member counts match the site's in 5% of districts.
 - `bin/collect_er.py`: the full collector (every GP's elected representatives, state by state; resumable; drops the masked contact fields as it saves). Run on a VM in India: `python3 bin/collect_er.py --out er --workers 3`.
 - `bin/`: the survey scripts. They route through a SOCKS proxy at localhost:1080
   (an SSH tunnel to a VM in India) and cache each response under `raw/`.
-
-## Source, permission and attribution
-
-The data come from [eGramSwaraj](https://egramswaraj.gov.in), whose contents are
-owned, updated and managed by the Panchayats and State Panchayati Raj Departments
-under the Ministry of Panchayati Raj's e-Panchayat Mission Mode Project; the site
-is hosted by the National Informatics Centre. Its copyright policy allows
-reproduction with permission and prominent acknowledgement of the source. The
-Ministry's permission was obtained for this research release. Phone numbers and
-email addresses, masked by the site, are removed from every file here.
-
-Cite: Ministry of Panchayati Raj, Government of India, eGramSwaraj elected
-representatives, retrieved 18-20 October 2026.
