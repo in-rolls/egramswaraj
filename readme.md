@@ -81,3 +81,58 @@ member counts match the site's in 5% of districts.
 - `bin/collect_er.py`: the full collector (every GP's elected representatives, state by state; resumable; drops the masked contact fields as it saves). Run on a VM in India: `python3 bin/collect_er.py --out er --workers 3`.
 - `bin/`: the survey scripts. They route through a SOCKS proxy at localhost:1080
   (an SSH tunnel to a VM in India) and cache each response under `raw/`.
+
+## Tables
+
+```python
+import pandas as pd
+gps = pd.read_parquet("data/gps.parquet")
+heads = pd.read_parquet("data/members.parquet").query("designation_class == 'head'")
+heads.merge(gps, on=["state_code", "gp_code"])  # one row per GP head
+```
+
+Types are as stored; `bin/describe.py` writes this section from the files and
+`schema/*.schema.json`, and `--check` fails when it is stale.
+
+<!-- tables:start -->
+
+### `data/gps.parquet`
+
+150,019 rows; one row per `gp_code`.
+
+| Column | Type | Required | Allowed | Description |
+|---|---|---|---|---|
+| `state_code` | int16 | yes | 1–99 | eGramSwaraj / LGD state code. |
+| `state_name` | string | yes |  | State name as in states.json. |
+| `zp_code` | int64 | yes | 1– | District panchayat (zila parishad) code: an LGD local-body code, not an LGD district code. |
+| `zp_name` | string | yes |  | District panchayat name as printed. |
+| `bp_code` | int64 |  | 1– | Block panchayat code (LGD local-body code). Null in two-tier states, where GPs hang off the district panchayat. |
+| `bp_name` | string |  |  | Block panchayat name as printed. Null in two-tier states. |
+| `gp_code` | int64 | yes | 1– | Gram panchayat LGD local-body code. |
+| `gp_name` | string | yes |  | Gram panchayat name as printed. |
+| `site_er_count` | int32 | yes | 0– | Elected representatives the GP listing reports for this GP (gperCount). The collector fetches members only when this is above zero. |
+| `site_male_count` | int32 | yes | 0– | Male ERs the GP listing reports (maleCount). |
+| `site_female_count` | int32 | yes | 0– | Female ERs the GP listing reports (femaleCount). |
+| `site_other_count` | int32 | yes | 0– | Other-gender ERs the GP listing reports (otherCount); corresponds to gender 'Transgender' in member responses. |
+| `members_parsed` | int32 |  | 0– | Rows in the GP's member response. Null when the member response was not fetched (site_er_count is 0). |
+| `members_file` | string |  |  | Member response path relative to the collection directory, e.g. '10/members/93638.json'. Null when not fetched. |
+| `members_sha256` | string |  |  | sha256 of the member response as received (before mobno/emailid were dropped), from log.jsonl. |
+| `fetched_at` | timestamp (UTC) |  |  | UTC time the member response was saved, from log.jsonl. |
+
+### `data/members.parquet`
+
+1,544,524 rows; one row per `gp_code`, `member_index`.
+
+| Column | Type | Required | Allowed | Description |
+|---|---|---|---|---|
+| `state_code` | int16 | yes | 1–99 | eGramSwaraj / LGD state code. |
+| `gp_code` | int64 | yes | 1– | Gram panchayat LGD local-body code; joins to gps.gp_code. |
+| `member_index` | int32 | yes | 0– | 0-based position of the person in the GP's member response. |
+| `elected_name` | string |  |  | electedname exactly as printed, including stray whitespace and placeholder entries. |
+| `designation` | string | yes |  | designationname exactly as printed. |
+| `designation_class` | category | yes | `head`, `ward_member`, `other` | head: the GP's elected chief (Sarpanch, Mukhiya, Pradhan, President...). ward_member: a ward-elected GP member, including deputies who hold a ward. other: offices of other bodies (e.g. Bihar's Gram Kachahari), staff, co-opted members. Mapping per state is DESIGNATION_CLASS in bin/build_er.py. |
+| `ward_name` | string |  |  | wardName exactly as printed; null for most heads. |
+| `ward_no` | int16 |  | 0–999 | Ward number parsed from ward_name when it is an explicit ward number ('Ward No. 5', 'Ward-5', '5', 'Five', 'Wimc no.5', '5 No. Ward'); null otherwise (place names, village segments). |
+| `gender` | category | yes | `Male`, `Female`, `Transgender`, `N/A` | gender exactly as the site codes it (N/A on one member). |
+
+<!-- tables:end -->
