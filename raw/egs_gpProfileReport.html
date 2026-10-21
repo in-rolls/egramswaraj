@@ -1,0 +1,1445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<!-- Bootstrap -->
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="referer" content="strict-origin-when-cross-origin" />
+<title>GP Profile Report</title>
+<link rel="stylesheet" type="text/css" href="/resources/home/js/font-awesome.min.css" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+<!-- Theme style -->
+
+<!--  Theme Skins -->
+	
+	<!-- Data Table -->
+
+
+
+<script defer src="https://egramswaraj.gov.in/pes_analytics/script.js" data-website-id="10df7fae-9459-4a49-af58-19370610e6f1"></script>
+
+</head>
+
+<body>
+	<html>
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!-- Site Metas -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+		<title>eGramSwaraj</title>
+		
+		<!-- slider stylesheet -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+		
+		<!-- bootstrap core css -->
+		<link rel="stylesheet" type="text/css" href="/resources/home/css/bootstrap.css" />
+		
+		<!-- fonts style -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/resources/home/css/style.css" rel="stylesheet" />
+		<!-- responsive style -->
+		<link href="/resources/home/css/responsive.css" rel="stylesheet" />
+	<script src="https://translation-plugin.bhashini.co.in/v2/website_translation_utility.js" data-pos-x="5" data-pos-y="10" referer="www.egramswaraj.gov.in" referrerpolicy="strict-origin-when-cross-origin"></script>
+<style>
+
+
+/* =======================
+   HEADER
+======================= */
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 42px;
+  background: #04285b;
+  color: white;
+  height: auto;              /* fixed height à¤¹à¤à¤¾à¤à¤ */
+  min-height: 42px;          /* minimum height à¤°à¤à¥à¤ */
+}
+
+.logo {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.logo:hover {
+  color: #007bff;
+}
+
+.top-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;           /* à¤à¥à¤à¥ screen à¤ªà¤° wrap */
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.action:hover {
+  opacity: 0.85;
+}
+
+.nav-link {
+  color: #FFFFFF;
+}
+.nav-link:hover {
+  color: #007bff;
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* =======================
+   TABLET
+======================= */
+@media (max-width: 992px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .top-links {
+    gap: 16px;
+  }
+}
+
+/* =======================
+   MOBILE
+======================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    gap: 8px;
+  }
+
+  .logo {
+    white-space: normal; /* allow wrap */
+    font-size: 12px;
+  }
+
+  .top-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .action {
+    font-size: 11.5px;
+  }
+}
+
+/* =======================
+   SMALL MOBILE
+======================= */
+@media (max-width: 480px) {
+  .top-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .action {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    font-size: 11px;
+  }
+}
+
+
+/* ================================
+   REPORT HEADER NAVBAR
+================================ */
+.rh-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px 40px;
+ 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  min-height: 72px;
+  box-sizing: border-box;
+}
+
+/* ---- LEFT LOGO ---- */
+.rh-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rh-emblem {
+  width: 52px;
+  height: auto;
+  object-fit: contain;
+}
+
+.rh-brand {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---- RIGHT ICONS ---- */
+.rh-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rh-icon {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .rh-navbar {
+    padding: 8px 16px;
+    min-height: 60px;
+  }
+
+  .rh-emblem {
+    width: 38px;
+  }
+
+  .rh-brand {
+    height: 36px;
+  }
+
+  .rh-icon {
+    height: 32px;
+  }
+
+  .rh-icons {
+    gap: 10px;
+  }
+}
+
+
+</style>
+
+</head>
+	<body>
+		
+		
+			<header class="header">
+			  <div class="logo"><a href="welcome.do" class="logo">Government of India | Ministry of Panchayati Raj</a></div>
+			  <div class="top-links">								  
+			     <span class="action">
+			      <img src="resources/home/images/new/Maskgroup.svg" class="action-icon" alt="" />
+			      <a class="nav-link" href="screenReader.jsp" target="_parent">   Screen Reader Access </a>
+			       <!-- <a class="nav-link action" href="screenReader.jsp" target="_parent">  Screen Reader Access </a> -->
+			    </span>
+			    <span class="action">
+			      <img src="resources/home/images/new/Simplification.svg" class="action-icon" alt="" />
+			      <a class="nav-link action" href="welcome.do"> Home </a>
+			    </span>
+			   <!--  <span class="action">
+			      <img src="resources/home/images/new/Login.svg" class="action-icon" alt="" />
+			      <a href="javascript:login()" class="nav-link action">Login</a>
+			    </span> -->
+			  </div>
+			</header>
+				
+		
+			<!-- header section strats -->
+			
+			<!-- end header section -->
+			<!-- slider section -->
+			
+			<div class="rh-navbar">
+			  <div class="rh-logo">
+			    <img src="resources/home/images/new/icon-emblem.svg" class="rh-emblem" alt="Emblem" />
+			    <img src="resources/home/images/new/eGramsSwaraj.svg" class="rh-brand" alt="eGramSwaraj" />
+			  </div>
+			
+			  <div class="rh-icons">
+			    <img src="resources/home/images/new/Panchayati Raj _Logo Government1.svg" class="rh-icon" alt="Panchayati Raj" />
+			    <img src="resources/home/images/new/Group3525.svg" class="rh-icon" alt="Sabka Vikas" />
+			  </div>
+			
+			</div>
+			<!-- end slider section -->
+		
+	</body>
+	
+  <script type="text/javascript" src="/resources/home/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/resources/js/popper.min.js"></script>
+  <script type="text/javascript" src="/resources/home/js/bootstrap.js"></script>
+</html>	
+	
+	
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="resources/plugins/datatables/css/jquery.dataTables.css">  
+<script type="text/javascript" charset="utf8" src="resources/plugins/datatables/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+
+
+
+function loader1(text) {
+    if ($('#resultLoading').length === 0) {
+    	$('body').append(
+                "<div id='resultLoading'>" +
+                    "<div class='loading-content'>" +
+                        "<i class='fa fa-spinner fa-spin'></i>" +
+                        "<div>" + text + "</div>" +
+                    "</div>" +
+                    "<div class='bg'></div>" +
+                "</div>"
+            );
+    }
+
+    $('#resultLoading').css({
+        'display': 'flex',
+        'align-items': 'center',
+        'justify-content': 'center',
+        'position': 'fixed',
+        'top': '0',
+        'left': '0',
+        'width': '100%',
+        'height': '100%',
+        'z-index': '100000',
+        'background': 'rgba(0,0,0,0.5)'
+    });
+
+    $('.loading-content').css({
+        'background': '#ffffff',
+        'padding': '15px',
+        'border-radius': '5px',
+        'text-align': 'center',
+        'color': '#000',
+        'font-size': '16px',
+        'box-shadow': '0px 0px 10px rgba(0,0,0,0.2)'
+    });
+
+    $('#resultLoading').fadeIn(300);
+    $('body').css('cursor', 'wait');
+}
+
+/* function removeLoader() {
+    $('#resultLoading').fadeOut(300, function () {
+        $(this).remove();
+    });
+    $('body').css('cursor', 'default');
+    
+} */
+
+function exportFile(divId, tableID,fileName){
+	    var downloadLink;
+	    var dataType = 'application/vnd.ms-excel';
+	    var tableSelect = document.getElementById(divId);
+	    
+	    var table=$("#"+tableID).DataTable();	
+	    table.rows().nodes().page.len(-1).draw();
+	    
+	    var clonedTable = tableSelect.cloneNode(true);
+	   
+	 	$(clonedTable).find(".remove-column").remove(); 
+	 	
+	 	$(clonedTable).find("#checkboxes,#TableId_length,#TableId_filter,#TableId_info,#TableId_paginate, #stateTable_filter, #distTable_filter, #blockTable_filter, #villageTable_filter, .dataTables_paginate, .dataTables_info, .dataTables_length ").remove();
+	    
+	    var tableHTML = clonedTable.outerHTML;
+	    var filename = fileName;
+	    
+	    filename = filename?filename+'.xls':'excel_data.xls';
+	    
+	    downloadLink = document.createElement("a");
+	    
+	    document.body.appendChild(downloadLink);
+	    
+	    if(navigator.msSaveOrOpenBlob){
+	        var blob = new Blob(['\ufeff', formatAsExcel(tableHTML)], {
+	            type: dataType
+	        });
+	        navigator.msSaveOrOpenBlob( blob, filename);
+	    }else{
+	 	   	var blob = new Blob([formatAsExcel(tableHTML)], { type: 'application/vnd.ms-excel' });
+		    	var link = document.createElement('a');
+		   	 	link.href = window.URL.createObjectURL(blob);
+		    	link.download = fileName+'.xls';
+		    	link.click();
+		    	table.rows().nodes().page.len(10).draw();	
+	   }
+	}
+
+
+	function formatAsExcel(tableHTML) {
+		    return '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">'
+		        + '<head>'
+		        + '<style>'
+		        + '@page { size: A4; mso-page-orientation: landscape; margin: 1cm; mso-header-margin: .5in; mso-footer-margin: .5in; }'
+		        + 'table, th, td { border: 1px solid black; border-collapse: collapse; width: 50%; table-layout: fixed; font-family: Times New Roman; }'
+		        + 'th, td { word-wrap: break-word; max-width: 100px; }'
+		        + '</style>'
+		        + '<!--[if gte mso 9]>'
+		        + '<xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>'
+		        + '<x:Name>Sheet 1</x:Name>'
+		        + '<x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions>'
+		        + '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml>'
+		        + '<![endif]--></head><body>' + tableHTML + '</body></html>';
+			
+	}
+	
+	function onPrint(tableId, headingDivId, extraDivId) {
+	    const table = $('#' + tableId).DataTable();
+
+	    //table.page.len(-1).draw();
+
+	    setTimeout(function () {
+	        const tableHTML = document.getElementById(tableId).outerHTML;
+	        const HeaderHTML = document.getElementById(headingDivId).outerHTML || "";
+	        const extraHTML = document.getElementById(extraDivId).outerHTML || "";
+
+	        const printWindow = window.open("");
+	        printWindow.document.write('<html><head><title>Print</title>');
+	        printWindow.document.write('<style>');
+	        printWindow.document.write('table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }');
+	        printWindow.document.write('th, td { border: 1px solid #000; padding: 6px; text-align: left; }');
+	        printWindow.document.write('</style></head><body>');
+			
+	        printWindow.document.write(HeaderHTML);
+	        printWindow.document.write(tableHTML);
+	        printWindow.document.write(extraHTML);
+
+	        printWindow.document.write('</body></html>');
+	        printWindow.document.close();
+	        printWindow.focus();
+
+	        printWindow.print();
+	        printWindow.close();
+	        table.page.len(10).draw();
+	    }, 300);
+	}
+
+</script>
+
+<form id="command" action="/gpProfileReport.do" method="GET">
+<input type="hidden" name='<csrf:token-name/>' value='<csrf:token-value uri="gpProfileReport.htm"/>'/>
+<input type="hidden" value="2026-2027" name="year" id="year"/>
+<section class="main-reports py-3" data-ng-app="gpProfileModule" data-ng-controller="gpProfileController">
+	<div class="container nav-reports">
+		<div class="row">
+			<h3 class="mainHeading heading_black collapsingdiv collapsingdiv-1 showing cursor-pointer mx-auto">
+				No. of GPs with Profile details
+			</h3>
+			<span id="formErrorDiv" class="w-auto"></span>
+			<div class="col-lg-12 tab-content">
+				<div class="card">
+					<div class="card-body">
+						
+						
+						<div id="stateLevel">
+							<div class="text-right mb-3">
+								<div class="col-12 col-lg-12">
+									
+									<a class="btn btn-sm btn-success print-link" onclick="onPrint('stateTable', '', 'stateTableFooterId');">
+				                   		<i class="fa fa-print"></i>&nbsp;<span class="remove-column">Print</span>
+				                   	</a>
+				                   	<a class="btn btn-sm btn-success" onclick="exportFile('stateLevel', 'stateTable', 'No. of GPs With Profile Details');">
+				                   		<i class="fa fa-file-excel-o"></i>&nbsp;<span class="remove-column">Download to Spreadsheet</span>
+				                   	</a>
+				           	 		
+				                </div>
+			             	</div>
+			             	
+			             	<div class="row text-center" data-ng-if="stateName!=null">
+			                    <div class="col-12 col-lg-4 text-left">
+			                        <b>State Name &#x3a;</b>
+			                        <span data-ng-bind="stateName"></span>
+			                    </div>
+			                    <div class="col-12 col-lg-4  text-left" data-ng-if="zpName!=null">
+			                        <b>District Panchayat &amp; Equivalent &#x3a;</b>
+			                        <span data-ng-bind="zpName"></span>
+			                    </div>
+			                    <div class="col-12 col-lg-4  text-left" data-ng-if="name!=null">
+			                        <b>Block Panchayat and Equivalent &#x3a;</b>
+			                        <span data-ng-bind="name"></span>
+			                    </div>
+			                </div>
+			                
+			             	<div style="max-height: 400px; overflow-y: auto;">
+			               		<table class="table table-striped table-bordered table-hover" id="stateTable">
+			               			<thead class="thead-dark" style="position: sticky; top: 0; z-index: 1; background-color: white;">
+										<tr>
+											<th>S.No.</th>
+											<th>State Code</th>
+											<th>State Name</th>
+											<th>Total No. of GP &amp; Equivalent</th>															
+											<th>No. of GP &amp; Equivalent With Profile Details</th>
+											<th>Profile Details Percentage</th>
+											<th>Profile Updated in &#x28;6 months&#x29;</th>
+											<th>Updated Profile Percent in&#x28;6 Months&#x29;</th>
+										</tr>	
+									</thead>
+									<tbody id="stateLevelTbodyId">
+										<tr id="stateLevelTRId" data-ng-repeat="d in details">
+											<td>{{$index+1}}.</td>
+											<td data-ng-if="d.count != 0" class="link" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.stateCode}}
+											</td> 
+											<td data-ng-if="d.count == 0" data-ng-bind="d.stateCode"></td>
+											<!-- <td>
+												<a href="" data-ng-if="d.count != 0" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+										            {{d.stateCode}}
+										        </a>
+										        <span ng-if="d.count == 0">{{d.stateCode}}</span>
+											</td> -->
+											
+											
+											<td data-ng-if="d.count != 0" class="link" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.stateName}}
+											</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.stateName"></td>												
+											
+											<td data-ng-if="d.count != 0" class="link text-right" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.totalGPCount}}
+											</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.totalGPCount" class="text-right"></td>
+											
+											<td data-ng-if="d.count != 0" class="link text-right" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.count}}
+											</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.count" class="text-right"></td>
+											
+											<td data-ng-if="d.count != 0" class="link text-right" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.gpProfilePercentage}}
+											</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.gpProfilePercentage" class="text-right"></td>
+											
+											<td data-ng-if="d.count != 0" class="link text-right" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.updatedGpCount}}
+											</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.updatedGpCount" class="text-right"></td>
+											
+											<td data-ng-if="d.count != 0" class="link text-right" data-ng-click="onDistrictCount(d.stateCode, d.stateName)">
+												{{d.percentage}}
+											</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.percentage" class="text-right"></td>
+											
+										</tr>
+										
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3" class="text-center"><b>Total</b></td>
+											<td class="text-right"><b>{{sumTotalGPCount}}</b></td>
+											<td class="text-right"><b>{{totalCount}}</b></td>
+											<td class="text-right"><b>{{totalGPProfilePercent}}</b></td>
+											<td class="text-right"><b>{{totalGPUpdatedCount}}</b></td>
+											<td class="text-right"><b>{{totalGPUpdPercent}}</b></td>
+										</tr>
+									</tfoot>
+			               		</table>
+			               	</div>
+			               	<div id="stateTableFooterId">
+				               	<div class="text-center">
+									<span><strong>Report generated through eGramSwaraj (http://egramswaraj.gov.in) on Mon, Oct 19, 2026 10:12:49 AM.</strong></span>
+								</div>
+				            	<div class="col-12 mt-3">
+				            		<span class="text-danger">Disclaimer : Profile Updation means both General Profile and Basic Profile is updated respectively in last 6 months </span>
+				            	</div>
+			            	</div>
+		            	</div>
+		            	<div id="districtCountLevel" style="display:none;">
+		            		
+		            		<div class="row mb-3">
+			            		<div class="col-md-6 float-left">
+			            			<a class="btn bn-sm btn-info" data-ng-click="onBack(stateCode, type, zpCode)">
+			                    		<span class="remove-column">Back</span>
+			                    	</a>
+			            		</div>
+		            	
+			            		<div class="col-md-6 text-right">
+									<div class="col-12 col-lg-12">
+					           	 		<a class="btn btn-sm btn-success print-link" onclick="onPrint('distTable','zpHeadDiv', 'zpTableFooterId');">
+					                   		<i class="fa fa-print"></i>&nbsp;<span class="remove-column">Print</span>
+					                   	</a>
+					                   	<a class="btn btn-sm btn-success" onclick="exportFile('districtCountLevel', 'distTable', 'No. of GPs With Profile Details');">
+					                   		<i class="fa fa-file-excel-o"></i>&nbsp;<span class="remove-column">Download to Spreadsheet</span>
+					                   	</a>
+					                </div>
+				             	</div>
+			             	</div>
+			             	
+			             	<div class="row mb-3 ml-1" data-ng-if="stateName!=null" id="zpHeadDiv">
+		                        <b>State Name &#x3a;</b>&nbsp;
+		                        <span data-ng-bind="stateName"></span>&nbsp;&nbsp;
+		                        
+		                        <span data-ng-if="zpName!=null">
+			                        <b>District Panchayat &amp; Equivalent &#x3a;</b>&nbsp;
+			                        <span data-ng-bind="zpName"></span>&nbsp;&nbsp;
+			                    </span>
+			                     
+			                     <span data-ng-if="name!=null">
+			                        <b>Block Panchayat and Equivalent &#x3a;</b>&nbsp;
+			                        <span data-ng-bind="name"></span>
+			                     </span>
+			                </div>
+			             	
+			             	<div style="max-height: 400px; overflow-y: auto;" id="districtTable">
+								<table class="table table-striped table-bordered table-hover" id="distTable">
+									<thead class="thead-dark" style="position: sticky; top: 0; z-index: 1; background-color: white;">
+										<tr class="tableHeader">
+											<th>S.No.</th>	
+											<th>Local Body Code</th>
+											<th>District Panchayat &amp; Equivalent</th>
+											<th>Total No. of GP &amp; Equivalent</th>
+											<th>No. of GP &amp; Equivalent With Profile Details</th>
+											<th>Profile Details Percentage</th>
+											<th>Profile Updated in &#x28;6 months&#x29;</th>
+											<th>Updated Profile Percent in&#x28;6 Months&#x29;</th>
+										
+										</tr>	
+									</thead>
+									<tbody>
+										<tr data-ng-repeat="d in details">
+											<td>{{$index+1}}.</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.entityCode"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.entityName"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.totalGPCount" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.count" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.percentage" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.updatedGpCount" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.profileDetailsPercentage" class="text-right"></td>
+											
+											<td data-ng-if="d.level == 'I' && d.count != 0">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.entityCode}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'I' && d.count != 0">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.entityName}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'I' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.totalGPCount}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'I' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.count}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'I' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.profileDetailsPercentage}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'I' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.updatedGpCount}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'I' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onBlockCount(d.entityCode, d.entityName)">
+													{{d.percentage}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.entityCode}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.entityName}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.totalGPCount}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.count}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.profileDetailsPercentage}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.updatedGpCount}}
+												</a>
+											</td>
+											<td data-ng-if="d.level == 'V' && d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'D')">
+													{{d.percentage}}
+												</a>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3" class="text-center"><b>Total</b></td>
+											<td class="text-right"><b>{{sumTotalGPCount}}</b></td>
+											<td class="text-right"><b>{{totalDistrictCount}}</b></td>
+											<td class="text-right"><b>{{totalGPDetailsPercent}}</b></td>
+											<td class="text-right"><b>{{totalGPUpdatedCount}}</b></td>
+											<td class="text-right"><b>{{totalGPUpdPercent}}</b></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div id="zpTableFooterId">
+								<div class="text-center">
+									<span><strong>Report generated through eGramSwaraj (http://egramswaraj.gov.in) on Mon, Oct 19, 2026 10:12:49 AM.</strong></span>
+								</div>
+				            	<div class="col-12 mt-3">
+				            		<span class="text-danger">Disclaimer : Profile Updation means both General Profile and Basic Profile is updated respectively in last 6 months </span>
+				            	</div>
+				            </div>	
+						</div>
+						<div id="blockCountLevel" style="display:none;">
+							<div class="row mb-3">
+			            		<div class="col-md-6 float-left">
+			            			<a class="btn bn-sm btn-info" data-ng-click="onBack(stateCode, type, zpCode)">
+			                    		<span class="remove-column">Back</span>
+			                    	</a>
+			            		</div>
+		            	
+			            		<div class="col-md-6 text-right">
+									<div class="col-12 col-lg-12">
+					           	 		<a class="btn btn-sm btn-success print-link" onclick="onPrint('blockTable', 'bpHeadDiv', 'bpTableFooterId');">
+					                   		<i class="fa fa-print"></i>&nbsp;<span class="remove-column">Print</span>
+					                   	</a>
+					                   	<a class="btn btn-sm btn-success" onclick="exportFile('blockCountLevel', 'blockTable', 'No. of GPs With Profile Details');">
+					                   		<i class="fa fa-file-excel-o"></i>&nbsp;<span class="remove-column">Download to Spreadsheet</span>
+					                   	</a>
+				                	</div>
+				                </div>	
+			             	</div>
+			             	
+			             	<div class="row mb-3 ml-1" data-ng-if="stateName!=null" id="bpHeadDiv">
+		                        <b>State Name &#x3a;</b>&nbsp;
+		                        <span data-ng-bind="stateName"></span>&nbsp;&nbsp;
+		                        <span data-ng-if="zpName!=null">
+			                        <b>District Panchayat &amp; Equivalent &#x3a;</b>&nbsp;
+			                        <span data-ng-bind="zpName"></span>&nbsp;&nbsp;
+			                    </span>
+			                     
+			                     <span data-ng-if="name!=null">
+			                        <b>Block Panchayat and Equivalent &#x3a;</b>&nbsp;
+			                        <span data-ng-bind="name"></span>
+			                     </span>
+			                </div>
+			                
+			             	<div style="max-height: 400px; overflow-y: auto;">
+								<table class="table table-striped table-bordered table-hover" id="blockTable">
+									<thead class="thead-dark" style="position: sticky; top: 0; z-index: 1; background-color: white;">
+										<tr class="tableHeader">
+											<th>S.No.</th>	
+											<th>Local Body Code</th>
+											<th>Block Panchayat and Equivalent</th>
+											<th>Total No. of GP &amp; Equivalent</th>
+											<th>No. of GP &amp; Equivalent With Profile Details</th>
+											<th>Profile Details Percentage</th>
+											<th>Profile Updated in &#x28;6 months&#x29;</th>
+											<th>Updated Profile Percent in&#x28;6 Months&#x29;</th>
+										
+										</tr>	
+									</thead>
+									<tbody>
+										<tr data-ng-repeat="d in details">
+											<td>{{$index+1}}.</td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.entityCode"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.entityName"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.totalGPCount" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.count" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.profileDetailsPercentage" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.updatedGpCount" class="text-right"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.percentage" class="text-right"></td>
+											<td data-ng-if="d.count != 0">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.entityCode}}
+												</a>
+											</td>
+											<td data-ng-if="d.count != 0">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.entityName}}
+												</a>
+											</td>
+											<td data-ng-if="d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.totalGPCount}}
+												</a>
+											</td>
+											<td data-ng-if="d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.count}}
+												</a>
+											</td>
+											<td data-ng-if="d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.profileDetailsPercentage}}
+												</a>
+											</td>
+											<td data-ng-if="d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.updatedGpCount}}
+												</a>
+											</td>
+											<td data-ng-if="d.count != 0" class="text-right">
+												<a class="link" data-ng-click="onVillage(d.entityCode, d.entityName, 'B')">
+													{{d.percentage}}
+												</a>
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3" class="text-center"><b>Total</b></td>
+											<td class="text-right"><b>{{sumTotalGPCount}}</b></td>
+											<td class="text-right"><b>{{totalBlockCount}}</b></td>
+											<td class="text-right"><b>{{totalGPProfileDetailsPercent}}</b></td>
+											<td class="text-right"><b>{{totalGPUpdatedCount}}</b></td>
+											<td class="text-right"><b>{{totalGPUpdPercent}}</b></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							<div id="bpTableFooterId">
+								<div class="text-center">
+									<span><strong>Report generated through eGramSwaraj (http://egramswaraj.gov.in) on Mon, Oct 19, 2026 10:12:49 AM.</strong></span>
+								</div>
+				            	<div class="col-12 mt-3">
+				            		<span class="text-danger">Disclaimer : Profile Updation means both General Profile and Basic Profile is updated respectively in last 6 months </span>
+				            	</div>
+			            	</div>
+						</div>
+						<div id="villageLevel" style="display:none;">
+							<div class="row mb-3">
+			            		<div class="col-md-6 float-left">
+			            			<a class="btn bn-sm btn-info" data-ng-click="onBack(stateCode, type, zpCode)">
+			                    		<span class="remove-column">Back</span>
+			                    	</a>
+			            		</div>
+		            	
+			            		<div class="col-md-6 text-right">
+									<div class="col-12 col-lg-12">
+										<a class="btn btn-sm btn-success print-link" onclick="onPrint('villageTable', 'gpHeadDiv', 'gpTableFooterId');">
+					                   		<i class="fa fa-print"></i>&nbsp;<span class="remove-column">Print</span>
+					                   	</a>
+					                   	<a class="btn btn-sm btn-success" onclick="exportFile('villageLevel', 'villageTable', 'No. of GPs With Profile Details');">
+					                   		<i class="fa fa-file-excel-o"></i>&nbsp;<span class="remove-column">Download to Spreadsheet</span>
+					                   	</a>
+					                </div>
+					             </div>   
+			             	</div>
+			             	
+			             	<div class="row mb-3 ml-1" data-ng-if="stateName!=null" id="gpHeadDiv">
+		                        <b>State Name &#x3a;</b>&nbsp;
+		                        <span data-ng-bind="stateName"></span>&nbsp;&nbsp;
+		                        <span data-ng-if="zpName!=null">
+			                        <b>District Panchayat &amp; Equivalent &#x3a;</b>&nbsp;
+			                        <span data-ng-bind="zpName"></span>&nbsp;&nbsp;
+			                    </span>
+			                     
+			                     <span data-ng-if="name!=null">
+			                        <b>Block Panchayat and Equivalent &#x3a;</b>&nbsp;
+			                        <span data-ng-bind="name"></span>
+			                     </span>
+			                </div>
+			                
+			             	<div style="max-height: 400px; overflow-y: auto;">
+								<table class="table table-striped table-bordered table-hover" id="villageTable">
+									<thead class="thead-dark" style="position: sticky; top: 0; z-index: 1; background-color: white;">
+										<tr class="tableHeader">
+											<th>S.No.</th>
+											<th>Local Body Code</th>
+											<th>Gram Panchayat &amp; Equivalent</th>
+											<th>GP &amp; Equivalent With Profile Details</th>
+											<th>Profile Updated in(6 Months)</th>
+										</tr>	
+									</thead>
+									<tbody>
+										<tr data-ng-repeat="d in details">
+											<td>{{$index+1}}.</td>
+											
+											<td data-ng-if="d.count != 0" data-ng-click="getGPDetails(d.entityCode)" data-toggle="tooltip" title="View Details" class="link" data-ng-bind="d.entityCode"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.entityCode"></td>
+											
+											<td data-ng-if="d.count != 0" data-ng-click="getGPDetails(d.entityCode)" data-toggle="tooltip" title="View Details" class="link" data-ng-bind="d.entityName"></td>
+											<td data-ng-if="d.count == 0" data-ng-bind="d.entityName"></td>
+											
+											<td data-ng-if="d.count != 0" data-ng-click="getGPDetails(d.entityCode)" data-toggle="tooltip" title="View Details" class="link">Yes</td>
+											<td data-ng-if="d.count == 0">No</td>
+											
+											<td data-ng-if="d.updatedGpCount != 0" data-ng-click="getGPDetails(d.entityCode)" data-toggle="tooltip" title="View Details" class="link">Yes</td>
+											<td data-ng-if="d.updatedGpCount == 0 && d.count != 0" data-ng-click="getGPDetails(d.entityCode)" data-toggle="tooltip" title="View Details" class="link">No</td>
+											<td data-ng-if="d.updatedGpCount == 0 && d.count == 0">No</td>
+										</tr>
+										<tr data-ng-if="loader == true">
+			                                <td colspan="4" class="text-center">
+			                                    <i class="fa fa-spinner fa-2x fa-spin" aria-hidden="true"></i>
+			                                </td>
+			                            </tr>
+									</tbody>
+									
+								</table>
+							</div>
+							<div id="gpTableFooterId">
+								<div class="text-center">
+									<span><strong>Report generated through eGramSwaraj (http://egramswaraj.gov.in) on Mon, Oct 19, 2026 10:12:49 AM.</strong></span>
+								</div>
+				            	<div class="col-12 mt-3">
+				            		<span class="text-danger">Disclaimer : Profile Updation means both General Profile and Basic Profile is updated respectively in last 6 months </span>
+				            	</div>
+			            	</div>
+						</div>
+						
+					</div>	
+					<div class="card-footer">
+	               		<div class="float-right">
+					        <a type="button" class="btn btn-danger" href="welcome.do">
+								<i class="fa fa-times"></i>&nbsp;Close
+							</a>
+	               		</div>
+	               	</div>
+               	</div>
+			</div>
+		</div>
+	</div>
+</section>	
+</form>
+<script type="text/javascript" src="/resources/plugins/angular/angular.min.js"></script>
+<script type="text/javascript" src="/resources/js/report/gpProfile/gpProfile-controller.js"></script>
+<script type="text/javascript" src="/resources/js/report/gpProfile/gpProfile-service.js"></script>
+<script type="text/javascript" src="/resources/js/report/gpProfile/gpProfile-model.js"></script>
+<script  type="text/javascript" src="/resources/plugins/angular/excelexportjs.js"></script>
+<script  type="text/javascript" src="/resources/plugins/angular/jQuery.print.js"></script>
+	
+
+
+
+
+
+<!-- Bootstrap -->
+
+
+
+
+
+   	<!-- <div class="container-fluid text-center">
+		<ul class="list-inline footer-link w-100">
+			<li><a href="#" role="link" style="border-left:none;">Sitemap</a></li>
+			<li><a href="#" role="link">Feedback</a></li>
+			<li><a href="#" role="link">Privacy Policy</a></li>
+			<li><a href="#" role="link">Terms &amp; Conditions</a></li>
+			<li><a href="#" role="link">Copyright</a></li>
+			<li><a href="#" role="link">Contact Us</a></li>
+	    </ul>
+	<hr>
+	</div> -->
+    
+    
+    <!-- BOTTOM BLUE BAR -->
+		<div class="sub-footer__bottom">
+		    <p class="sub-footer__text">
+		      Contents on this website are owned, updated and managed by the Panchayats
+		      and State Panchayati Raj Department as a part of e-Panchayat MMP of
+		      <strong>Ministry of Panchayati Raj (MoPR)</strong>. Site is technically
+		      designed, hosted and maintained by
+		      <strong>National Informatics Centre (NIC)</strong>.
+		    </p>
+		
+		    <div class="sub-footer__links">
+		    	<div class="footer-tnc">
+		    	 <div>
+				      <a  href="#" data-toggle="modal" data-target="#quickModal" id="One" onClick="allPolicies(this.id)">Privacy Policy</a>
+				      <a href="#" data-toggle="modal" data-target="#quickModal" id="Two" onClick="allPolicies(this.id)">Terms & Conditions</a>
+				      <a  href="#" data-toggle="modal" data-target="#quickModal" id="Three" onClick="allPolicies(this.id)">Cookie Policy</a>
+				      <a  href="#" data-toggle="modal" data-target="#quickModal" id="Four" onClick="allPolicies(this.id)">Contact</a>
+				     </div>
+				    <div class="sub-footer__right">
+				      <img src="resources/home/images/new/NIC_logo_new.svg" alt="NIC" />
+				    </div>
+		    	</div>
+		    </div>
+		  </div>
+    
+
+<div class="modal fade" id="quickModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row footer-row-padding footer-modal">
+                    <div class="col-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header p-0" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseOne"><i class="fa fa-plus float-right"></i>
+                                        Terms & Conditions</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    	<p class="text-jutify">Contents on this website are owned, updated and managed by the Panchayats and State Panchayati Raj Department as a part of e-Panchayat MMP of Ministry of Panchayati Raj (MoPR),. 
+                                    	Site is technically designed, hosted and maintained by National Informatics Centre (NIC)</p>
+                                        <p class="text-jutify">The following terms and conditions will apply if you wish to use the Internet for availing a service. Please go through the conditions carefully and if you accept them, you may register yourself and transact on the site. On using this site for service delivery, you are deemed to have agreed to the terms and conditions set forth below. If You do not agree with all these terms and conditions, you must not transact on this Website.</p>
+                                        <p class="text-jutify">If a user violates the terms and conditions Government (service owner) reserves the right to deactivate all such user registration and cancel any or all services requested without any notice. Garbage / Junk values in profile may lead to Deactivation.</p>
+                                        <p class="text-jutify">Operationalization of this agreement is subject to existing laws and legal processes of the respective Government, and nothing contained in this agreement is in derogation of Government's right to comply with law enforcement requests or requirements relating to your use of this Web Site or information provided to or gathered by this site with respect to such use. You agree that Government may provide details of your use of the Web Site to regulators or police or to any other third party, or in order to resolve disputes or complaints which relate to the Web Site, at Government’s complete discretion.</p>
+                                        <p class="text-jutify">This agreement is made between: respective service owner department of the respective government who has configured the serviceGovernment ('Us') and The User ('You'), the individual, whose details  are set out in the Portal User Creation page.</p>
+                                        <p class="text-jutify"><strong>User Creation</strong></p>
+                                        <p class="text-jutify">You are responsible for maintaining the confidentiality of the password and account, and are fully responsible for all activities that occur under your password or account.</p>
+                                        <p class="text-jutify"><strong>Complaints Procedure</strong></p>
+                                        <p class="text-jutify">You can reach us on the contact details given in the 'Contacts' option given in the login page.</p>
+                                        <p class="text-jutify"><strong>General Obligations</strong></p>
+                                        <p class="text-jutify">You shall access web site only for lawful purposes and you shall be responsible for complying with all applicable laws, statutes and regulations in connection with the use of Government web site. This Website is for your personal or commercial use by approved kiosks. You shall not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer or sell any information, or services obtained from this Website. You shall not create a hypertext link to the Website or "frame" the Website, except with the express advance written permission of the Government.</p>
+                                        <p class="text-jutify"><strong>Information Provided</strong></p>
+                                        <p class="text-jutify">The information you provide in the Registration page must be complete and accurate. Government 00. reserves the right at all times to disclose any information as deems necessary to satisfy any applicable law, regulation, legal process.</p>
+                                        <p class="text-jutify"><strong>Termination</strong></p>
+                                        <p class="text-jutify">We may at any time at our sole discretion and without giving any reason or any prior notice terminate or temporarily suspend your access to all or any part of the web site.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseTwo"><i class="fa fa-plus float-right"></i>
+                                        Privacy Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">The Government will have complete discretion to share the details of your use of the Web Site and/ or data entered by you with regulators or with any other third party, or in order to resolve disputes or complaints which relate to the Web Site.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseThree"><i class="fa fa-plus float-right"></i>
+                                        Web Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                    	<p class="text-jutify">The following terms and conditions will apply if you wish to use the Internet for availing a service. Please go through the conditions carefully and if you accept them, you may register yourself and transact on the site. On using this site for service delivery, you are deemed to have agreed to the terms and conditions set forth below. If You do not agree with all these terms and conditions, you must not transact on this Website.</p>
+                                        <p class="text-jutify">If a user violates the terms and conditions Government (service owner) reserves the right to deactivate all such user registration and cancel any or all services requested without any notice. Garbage / Junk values in profile may lead to Deactivation.</p>
+                                        <p class="text-jutify">Operationalization of this agreement is subject to existing laws and legal processes of the respective Government, and nothing contained in this agreement is in derogation of Government's right to comply with law enforcement requests or requirements relating to your use of this Web Site or information provided to or gathered by this site with respect to such use. You agree that Government may provide details of your use of the Web Site to regulators or police or to any other third party, or in order to resolve disputes or complaints which relate to the Web Site, at Government’s complete discretion.</p>
+                                        <p class="text-jutify">This agreement is made between: respective service owner department of the respective government who has configured the serviceGovernment ('Us') and The User ('You'), the individual, whose details  are set out in the Portal User Creation page.</p>
+                                        <p class="text-jutify"><strong>Payment Option</strong></p>
+                                        <p class="text-jutify">The list of payment options available are internet banking /debit card payment / credit card payment from banks that are listed when selecting each of the above options. Apart from the fee chargeable to Government against each service, bank / payment gateway transaction charges will be applicable extra. In case of a failed transaction the user shall have no right to claim the amount. The loss on this account shall not be borne either by Government or by the Banks /Payment Gateways.</p>
+                                        <p class="text-jutify"><strong>User Creation</strong></p>
+                                        <p class="text-jutify">You are responsible for maintaining the confidentiality of the password and account, and are fully responsible for all activities that occur under your password or account.</p>
+                                        <p class="text-jutify"><strong>Complaints Procedure</strong></p>
+                                        <p class="text-jutify">You can reach us on the contact details given in the 'Contacts' option given in the login page.</p>
+                                        <p class="text-jutify"><strong>General Obligations</strong></p>
+                                        <p class="text-jutify">You shall access web site only for lawful purposes and you shall be responsible for complying with all applicable laws, statutes and regulations in connection with the use of Government web site. This Website is for your personal or commercial use by approved kiosks. You shall not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer or sell any information, or services obtained from this Website. You shall not create a hypertext link to the Website or "frame" the Website, except with the express advance written permission of the Government.</p>
+                                        <p class="text-jutify"><strong>Information Provided</strong></p>
+                                        <p class="text-jutify">The information you provide in the Registration page must be complete and accurate. Government 00. reserves the right at all times to disclose any information as deems necessary to satisfy any applicable law, regulation, legal process.</p>
+                                        <p class="text-jutify"><strong>Termination</strong></p>
+                                        <p class="text-jutify">We may at any time at our sole discretion and without giving any reason or any prior notice terminate or temporarily suspend your access to all or any part of the web site.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header p-0" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseSeven"><i class="fa fa-plus float-right"></i>
+                                        Copyright Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">Material featured on this website may be reproduced free of charge after taking proper permission by sending a mail to us. However, the material has to be reproduced accurately and not to be used in a derogatory manner or in a misleading context. Wherever the material is being published or issued to others, the source must be prominently acknowledged. However, the permission to reproduce this material shall not extend to any material which is identified as being copyright of a third party. Authorisation to reproduce such material must be obtained from the departments/copyright holders concerned.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseSix"><i class="fa fa-plus float-right"></i>
+                                        Hyperlinking Policy</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify"><strong>Links to external websites/portals</strong></p>
+                                        <p class="text-jutify">At many places in this website, you shall find links to other websites/portals. These links have been placed for your convenience. This website is not responsible for the contents and reliability of the linked websites and does not necessarily endorse the views expressed in them. Mere presence of the link or its listing on this website should not be assumed as endorsement of any kind. We cannot guarantee that these links will work all the time and we have no control over the availability of linked pages.</p>
+                                        <p class="text-jutify"><strong>Links to this Website by other websites/portals</strong></p>
+                                        <p class="text-jutify">We do not object to linking directly to the information that is hosted on this site but it is necessary that prior permission is taken before hyperlinks are directed from any website to this site. Permission for the same, stating the nature of the content on the pages from where the link has to be given and the exact language of the hyperlink should be obtained by sending a request to 'egramswaraj[at]gov[dot]in'. Also, it is not permitted that our pages be loaded into frames on the requested site. Our Department's pages must load into a newly opened browser window of the user.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header p-0" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseFour"><i class="fa fa-plus float-right"></i>
+                                        Contact Us</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">Email at <i class="fa fa-envelope"></i> 
+                                        <em>egramswaraj[at]gov[dot]in</em></p>
+                                        <p class="text-jutify">
+                                            Ministry of Panchayati Raj<br />
+                                            Government of India<br />
+                                            Eleventh Floor, J.P. Building,<br />
+                                            Kasturba Gandhi Marg, Connaught Place,<br />
+                                            New Delhi-110001
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header p-0" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button type="button" class="btn btn-link collapsed w-100 text-left" data-toggle="collapse" 
+                                        data-target="#collapseFive"><i class="fa fa-plus float-right"></i>
+                                        Web Information Manager</button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="text-jutify">
+                                            Ms. Mukta Shekhar<br />
+                                            Joint Secretary<br />
+                                            <i class="fa fa-envelope"></i> <em>js2[-]mopr[at]gov[dot]in</em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    #quickModal .accordion .card-header .btn-link:not(.collapsed) {
+        background-color: #f9e3a1;
+    }
+    #quickModal .card-body {
+        min-height: 150px;
+        overflow-y: scroll;
+        height: 175px;
+    }
+    #myModal-popup .modal-content {
+        /*margin: auto;*/
+        display: block;
+        width: 1200px;
+        /*width: 100%;*/
+        /*max-width: 2000px;*/
+    }
+    #myModal-popup .modal-header {
+        border-bottom: 1px solid transparent;
+    }
+
+    @media screen and (max-width: 1190px) {
+        #myModal-popup .modal-content {
+            margin: auto;
+            display: block;
+            /*width: 1200px;*/
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+    
+    
+
+
+
+
+
+
+
+/* footer */
+
+.sub-footer {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* LOGO SECTION */
+.sub-footer__logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 20px;
+    background: lightblue;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sub-footer__logos img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* BLUE SECTION */
+.sub-footer__bottom {
+    background: rgb(12, 59, 110);
+    color: #fff;
+    padding: 12px;
+    font-size: 15px;
+    height: auto;              /* fixed height à¤¹à¤à¤¾à¤à¤ */
+    display: flex;
+    flex-direction: column;    /* mobile default column */
+    align-items: center;
+    text-align: center;
+}
+
+.sub-footer__text {
+  margin-bottom: 0px;
+  line-height: 1.6;
+   max-width: 1040px;
+}
+
+.footer-tnc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.footer-tnc a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-tnc a:hover {
+  color: #007bff;
+}
+
+/* Logo section */
+.sub-footer__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sub-footer__right img {
+    max-height: 50px;
+    height: auto;
+}
+
+
+.footer-tnc > div:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* links center me */
+    align-items: center;
+    gap: 20px;                 /* links ke beech spacing */
+}
+
+
+
+
+/* LINKS */
+.sub-footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sub-footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.sub-footer__links a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SECTION */
+.sub-footer__right {
+  display: flex;
+  justify-content: space-between;
+   justify-content: flex-end;   
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sub-footer__right img {
+  height: 55px;
+}
+
+.sub-footer__right span {
+  font-size: 14px;
+}
+
+
+/* Logo section */
+.sub-footer__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sub-footer__right img {
+    max-height: 50px;
+    height: auto;
+}
+
+
+    
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("td").attr("tabindex","0");
+		$("th").attr("tabindex","0");
+		$(".btn").attr("tabindex","0");
+		$("a .btn").attr("tabindex","0");
+	});
+	function allPolicies(id) {
+		
+		var a = "heading";
+		var newid = a + id; 
+		$(".card-header .btn").addClass("collapsed");
+		$(".card-header .btn .fa").addClass("fa-plus").removeClass("fa-minus");
+		$(".collapse").removeClass("show");
+		$("#" + newid +"  .btn").removeClass("collapsed");
+		$("#" + newid +"  .btn .fa").removeClass("fa-plus").addClass("fa-minus");
+		$("#collapse"+id).addClass("show");
+	}
+	function changeTextSize(size) {
+      	if (size=='xx-large'){
+      		document.getElementById("maintext").style.fontSize = "xx-large";
+      	}
+      	if (size=='small'){
+      		document.getElementById("maintext").style.fontSize = "small";
+      	}
+      	if (size=='medium'){
+      		document.getElementById("maintext").style.fontSize = "medium";
+      	}
+    	
+    }
+</script>
+
+	</div>
+	</div>
+	
+	
+ <!-- #####################################Alert ############################### -->
+
+ <!-- added by shiv  -->
+ 
+ 
+ <!-- end here -->
+
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#formErrorDiv").append("<div class='alert alert-primary'><i class='fa fa-exclamation-circle' aria-hidden='true'></i> KPI statistics are updated through a scheduler that runs on hourly basis hence there might be a difference in the counts of both reports at a point of time.</div>");
+	$("#formErrorDiv").fadeTo(6000, 500).slideUp(500, function(){
+	    $("#formErrorDiv").slideUp(500);
+	});
+});
+</script>
+
+</body>
+</html>
