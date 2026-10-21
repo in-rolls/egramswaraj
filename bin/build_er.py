@@ -16,6 +16,7 @@ class in DESIGNATION_CLASS.
 
 import argparse
 import collections
+import difflib
 import json
 import pathlib
 import random
@@ -198,6 +199,7 @@ GPS_DTYPES = {
     "site_other_count": "int32",
     "members_parsed": "Int32",
     "members_repeated": "Int32",
+    "heads_merged": "Int16",
     "heads_listed": "Int16",
     "members_file": "string",
     "members_sha256": "string",
@@ -422,13 +424,61 @@ def to_frames(gps, members, problems):
     m["ward_no"] = [ward_no(w) for w in m["ward_name"]]
     m = m[list(MEMBERS_DTYPES)].astype(MEMBERS_DTYPES)
     m = m.sort_values(["state_code", "gp_code", "member_index"], ignore_index=True)
-    # More than one head after repeats are dropped: the same person entered
-    # twice with a spelling, ward or gender change, or two different people
-    # (a successor kept beside the predecessor, undated). Counted, not chosen.
+    m, merged = merge_head_reentries(m)
+    g["heads_merged"] = g.gp_code.map(collections.Counter(r["gp_code"] for r in merged))
+    g["heads_merged"] = g["heads_merged"].fillna(0).astype("Int16")
+    g.loc[g.members_file.isna(), "heads_merged"] = pd.NA
+    # Two heads left are two different people (a successor kept beside the
+    # predecessor, or a husband beside a woman sarpanch; the site has no
+    # dates). Counted, not chosen.
     heads = m[m.designation_class == "head"].groupby("gp_code").size()
     g["heads_listed"] = g.gp_code.map(heads).fillna(0).astype("Int16")
     g.loc[g.members_file.isna(), "heads_listed"] = pd.NA
-    return g, m
+    return g, m, merged
+
+
+def same_person(a, b):
+    """One person entered twice: the names agree once case and spacing are
+    ignored, or differ by a single stray character ('Malti devi', 'Malti deviw')."""
+    a, b = (re.sub(r"\s+", " ", (x or "").strip().lower()) for x in (a, b))
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    return difflib.SequenceMatcher(None, a, b).ratio() >= 0.9 and (
+        a.startswith(b) or b.startswith(a) or len(a) == len(b)
+    )
+
+
+def merge_head_reentries(m):
+    """Keep one row where a GP lists the same head twice. The first-listed entry
+    is kept, unless only a later one carries a recorded gender (not 'N/A')."""
+    heads = m[m.designation_class == "head"]
+    drop, merged = set(), []
+    for gp, rows in heads.groupby("gp_code"):
+        if len(rows) < 2:
+            continue
+        rows = rows.sort_values("member_index")
+        keep = rows.iloc[0]
+        for _, other in rows.iloc[1:].iterrows():
+            if not same_person(keep.elected_name, other.elected_name):
+                continue
+            if str(keep.gender) == "N/A" and str(other.gender) != "N/A":
+                keep, other = other, keep
+            drop.add((gp, int(other.member_index)))
+            merged.append(
+                {
+                    "gp_code": int(gp),
+                    "kept_index": int(keep.member_index),
+                    "kept": [keep.elected_name, str(keep.gender), keep.ward_name],
+                    "dropped_index": int(other.member_index),
+                    "dropped": [other.elected_name, str(other.gender), other.ward_name],
+                }
+            )
+    out = m[[(g, i) not in drop for g, i in zip(m.gp_code, m.member_index)]]
+    return out.reset_index(drop=True), merged
 
 
 def validate(path, schema_path, dtypes):
@@ -699,7 +749,7 @@ def main():
         if fetched != done[sc]:
             problems.append(f"state {sc}: run.out says {done[sc]} GPs saved, parsed {fetched}")
         print(f"state {sc}: {len(gps)} GPs listed, {fetched} with members", flush=True)
-    gps_df, mem_df = to_frames(all_gps, all_members, problems)
+    gps_df, mem_df, merged_heads = to_frames(all_gps, all_members, problems)
     if gps_df.gp_code.duplicated().any():
         problems.append(
             f"duplicate gp_code: {gps_df.gp_code[gps_df.gp_code.duplicated()].tolist()[:10]}"
@@ -716,6 +766,7 @@ def main():
 
     sample = build_sample(gps_df, mem_df, sorted(done), args.seed)
     checks = {"src": str(src), "finished_states": sorted(done), "states": {}}
+    checks["merged_head_reentries"] = merged_heads
     for sc in sorted(done):
         picked = [b["bp_code"] or b["zp_code"] for b in sample[sc]]
         checks["states"][sc] = state_checks(sc, states[sc], gps_df, mem_df, units[sc], picked)

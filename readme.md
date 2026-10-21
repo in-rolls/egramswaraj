@@ -68,10 +68,11 @@ other).
 
 The site stores some people twice: 923 GPs' responses repeat a row exactly
 (2,963 rows; the site's own counts include them). Repeats are dropped and
-counted in `gps.members_repeated`. Sixteen GPs still list two heads
-(`heads_listed = 2`): nine are one person entered twice with a change (ward,
-case, spelling, gender), seven are two different people with no date to say
-which is current. Neither is chosen.
+counted in `gps.members_repeated`. Ten GPs list one head twice with a change
+(ward, case, a stray letter, gender); the first entry is kept, or the one with a
+recorded gender, and the pairs are in `checks.json` (`merged_head_reentries`).
+Six GPs list two different people as head (`heads_listed = 2`), with no date to
+say which is current; neither is chosen.
 
 Care: Maharashtra lists about 4 members per GP against at least 7 seats, and
 the site's own counts agree, so the site is incomplete there; Bihar's district
@@ -123,14 +124,15 @@ Types are as stored; `bin/describe.py` writes this section from the files and
 | `site_other_count` | int32 | yes | 0– | Other-gender ERs the GP listing reports (otherCount); corresponds to gender 'Transgender' in member responses. |
 | `members_parsed` | int32 |  | 0– | Rows in the GP's member response as received, repeats included (the site's own ER count includes them). Null when the member response was not fetched (site_er_count is 0). |
 | `members_repeated` | int32 |  | 0– | Rows that exactly repeat an earlier row of the same response (all four fields) and are left out of members.parquet. Null when not fetched. |
-| `heads_listed` | int16 |  | 0– | Members classed head after repeats are dropped. Above 1 means the site lists the same person twice with differences, or two people (a successor beside a predecessor, undated); none is chosen here. Null when not fetched. |
+| `heads_merged` | int16 |  | 0– | Head rows dropped as a second entry of the same person (names equal ignoring case and spacing, or one stray character apart); the pairs are listed in checks.json. Null when not fetched. |
+| `heads_listed` | int16 |  | 0– | Members classed head after repeats and re-entries are dropped. 2 means two different people (a successor beside a predecessor, or a proxy beside the head; undated); none is chosen. Null when not fetched. |
 | `members_file` | string |  |  | Member response path relative to the collection directory, e.g. '10/members/93638.json'. Null when not fetched. |
 | `members_sha256` | string |  |  | sha256 of the member response as received (before mobno/emailid were dropped), from log.jsonl. |
 | `fetched_at` | timestamp (UTC) |  |  | UTC time the member response was saved, from log.jsonl. |
 
 ### `data/members.parquet`
 
-1,541,561 rows; one row per `gp_code`, `member_index`.
+1,541,551 rows; one row per `gp_code`, `member_index`.
 
 | Column | Type | Required | Allowed | Description |
 |---|---|---|---|---|
